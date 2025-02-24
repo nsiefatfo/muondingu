@@ -1,6 +1,6 @@
 [submodule "themes/hugo-admonitions"]
 	path = themes/hugo-admonitions
-	url = git@github.com:nsiefatfo/hugo-admonitions.git
+	url = https://github.com/nsiefatfo/hugo-admonitions.git
 [submodule "themes/muondingublogtheme"]
 	path = themes/muondingublogtheme
 	url = https://github.com/nsiefatfo/muondingublogtheme.git
