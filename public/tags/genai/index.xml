@@ -6,20 +6,20 @@
     <description>Recent content in GenAI on </description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/genai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>D2</title>
+      <link>//localhost:1313/post/d1---foundational-large-language-models--text-generation/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/d1---foundational-large-language-models--text-generation/</guid>
+      <description>&lt;h1 id=&#34;contents&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#contents&#34;&gt;&lt;/a&gt;&#xD;&#xA;Contents&#xD;&#xA;&lt;/h1&gt;&lt;h2 id=&#34;why-language-models-are-important&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#why-language-models-are-important&#34;&gt;&lt;/a&gt;&#xD;&#xA;Why language models are important&#xD;&#xA;&lt;/h2&gt;&lt;blockquote&gt;&#xA;&lt;p&gt;[!PDF|yellow] [[Barektain et al_Foundational Large Language Models &amp;amp; Text Generation.pdf#page=7&amp;amp;selection=20,15,30,29&amp;amp;color=yellow|Barektain et al_Foundational Large Language Models &amp;amp; Text Generation, p.7]]&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Although foundational LLMs trained in a variety of tasks on large amounts of data perform very well out of the box and display emergent behaviors (e.g. the ability to perform tasks they have not been directly trained for) they can also be adapted to solve specific tasks where performance out of the box is not at the level desired through a process known as fine-tuning. This requires significantly less data and computational resources than training an LLM from scratch.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>D1</title>
       <link>//localhost:1313/post/d1---foundational-large-language-models--text-generation---copy/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/post/d1---foundational-large-language-models--text-generation---copy/</guid>
-      <description>&lt;h1 id=&#34;contents&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#contents&#34;&gt;&lt;/a&gt;&#xD;&#xA;Contents&#xD;&#xA;&lt;/h1&gt;&lt;h2 id=&#34;why-language-models-are-important&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#why-language-models-are-important&#34;&gt;&lt;/a&gt;&#xD;&#xA;Why language models are important&#xD;&#xA;&lt;/h2&gt;&lt;blockquote&gt;&#xA;&lt;p&gt;[!PDF|yellow] [[Barektain et al_Foundational Large Language Models &amp;amp; Text Generation.pdf#page=7&amp;amp;selection=20,15,30,29&amp;amp;color=yellow|Barektain et al_Foundational Large Language Models &amp;amp; Text Generation, p.7]]&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Although foundational LLMs trained in a variety of tasks on large amounts of data perform very well out of the box and display emergent behaviors (e.g. the ability to perform tasks they have not been directly trained for) they can also be adapted to solve specific tasks where performance out of the box is not at the level desired through a process known as fine-tuning. This requires significantly less data and computational resources than training an LLM from scratch.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>D1</title>
-      <link>//localhost:1313/post/d1---foundational-large-language-models--text-generation/</link>
-      <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/d1---foundational-large-language-models--text-generation/</guid>
       <description>&lt;h1 id=&#34;contents&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#contents&#34;&gt;&lt;/a&gt;&#xD;&#xA;Contents&#xD;&#xA;&lt;/h1&gt;&lt;h2 id=&#34;why-language-models-are-important&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#why-language-models-are-important&#34;&gt;&lt;/a&gt;&#xD;&#xA;Why language models are important&#xD;&#xA;&lt;/h2&gt;&lt;blockquote&gt;&#xA;&lt;p&gt;[!PDF|yellow] [[Barektain et al_Foundational Large Language Models &amp;amp; Text Generation.pdf#page=7&amp;amp;selection=20,15,30,29&amp;amp;color=yellow|Barektain et al_Foundational Large Language Models &amp;amp; Text Generation, p.7]]&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Although foundational LLMs trained in a variety of tasks on large amounts of data perform very well out of the box and display emergent behaviors (e.g. the ability to perform tasks they have not been directly trained for) they can also be adapted to solve specific tasks where performance out of the box is not at the level desired through a process known as fine-tuning. This requires significantly less data and computational resources than training an LLM from scratch.&lt;/p&gt;</description>
     </item>
   </channel>

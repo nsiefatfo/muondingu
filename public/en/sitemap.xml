@@ -34,10 +34,22 @@
                 href="//localhost:1313/categories/"
                 />
   </url><url>
+    <loc>//localhost:1313/post/d1---foundational-large-language-models--text-generation/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/genai/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/tags/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/post/git/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/paradigm-shift/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/philosophy/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/system-design/</loc>
@@ -127,19 +139,10 @@
                 href="//localhost:1313/tags/ontology/"
                 />
   </url><url>
-    <loc>//localhost:1313/tags/philosophy/</loc>
-    <lastmod>2025-02-21T19:17:31+07:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/post/readme/</loc>
     <lastmod>2025-02-21T19:17:31+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/post/d1---foundational-large-language-models--text-generation/</loc>
-    <lastmod>2024-11-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/genai/</loc>
-    <lastmod>2024-11-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/categories/paradigm-shift/</loc>
+    <loc>//localhost:1313/post/d1---foundational-large-language-models--text-generation---copy/</loc>
     <lastmod>2024-11-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/resources/</loc>
