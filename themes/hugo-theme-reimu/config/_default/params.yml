@@ -75,7 +75,7 @@ footer:
     mask: false # whether to use the images as a mask
 
 # Sidebar
-sidebar: left
+sidebar: right
 
 social:
   email: 'muondingu.work@gmail.com'
