@@ -64,6 +64,18 @@
   , 
   {
     "objectID": "1731715200",
+    "permalink": "//localhost:1313/post/d1---foundational-large-language-models--text-generation---copy/",
+    "title": "D1",
+    
+    "content": "\rContents\rWhy language models are important\r[!PDF|yellow] [[Barektain et al_Foundational Large Language Models \u0026amp;amp; Text Generation.pdf#page=7\u0026amp;amp;selection=20,15,30,29\u0026amp;amp;color=yellow|Barektain et al_Foundational Large Language Models \u0026amp;amp; Text Generation, p.7]]\nAlthough foundational LLMs trained in a variety of tasks on large amounts of data perform very well out of the box and display emergent behaviors (e.g. the ability to perform tasks they have not been directly trained for) they can also be adapted to solve specific tasks where performance out of the box is not at the level desired through a process known as fine-tuning. This requires significantly less data and computational resources than training an LLM from scratch.\nThe big question is: how do these large language models work? The next section explores the core building blocks of LLMs,\nfocusing on transformer architectures and their evolution from the original ‘Attention is all you need’ to the latest models such as …",
+    
+    "date": "2024-11-16 00:00:00",
+    "updated": "2024-11-16 00:00:00"
+  }
+  
+  , 
+  {
+    "objectID": "1731715200",
     "permalink": "//localhost:1313/post/d1---foundational-large-language-models--text-generation/",
     "title": "D1",
     

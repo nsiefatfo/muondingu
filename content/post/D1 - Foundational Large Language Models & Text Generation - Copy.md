@@ -1,6 +1,6 @@
 ---
-title: D2
-date: 2025-24-02
+title: D1
+date: 2024-11-16
 tags:
   - GenAI
   - philosophy
