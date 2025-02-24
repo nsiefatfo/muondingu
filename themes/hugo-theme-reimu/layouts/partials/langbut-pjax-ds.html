@@ -1,0 +1,157 @@
+{{/* In your template file */}}
+<div class="lang-switcher" style="display: none;">
+  <button class="lang-main"></button>
+  <div class="lang-alternatives"></div>
+</div>
+
+{{/* Add this to your PJAX container */}}
+<div class="translation-data" data-current-lang="{{ .Site.Language.Lang }}" hidden>
+  {{ range .Translations }}
+    <div data-lang="{{ .Language.Lang }}" 
+         data-url="{{ .RelPermalink }}" 
+         data-title="{{ .Language.LanguageName }}"></div>
+  {{ end }}
+</div>
+
+<style>
+.lang-switcher {
+  position: fixed;
+  bottom: 200px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-main, .lang-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-alternatives {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+
+.lang-switcher:hover .lang-alternatives {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.lang-option {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.lang-switcher:hover .lang-option {
+  transform: translateY(-55px) rotate(0deg);
+}
+
+.lang-switcher:hover .lang-option:nth-child(1) { transform: translate(-50px, -35px); }
+.lang-switcher:hover .lang-option:nth-child(2) { transform: translate(-35px, -50px); }
+.lang-switcher:hover .lang-option:nth-child(3) { transform: translate(-15px, -60px); }
+
+.lang-main:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+</style>
+
+<script>
+// PJAX-compatible language switcher controller
+class LangSwitcher {
+  constructor() {
+    this.container = document.querySelector('.lang-switcher');
+    this.mainButton = this.container.querySelector('.lang-main');
+    this.alternatives = this.container.querySelector('.lang-alternatives');
+    this.init();
+  }
+
+  init() {
+    document.addEventListener('DOMContentLoaded', this.update.bind(this));
+    document.addEventListener('pjax:success', this.update.bind(this));
+    this.addPjaxHooks();
+  }
+
+  addPjaxHooks() {
+    if (window.Pjax) {
+      // Intercept PJAX parsing to maintain language data
+      const originalParse = window.Pjax.prototype.parseDOM;
+      window.Pjax.prototype.parseDOM = function(response) {
+        const dom = originalParse.call(this, response);
+        this.languageData = dom.querySelector('.translation-data');
+        return dom;
+      };
+    }
+  }
+
+  getTranslations() {
+    // Try to get fresh data from PJAX first, then fallback to DOM
+    const source = window.Pjax?.instance?.languageData || 
+                 document.querySelector('.translation-data');
+    
+    if (!source) return { current: null, alternatives: [] };
+
+    return {
+      current: source.dataset.currentLang,
+      alternatives: Array.from(source.children).map(el => ({
+        lang: el.dataset.lang,
+        url: el.dataset.url,
+        title: el.dataset.title
+      }))
+    };
+  }
+
+  update() {
+    const { current, alternatives } = this.getTranslations();
+    
+    if (!current || alternatives.length === 0) {
+      this.container.style.display = 'none';
+      return;
+    }
+
+    // Update main button
+    this.mainButton.style.backgroundImage = `url('/flags/${current}.png')`;
+    
+    // Clear and rebuild alternatives
+    this.alternatives.innerHTML = '';
+    alternatives.forEach(alt => {
+      const link = document.createElement('a');
+      link.className = 'lang-option';
+      link.href = alt.url;
+      link.style.backgroundImage = `url('/flags/${alt.lang}.png')`;
+      link.title = alt.title;
+      
+      link.addEventListener('click', e => this.handleClick(e, alt.url));
+      this.alternatives.appendChild(link);
+    });
+
+    this.container.style.display = 'block';
+  }
+
+  handleClick(e, url) {
+    e.preventDefault();
+    if (window.Pjax) {
+      // Update PJAX instance with fresh language data
+      window.Pjax.instance.languageData = document.querySelector('.translation-data');
+      window.Pjax.navigate(url);
+    } else {
+      window.location.href = url;
+    }
+  }
+}
+
+// Initialize the language switcher
+new LangSwitcher();
+</script>

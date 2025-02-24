@@ -1,0 +1,162 @@
+{{ $params := .Site.Params }}
+
+{{ if in .Site.Params.mainSections .Type }}
+  {{/* Minimalistic version for posts */}}
+  <div class="sidebar-author-mini">
+    <img
+      data-src="{{ "avatar/" | relURL }}{{ .Site.Params.avatar }}"
+      data-sizes="auto"
+      alt="{{ .Site.Params.author }}"
+      class="lazyload"
+    />
+  </div>
+  <div class="sidebar-menu-mini">
+    {{ range .Site.Params.menu }}
+      <a
+        href="{{ .url | absLangURL }}"
+        class="sidebar-menu-item"
+        aria-label="{{ i18n .name }}"
+      >
+        <div class='sidebar-menu-icon icon {{ if or (and (eq .icon "e62b") ($params.icon_font)) (and (eq .icon "f6ad") (not $params.icon_font)) (not .icon) }}rotate{{ end }}'>
+          {{ if .icon }}
+            &#x{{ .icon }};
+          {{ else }}
+            {{ if $params.icon_font }}
+              &#xe62b;
+            {{ else }}
+              &#xf6ad;
+            {{ end }}
+          {{ end }}
+        </div>
+      </a>
+    {{ end }}
+  </div>
+
+  <style>
+  .sidebar-author-mini {
+    display: flex;
+    justify-content: center;
+    margin: 0.8rem 0;
+    padding: 0.3rem;
+  }
+
+  .sidebar-author-mini img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 1px;
+    background: var(--color-wrap);
+  }
+
+  .sidebar-author-mini img:hover {
+    transform: scale(1.05);
+  }
+
+  .sidebar-menu-mini {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-menu-item {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-menu-item:hover {
+    color: var(--color-link);
+    transform: translateY(-2px);
+  }
+
+  .sidebar-menu-icon {
+    font-size: 1.2rem;
+  }
+  </style>
+
+{{ else }}
+  {{/* Original version for other pages */}}
+  <div class="sidebar-author">
+    <img
+      data-src="{{ "avatar/" | relURL }}{{ .Site.Params.avatar }}"
+      data-sizes="auto"
+      alt="{{ .Site.Params.author }}"
+      class="lazyload"
+    />
+    <div class="sidebar-author-name">{{ .Site.Params.author }}</div>
+    <div class="sidebar-description">{{ .Site.Params.description }}</div>
+  </div>
+  <div class="sidebar-state">
+    <div class="sidebar-state-article">
+      <div>{{ i18n "sidebar.post" }}</div>
+      {{ $posts := (where .Page.Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+      <div class="sidebar-state-number">{{ len $posts }}</div>
+    </div>
+    <div class="sidebar-state-category">
+      <div>{{ i18n "sidebar.category" }}</div>
+      <div class="sidebar-state-number">
+        {{ len .Site.Taxonomies.categories }}
+      </div>
+    </div>
+    <div class="sidebar-state-tag">
+      <div>{{ i18n "sidebar.tag" }}</div>
+      <div class="sidebar-state-number">{{ len .Site.Taxonomies.tags }}</div>
+    </div>
+  </div>
+  <div class="sidebar-social">
+    {{ range $name, $url := .Site.Params.social }}
+      <div class="icon-{{ $name }} sidebar-social-icon">
+        <a
+          href="{{ $url }}"
+          itemprop="url"
+          target="_blank"
+          aria-label="{{ $name }}"
+          rel="noopener external nofollow noreferrer"
+        ></a>
+      </div>
+    {{ end }}
+  </div>
+  <div class="sidebar-menu">
+    {{ range .Site.Params.menu }}
+      <div class="sidebar-menu-link-wrap">
+        <a
+          class="sidebar-menu-link-dummy"
+          href="{{ .url | absLangURL }}"
+          aria-label="{{ i18n .name }}"
+        ></a>
+        <div class='sidebar-menu-icon icon {{ if or (and (eq .icon "e62b") ($params.icon_font)) (and (eq .icon "f6ad") (not $params.icon_font)) (not .icon) }}rotate{{ end }}'>
+          {{ if .icon }}
+            &#x{{ .icon }};
+          {{ else }}
+            {{ if $params.icon_font }}
+              &#xe62b;
+            {{ else }}
+              &#xf6ad;
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="sidebar-menu-link">{{ i18n .name }}</div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+<!-- <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('muondingu', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#00b9fe',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-4aad71cb-9178-4154-afbc-2b2b9c5658bc" data-elfsight-app-lazy></div> -->
+

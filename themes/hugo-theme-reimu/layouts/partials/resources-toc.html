@@ -1,0 +1,10 @@
+<div class="resources-toc">
+    <h4>Categories</h4>
+    <nav>
+      {{ range findRE "<h2 id=\"([^\"]+)\">(.+)</h2>" .Content }}
+        {{ $id := replaceRE "<h2 id=\"([^\"]+)\">(.+)</h2>" "$1" . }}
+        {{ $title := replaceRE "<h2 id=\"([^\"]+)\">(.+)</h2>" "$2" . }}
+        <a href="#{{ $id }}" class="toc-item">{{ $title | safeHTML }}</a>
+      {{ end }}
+    </nav>
+  </div>

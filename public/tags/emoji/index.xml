@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emoji on </title>
+    <link>//localhost:1313/tags/emoji/</link>
+    <description>Recent content in Emoji on </description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emoji Support</title>
+      <link>//localhost:1313/post/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/emoji-support/</guid>
+      <description>&lt;div class=&#34;post-link-card-wrap&#34;&gt;&#xD;&#xA;  &lt;div class=&#34;post-link-card&#34;&gt;&#xD;&#xA;    &lt;a href=&#34;youtube.com&#34; title=&#34;test&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&#xD;&#xA;    &#xD;&#xA;      &lt;div class=&#34;post-link-card-cover-wrap&#34;&gt;&#xD;&#xA;        &lt;img&#xD;&#xA;          src=&#34;//localhost:1313/avatar.png&#34;&#xD;&#xA;          class=&#34;no-lightbox&#34;&#xD;&#xA;          title=&#34;test&#34;&#xD;&#xA;          alt=&#34;test&#34;&#xD;&#xA;        /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div class=&#34;post-link-card-item-wrap&#34;&gt;&#xD;&#xA;      &lt;div class=&#34;post-link-card-title&#34;&gt;test&lt;/div&gt;&#xD;&#xA;      &lt;div class=&#34;post-link-card-excerpt&#34;&gt;&#xD;&#xA;        &lt;span class=&#34;icon-link&#34;&gt;&lt;/span&gt;youtube.com&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

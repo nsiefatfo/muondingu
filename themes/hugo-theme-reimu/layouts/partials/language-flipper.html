@@ -1,0 +1,137 @@
+<!-- Floating Language Button -->
+<div class="language-float-container">
+    <div class="language-float-btn" id="language-float-btn">
+      <!-- Current language and alternatives will be injected via JavaScript -->
+    </div>
+  </div>
+  
+  <style>
+  .language-float-container {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+  }
+  
+  .language-float-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    display: none; /* Hidden by default until translations are checked */
+  }
+  
+  /* Hide alternative flags by default */
+  .alt-lang-flag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Current language flag */
+  .current-lang-flag {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Hover effects */
+  .language-float-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .language-float-btn:hover .current-lang-flag {
+    opacity: 0.3;
+  }
+  
+  .language-float-btn:hover .alt-lang-flag {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Position alternative flags */
+  .alt-lang-flag:nth-child(2) {
+    transform: translate(50px, 0);
+  }
+  
+  .alt-lang-flag:nth-child(3) {
+    transform: translate(100px, 0);
+  }
+  
+  .alt-lang-flag:hover {
+    transform: scale(1.2) !important;
+    z-index: 10;
+  }
+  </style>
+  
+  <script>
+  // Function to update language button
+  function updateLanguageButton() {
+    const btn = document.getElementById('language-float-btn');
+    btn.innerHTML = ''; // Clear existing content
+  
+    // Assuming Hugo makes translation data available in a global variable
+    // Adjust this based on how your site exposes .Site.Language and .Translations
+    const currentLang = window.currentLanguage || '{{ .Site.Language.Lang }}';
+    const currentUrl = window.location.pathname;
+    const translations = window.translations || []; // Array of {lang, url} objects
+  
+    // Check if there are translations for the current page
+    if (translations && translations.length > 0) {
+      // Add current language flag
+      const currentFlag = document.createElement('img');
+      currentFlag.src = `/flags/${currentLang}.png`;
+      currentFlag.alt = currentLang;
+      currentFlag.className = 'current-lang-flag';
+      currentFlag.dataset.url = currentUrl;
+      btn.appendChild(currentFlag);
+  
+      // Add alternative language flags
+      translations.forEach((translation, index) => {
+        const altFlag = document.createElement('img');
+        altFlag.src = `/flags/${translation.lang}.png`;
+        altFlag.alt = translation.lang;
+        altFlag.className = 'alt-lang-flag';
+        altFlag.dataset.url = translation.url;
+        btn.appendChild(altFlag);
+      });
+  
+      btn.style.display = 'block'; // Show the button
+    } else {
+      btn.style.display = 'none'; // Hide if no translations
+    }
+  
+    // Add click handlers
+    btn.querySelectorAll('img').forEach(flag => {
+      flag.addEventListener('click', function() {
+        const url = this.dataset.url;
+        if (url && url !== currentUrl) {
+          // Trigger PJAX navigation
+          if (window.pjax) {
+            window.pjax.loadUrl(url);
+          } else {
+            window.location.href = url;
+          }
+        }
+      });
+    });
+  }
+  
+  // Initial load
+  document.addEventListener('DOMContentLoaded', updateLanguageButton);
+  
+  // Listen for PJAX events (adjust event names based on your PJAX implementation)
+  document.addEventListener('pjax:complete', updateLanguageButton);
+  document.addEventListener('pjax:end', updateLanguageButton);
+  
+  // If you're using a specific PJAX library, adjust the event:
+  // For example, with jquery-pjax:
+  // $(document).on('pjax:end', updateLanguageButton);
+  </script>

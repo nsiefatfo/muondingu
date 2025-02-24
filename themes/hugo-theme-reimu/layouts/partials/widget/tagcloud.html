@@ -1,0 +1,29 @@
+{{ if len .Site.Taxonomies.tags }}
+<div class="widget-wrapper">
+  <div
+    class="widget-wrap"
+    data-aos="{{ .Site.Params.animation.options.home.widget }}"
+  >
+    <h3 class="widget-title">{{ i18n "tagcloud" }}</h3>
+    {{ $posts := (where .Page.Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+    <div class="widget tagcloud">
+      {{ if gt (len $posts) 0 }}
+        {{ range $tag := .Site.Taxonomies.tags }}
+          {{ $weight := 10 }}
+          {{ $postCount := len $tag.Pages }}
+          {{ if gt $postCount 0 }}
+            {{ $weight = add 10 (mul 10 (div (float $postCount) (float (len $posts)))) }}
+          {{ end }}
+          <a
+            style="font-size:{{ $weight }}px"
+            href="{{ $tag.Page.RelPermalink }}"
+            aria-label="{{ i18n "tag" }}: {{ $tag.Page.Title }}"
+            >{{ $tag.Page.Title }}</a>
+        {{ end }}
+      {{ else }}
+        <p>{{ i18n "no_posts" | default "No posts yet" }}</p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

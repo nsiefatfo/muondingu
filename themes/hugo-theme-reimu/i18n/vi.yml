@@ -1,0 +1,64 @@
+categories: Danh mục
+search: Tìm kiếm
+tags: Thẻ
+tagcloud: Đám mây thẻ
+tweets: Tweet
+prev: Trước
+next: Tiếp theo
+comment: Bình luận
+reading: Lượt đọc
+archive_a: Lưu trữ
+archive_b: "Lưu trữ: {{ . -}}"
+page: "Trang {{ . -}}"
+recent_posts: Bài viết gần đây
+newer: Mới hơn
+older: Cũ hơn
+share: Chia sẻ
+powered_by: Được vận hành bởi
+rss_feed: Nguồn cấp dữ liệu RSS
+category: Danh mục
+tag: Thẻ
+toc: Mục lục
+
+home: Trang chủ
+about: Giới thiệu
+friend: Bạn bè
+archives: Lưu trữ
+resources: Hữu ích
+
+
+sidebar:
+  post: Bài viết
+  category: Danh mục
+  tag: Thẻ
+
+not_found:
+  title: "4 0 4 (ﾟ⊿ﾟ)ﾂ"
+  subtitle: KHÔNG TÌM THẤY
+
+post:
+  count:
+    one: "{{- . }} từ"
+    other: "{{- . }} từ"
+  time:
+    one: "{{- . }} phút"
+    other: "{{- . }} phút"
+
+busuanzi:
+  pv: Số lượt truy cập
+  uv: Số lượt khách
+
+sticky: Ghim
+
+service_worker:
+  title: Phiên bản mới được tìm thấy
+  content: Trang web dường như có nội dung mới, bạn có muốn cập nhật không?
+  confirm: Cập nhật
+  cancel: Hủy
+
+sponsor: Tài trợ
+
+home_categories:
+  count: 
+    one: "{{- . }} bài viết"
+    other: "{{- . }} bài viết"

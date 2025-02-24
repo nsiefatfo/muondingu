@@ -1,0 +1,54 @@
+theme = ["hugo-theme-reimu", "hugo-admonitions"]
+title = ''
+# codeblock 
+[markup.highlight]
+guessSyntax = true
+noClasses = false
+
+# search 
+[outputs]
+home = ["Algolia", "HTML", "RSS"]
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[pagination]
+pagerSize = 5
+
+
+DefaultContentLanguage= "en"
+defaultContentLanguageInSubdir = false
+baseURL = "https://muondingu.com/"
+title = "hello"
+
+[languages]
+[languages.en]
+languageCode = "en-US"
+languageName = "English"
+weight = 1
+
+[languages.vi]
+languageCode = "vi-VN"
+languageName = "Vietnamese"
+weight = 2
+
+[params]
+  enablei18n-switch = false
+  mainSections = ["post"]
+  related_posts_limit = 3
+
+
+
+# Enable raw HTML in markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[module]
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"

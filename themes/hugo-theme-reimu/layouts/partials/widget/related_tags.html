@@ -1,0 +1,125 @@
+{{ if .Params.tags }}
+<div class="widget-wrapper">
+  <div class="widget-wrap" data-aos="{{ .Site.Params.animation.options.home.widget }}">
+    <h3 class="widget-title">Posts by Tags</h3>
+    <div class="widget related-tags-widget">
+      {{ $currentPage := . }}
+      {{ range .Params.tags }}
+        {{ $tag := . }}
+        <div class="related-tag-section">
+          <h4 class="related-tag-name">
+            <a href="{{ "tags/" | absLangURL }}{{ $tag | urlize | lower }}" class="tag-link">
+              {{ $tag | upper }}
+            </a>
+          </h4>
+          <ul class="related-tag-posts">
+            {{ range first 3 (where $currentPage.Site.RegularPages "Params.tags" "intersect" (slice $tag)) }}
+              {{ if ne .Permalink $currentPage.Permalink }}
+                <li class="related-tag-post-item" data-aos="fade-left">
+                  <a href="{{ .RelPermalink }}" class="related-tag-post-link">
+                    <div class="post-info">
+                      <span class="post-title">{{ .Title }}</span>
+                      <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+                    </div>
+                  </a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<style>
+.related-tags-widget {
+  padding: 10px;
+}
+
+.related-tag-section {
+  margin-bottom: 1.5rem;
+}
+
+.related-tag-section:last-child {
+  margin-bottom: 0;
+}
+
+.related-tag-name {
+  margin: 0 0 0.8rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.tag-link {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tag-link:hover {
+  color: var(--color-link-hover);
+}
+
+.related-tag-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.related-tag-post-item {
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.related-tag-post-item:last-child {
+  margin-bottom: 0;
+}
+
+.related-tag-post-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-meta);
+  transition: all 0.3s ease;
+}
+
+.related-tag-post-item:hover {
+  transform: translateX(5px);
+}
+
+.related-tag-post-item:hover::before {
+  background: var(--color-link);
+}
+
+.related-tag-post-link {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.post-title {
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: var(--color-meta);
+}
+</style>
+{{ end }} 

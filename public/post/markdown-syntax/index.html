@@ -1,0 +1,2333 @@
+<!doctype html>
+<html
+  lang="en-US" 
+  
+    data-theme-mode="auto"
+  
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+
+
+
+
+
+
+
+  
+
+<title>
+  Markdown Syntax Guide | Muondingu
+</title>
+<meta
+  name="description"
+  content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+/>
+
+
+
+
+  
+<script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+<script data-pjax>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'true');
+</script>
+
+
+
+
+
+
+
+
+<script>
+  window.siteConfig = JSON.parse("{\"anchor_icon\":\"f0c9\",\"clipboard\":{\"copyright\":{\"content\":\"Copyright of this article： All articles on this blog, except those with a special declaration, are licensed under the BY-NC-SA license. Please indicate the source when reprinting!\",\"count\":50,\"enable\":false},\"fail\":\"Ehh!?? (ﾟ⊿ﾟ)ﾂ\",\"success\":\"Copied!(*^▽^*)\"},\"code_block\":{\"expand\":true},\"icon_font\":false,\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+  
+
+  
+    
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+
+
+
+
+
+
+  
+
+
+  <link rel="stylesheet" href="https://npm.webcache.cn/@fortawesome/fontawesome-free@6.5.1/css/regular.min.css" />
+
+  <link rel="stylesheet" href="https://npm.webcache.cn/@fortawesome/fontawesome-free@6.5.1/css/solid.min.css" />
+
+
+  
+
+
+  <link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/@fortawesome/fontawesome-free@6.5.1/css/brands.min.css"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+
+  <link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/@fortawesome/fontawesome-free@6.5.1/css/v5-font-face.min.css"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+
+  <link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/@fortawesome/fontawesome-free@6.5.1/css/v4-font-face.min.css"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+
+
+
+
+
+  
+
+
+
+
+
+
+ <link rel="stylesheet" href="/css/loader.css" />
+
+
+
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Markdown Syntax Guide | Muondingu" />
+  <meta
+    property="og:description"
+    content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+  />
+  <meta property="og:url" content="//localhost:1313/post/markdown-syntax/" />
+  <meta
+    property="og:site_name"
+    content=""
+  />
+  <meta
+    property="og:image"
+    content="/"
+  />
+  <meta property="article:author" content="Muondingu" />
+  <meta property="article:published_time" content="2019-03-11T00:00:00&#43;00:00" />
+  <meta property="article:modified_time" content="2019-03-11T00:00:00&#43;00:00" />
+  
+    <meta property="article:tag" content="markdowncsshtmlthemes" />
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="/" />
+  
+  
+  
+  
+  
+
+
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+
+
+
+ <link rel="stylesheet" href="/css/main.css" />
+
+
+
+
+
+  <link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+
+
+
+
+
+
+  <link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/katex@0.16.9/dist/katex.min.css"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"
+    
+    
+    
+    
+    integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"
+  ></script>
+
+
+
+
+
+  
+
+
+  <link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" />
+
+
+
+
+
+  </head>
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        
+          <img src="/images/iX0X1V01.svg" alt="loading" />
+        
+      </div>
+      <div class="loading-word"></div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+
+
+    <div id="container">
+      <div id="wrap">
+        
+<div id="header-nav">
+  <nav id="main-nav">
+    
+      <span class="main-nav-link-wrap">
+        <div class='main-nav-icon icon '>
+          
+            &#xf0c9;
+          
+        </div>
+        <a class="main-nav-link" href="//localhost:1313/">Home</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class='main-nav-icon icon '>
+          
+            &#xf252;
+          
+        </div>
+        <a class="main-nav-link" href="//localhost:1313/archives">Archives</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class='main-nav-icon icon '>
+          
+            &#xf02e;
+          
+        </div>
+        <a class="main-nav-link" href="//localhost:1313/resources">Resources</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class='main-nav-icon icon '>
+          
+            &#xf0f4;
+          
+        </div>
+        <a class="main-nav-link" href="//localhost:1313/about">About</a>
+      </span>
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+    
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="Search"></a>
+    
+  </nav>
+</div>
+
+<header id="header">
+  
+    <picture>
+      
+    </picture>
+    
+      <img fetchpriority="high" src="//localhost:1313/abstract-fantasy-landscape-with-color-year-purple-tones.webp" alt="Markdown Syntax Guide">
+    
+  
+
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          
+        
+  
+        
+          <a href="//localhost:1313/" id="logo">
+            <h1 data-aos="slide-up">Markdown Syntax Guide</h1>
+          </a>
+        
+      
+  
+      
+        
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+
+
+
+
+        <div id="content"
+          class="sidebar-left"
+            >
+          <aside id="sidebar">
+  
+  
+    <meting-js
+      theme="var(--color-link)"
+      id="9102128200"
+      server="netease"
+      type="playlist"
+      
+      fixed="false"
+      autoplay="false"
+      
+      order="random"
+      preload="true"
+      volume="0.3"
+      mutex="true"
+      list-folded="true"
+      lrc-type="0"
+      >
+    </meting-js>
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    >
+      
+        <div class="sidebar-toc-sidebar">
+          <div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#headings">Headings</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#h2">H2</a>
+      <ul>
+        <li><a href="#h3">H3</a></li>
+      </ul>
+    </li>
+    <li><a href="#paragraph">Paragraph</a></li>
+    <li><a href="#blockquotes">Blockquotes</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#tables">Tables</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#code-blocks">Code Blocks</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#list-types">List Types</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</a></li>
+    <li><a href="#hyperlinked-image">Hyperlinked image</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+<style>
+.sidebar-toc-wrapper {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+.sidebar-toc-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-toc-wrapper ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.sidebar-toc-wrapper li {
+  margin: 0.4em 0;
+}
+
+.sidebar-toc-wrapper a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: all 0.2s ease;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.sidebar-toc-wrapper a:hover {
+  color: var(--color-meta);
+  background-color: var(--color-meta-shadow);
+}
+
+.sidebar-toc-wrapper a.active {
+  color: var(--color-link);
+  background-color: rgba(var(--color-link-rgb), 0.1);
+}
+
+.sidebar-toc-wrapper a.active:hover {
+  color: var(--color-link-hover);
+  background-color: rgba(var(--color-link-rgb), 0.8);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('.sidebar-toc-wrapper a');
+  const sections = [];
+  let lastActiveLink = null;
+
+  tocLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const section = document.getElementById(href.substring(1));
+      if (section) {
+        sections.push({ element: section, link: link });
+      }
+    }
+  });
+
+  function updateActiveSection() {
+    const scrollPosition = window.scrollY + 100;
+    let currentSection = null;
+
+    for (const section of sections) {
+      if (section.element.offsetTop <= scrollPosition) {
+        currentSection = section;
+      } else {
+        break;
+      }
+    }
+
+    if (currentSection && lastActiveLink !== currentSection.link) {
+      if (lastActiveLink) {
+        lastActiveLink.classList.remove('active');
+      }
+      currentSection.link.classList.add('active');
+      lastActiveLink = currentSection.link;
+    }
+  }
+
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(updateActiveSection);
+  });
+
+  updateActiveSection();
+});
+</script>
+        </div>
+        <div class="sidebar-common-sidebar hidden">
+          
+
+
+  
+  <div class="sidebar-author-mini">
+    <img
+      data-src="/avatar/avatar.webp"
+      data-sizes="auto"
+      alt="Muondingu"
+      class="lazyload"
+    />
+  </div>
+  <div class="sidebar-menu-mini">
+    
+      <a
+        href="//localhost:1313/"
+        class="sidebar-menu-item"
+        aria-label="Home"
+      >
+        <div class='sidebar-menu-icon icon '>
+          
+            &#xf0c9;
+          
+        </div>
+      </a>
+    
+      <a
+        href="//localhost:1313/archives"
+        class="sidebar-menu-item"
+        aria-label="Archives"
+      >
+        <div class='sidebar-menu-icon icon '>
+          
+            &#xf252;
+          
+        </div>
+      </a>
+    
+      <a
+        href="//localhost:1313/resources"
+        class="sidebar-menu-item"
+        aria-label="Resources"
+      >
+        <div class='sidebar-menu-icon icon '>
+          
+            &#xf02e;
+          
+        </div>
+      </a>
+    
+      <a
+        href="//localhost:1313/about"
+        class="sidebar-menu-item"
+        aria-label="About"
+      >
+        <div class='sidebar-menu-icon icon '>
+          
+            &#xf0f4;
+          
+        </div>
+      </a>
+    
+  </div>
+
+  <style>
+  .sidebar-author-mini {
+    display: flex;
+    justify-content: center;
+    margin: 0.8rem 0;
+    padding: 0.3rem;
+  }
+
+  .sidebar-author-mini img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 1px;
+    background: var(--color-wrap);
+  }
+
+  .sidebar-author-mini img:hover {
+    transform: scale(1.05);
+  }
+
+  .sidebar-menu-mini {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-menu-item {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-menu-item:hover {
+    color: var(--color-link);
+    transform: translateY(-2px);
+  }
+
+  .sidebar-menu-icon {
+    font-size: 1.2rem;
+  }
+  </style>
+
+
+
+
+
+
+          
+            
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+
+  
+    <div class="sidebar-related">
+      <h3 class="sidebar-related-title">Related Posts</h3>
+      <div class="sidebar-related-posts">
+        
+          
+          
+          <div class="sidebar-related-item" data-aos="fade-left">
+            <a href="/post/placeholder-text/" class="sidebar-related-link" title="Placeholder Text">
+              <div class="sidebar-related-cover">
+                
+                  
+                  
+                    <img
+                      data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
+                      data-sizes="auto"
+                      alt="Placeholder Text"
+                      class="lazyload"
+                    />
+                  
+                
+              </div>
+              <div class="sidebar-related-info">
+                <div class="sidebar-related-title">Placeholder Text</div>
+                <div class="sidebar-related-date">2019-03-09</div>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+      <div class="related-tags">
+        
+          <a href="//localhost:1313/tags/markdown" class="related-tag">
+            MARKDOWN
+          </a>
+        
+          <a href="//localhost:1313/tags/css" class="related-tag">
+            CSS
+          </a>
+        
+          <a href="//localhost:1313/tags/html" class="related-tag">
+            HTML
+          </a>
+        
+          <a href="//localhost:1313/tags/themes" class="related-tag">
+            THEMES
+          </a>
+        
+      </div>
+    </div>
+
+    <style>
+    .sidebar-related {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      background: var(--color-wrap);
+      border-radius: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--color-meta-shadow);
+    }
+
+    .related-tag {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      border-radius: 10px;
+      background: rgba(var(--color-link-rgb), 0.1);
+      color: var(--color-link);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .related-tag:hover {
+      background: rgba(var(--color-link-rgb), 0.2);
+      transform: translateY(-1px);
+    }
+
+    .sidebar-related-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: var(--color-text);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-meta-shadow);
+    }
+
+    .sidebar-related-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .sidebar-related-item {
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-related-item:hover {
+      transform: translateX(5px);
+    }
+
+    .sidebar-related-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      width: 100%;
+    }
+
+    .sidebar-related-cover {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .sidebar-related-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-related-info {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .sidebar-related-info .sidebar-related-title {
+      font-size: 0.85rem;
+      margin: 0;
+      padding: 0;
+      border: none;
+      color: var(--color-text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .sidebar-related-date {
+      font-size: 0.75rem;
+      color: var(--color-meta);
+      margin-top: 0.2rem;
+    }
+    </style>
+  
+ 
+          
+        </div>
+      
+
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+    
+  </div>
+</aside>
+
+<style>
+.sidebar-common-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-common-sidebar.hidden {
+  display: none;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocBtn = document.querySelector('.sidebar-toc-btn');
+  const commonBtn = document.querySelector('.sidebar-common-btn');
+  const tocSidebar = document.querySelector('.sidebar-toc-sidebar');
+  const commonSidebar = document.querySelector('.sidebar-common-sidebar');
+
+  if (tocBtn && commonBtn) {
+    tocBtn.addEventListener('click', function() {
+      tocBtn.classList.add('current');
+      commonBtn.classList.remove('current');
+      tocSidebar.classList.remove('hidden');
+      commonSidebar.classList.add('hidden');
+    });
+
+    commonBtn.addEventListener('click', function() {
+      commonBtn.classList.add('current');
+      tocBtn.classList.remove('current');
+      commonSidebar.classList.remove('hidden');
+      tocSidebar.classList.add('hidden');
+    });
+  }
+});
+</script>
+
+
+          <section id="main">
+  <div class="reading-progress-bar"></div>
+
+<style>
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: var(--color-link);
+  z-index: 9999;
+  transition: width 0.2s ease;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const progressBar = document.querySelector('.reading-progress-bar');
+  
+  function updateProgressBar() {
+    const docElement = document.documentElement;
+    const totalHeight = docElement.scrollHeight - docElement.clientHeight;
+    const progress = (window.scrollY / totalHeight) * 100;
+    progressBar.style.width = `${progress}%`;
+  }
+
+  window.addEventListener('scroll', updateProgressBar);
+  window.addEventListener('resize', updateProgressBar);
+});
+</script> 
+<article
+  class="h-entry article"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta">
+      <div class="article-date">
+  <a
+    href="//localhost:1313/post/markdown-syntax/"
+    class="article-date-link"
+    data-aos="zoom-in"
+  >
+    <time datetime="2019-03-11 00:00:00 &#43;0000 UTC" itemprop="datePublished"
+      >2019-03-11</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2019-03-11</time
+    >
+  </a>
+</div>
+
+      <div class="article-category">
+  
+    <a
+      class="article-category-link"
+      href="//localhost:1313/categories/knowledge-management"
+      data-aos="zoom-in"
+      >KNOWLEDGE-MANAGEMENT</a
+    >
+  
+</div>
+
+    </div>
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+<h2 id="headings">
+<a class="header-anchor" href="#headings"></a>
+Headings
+</h2><p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
+<h1 id="h1">
+<a class="header-anchor" href="#h1"></a>
+H1
+</h1><h2 id="h2">
+<a class="header-anchor" href="#h2"></a>
+H2
+</h2><h3 id="h3">
+<a class="header-anchor" href="#h3"></a>
+H3
+</h3><h4 id="h4">
+<a class="header-anchor" href="#h4"></a>
+H4
+</h4><h5 id="h5">
+<a class="header-anchor" href="#h5"></a>
+H5
+</h5><h6 id="h6">
+<a class="header-anchor" href="#h6"></a>
+H6
+</h6><h2 id="paragraph">
+<a class="header-anchor" href="#paragraph"></a>
+Paragraph
+</h2><p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h2 id="blockquotes">
+<a class="header-anchor" href="#blockquotes"></a>
+Blockquotes
+</h2><p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
+<h4 id="blockquote-without-attribution">
+<a class="header-anchor" href="#blockquote-without-attribution"></a>
+Blockquote without attribution
+</h4><blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p></blockquote>
+<h4 id="blockquote-with-attribution">
+<a class="header-anchor" href="#blockquote-with-attribution"></a>
+Blockquote with attribution
+</h4><blockquote>
+<p>Don&rsquo;t communicate by sharing memory, share memory by communicating.<br>
+— <cite>Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p></blockquote>
+<h2 id="tables">
+<a class="header-anchor" href="#tables"></a>
+Tables
+</h2><p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Age</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Bob</td>
+          <td>27</td>
+      </tr>
+      <tr>
+          <td>Alice</td>
+          <td>23</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="inline-markdown-within-tables">
+<a class="header-anchor" href="#inline-markdown-within-tables"></a>
+Inline Markdown within tables
+</h4><table>
+  <thead>
+      <tr>
+          <th>Italics</th>
+          <th>Bold</th>
+          <th>Code</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><em>italics</em></td>
+          <td><strong>bold</strong></td>
+          <td><code>code</code></td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+          <th>F</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+          <td>Phasellus ultricies, sapien non euismod aliquam, dui ligula tincidunt odio, at accumsan nulla sapien eget ex.</td>
+          <td>Proin eleifend dictum ipsum, non euismod ipsum pulvinar et. Vivamus sollicitudin, quam in pulvinar aliquam, metus elit pretium purus</td>
+          <td>Proin sit amet velit nec enim imperdiet vehicula.</td>
+          <td>Ut bibendum vestibulum quam, eu egestas turpis gravida nec</td>
+          <td>Sed scelerisque nec turpis vel viverra. Vivamus vitae pretium sapien</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="code-blocks">
+<a class="header-anchor" href="#code-blocks"></a>
+Code Blocks
+</h2><h4 id="code-block-with-backticks">
+<a class="header-anchor" href="#code-block-with-backticks"></a>
+Code block with backticks
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="code-block-indented-with-four-spaces">
+<a class="header-anchor" href="#code-block-indented-with-four-spaces"></a>
+Code block indented with four spaces
+</h4><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="code-block-with-hugos-internal-highlight-shortcode">
+<a class="header-anchor" href="#code-block-with-hugos-internal-highlight-shortcode"></a>
+Code block with Hugo&rsquo;s internal highlight shortcode
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h4 id="diff-code-block">
+<a class="header-anchor" href="#diff-code-block"></a>
+Diff code block
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">[dependencies.bevy]
+</span></span><span class="line"><span class="cl">git = &#34;https://github.com/bevyengine/bevy&#34;
+</span></span><span class="line"><span class="cl">rev = &#34;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&#34;
+</span></span><span class="line"><span class="cl"><span class="gd">- features = [&#34;dynamic&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+ features = [&#34;jpeg&#34;, &#34;dynamic&#34;]
+</span></span></span></code></pre></div><h2 id="list-types">
+<a class="header-anchor" href="#list-types"></a>
+List Types
+</h2><h4 id="ordered-list">
+<a class="header-anchor" href="#ordered-list"></a>
+Ordered List
+</h4><ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h4 id="unordered-list">
+<a class="header-anchor" href="#unordered-list"></a>
+Unordered List
+</h4><ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+<h4 id="nested-list">
+<a class="header-anchor" href="#nested-list"></a>
+Nested list
+</h4><ul>
+<li>Fruit
+<ul>
+<li>Apple</li>
+<li>Orange</li>
+<li>Banana</li>
+</ul>
+</li>
+<li>Dairy
+<ul>
+<li>Milk</li>
+<li>Cheese</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-elements--abbr-sub-sup-kbd-mark">
+<a class="header-anchor" href="#other-elements--abbr-sub-sup-kbd-mark"></a>
+Other Elements — abbr, sub, sup, kbd, mark
+</h2><p><abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.</p>
+<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+<h2 id="hyperlinked-image">
+<a class="header-anchor" href="#hyperlinked-image"></a>
+Hyperlinked image
+</h2><p><a href="https://google.com"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png" alt="Google"></a></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+
+
+
+
+
+
+<blockquote class="article-copyright">
+  
+    <p><strong><span class="icon-user icon"></span> </strong>Muondingu @ </p>
+  
+  
+  
+    <p><strong><span class="icon-pencil icon"></span> </strong>Markdown Syntax Guide</p>
+  
+  
+    <p><strong><span class="icon-calendar icon"></span> </strong>2019-03-11 00:00:00</p>
+  
+  
+  
+</blockquote>
+
+      
+
+      
+
+      
+        
+
+<div class="share-wrapper">
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=//localhost:1313/post/markdown-syntax/" target="_blank" rel="noopener noreferrer" title="Markdown Syntax Guide">
+      <div class="share-icon icon icon-facebook">
+        
+      </div>
+    </a>
+  
+    <a href="https://twitter.com/intent/tweet?url=//localhost:1313/post/markdown-syntax/&amp;text=Markdown%20Syntax%20Guide&amp;via=//localhost:1313/" target="_blank" rel="noopener noreferrer" title="Markdown Syntax Guide">
+      <div class="share-icon icon icon-twitter">
+        
+      </div>
+    </a>
+  
+</div>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <ul class="article-tag-list" itemprop="keywords">
+  
+    <li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/markdown"
+        rel="tag"
+        >MARKDOWN</a
+      >
+    </li>
+  
+    <li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/css"
+        rel="tag"
+        >CSS</a
+      >
+    </li>
+  
+    <li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/html"
+        rel="tag"
+        >HTML</a
+      >
+    </li>
+  
+    <li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/themes"
+        rel="tag"
+        >THEMES</a
+      >
+    </li>
+  
+</ul>
+
+    </footer>
+  </div>
+  
+    
+  <nav
+    id="article-nav"
+    data-aos="fade-up"
+  >
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img
+              data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
+              data-sizes="auto"
+              alt="Placeholder Text"
+              class="lazyload"
+            />
+          
+        
+        <a href="//localhost:1313/post/placeholder-text/"></a>
+        <div class="article-nav-caption">Newer</div>
+        <h3 class="article-nav-title">
+          
+            Placeholder Text
+          
+        </h3>
+      </div>
+    
+
+    
+      <div class="article-nav-link-wrap article-nav-link-right">
+        
+          
+          
+            <img
+              data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
+              data-sizes="auto"
+              alt="D1"
+              class="lazyload"
+            />
+          
+        
+        <a href="//localhost:1313/post/d1---foundational-large-language-models--text-generation/"></a>
+        <div class="article-nav-caption">Older</div>
+        <h3 class="article-nav-title">
+          
+            D1
+          
+        </h3>
+      </div>
+    
+  </nav>
+
+
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+</section>
+        </div>
+        
+        
+        
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+<footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    <div>
+      <span class="icon-copyright"></span>
+       -
+      2025
+      <span class="footer-info-sep rotate"></span>
+      Muondingu
+    </div>
+    
+    
+      <div>
+        <span class="icon-brush"
+          >&nbsp;
+            11.0k
+          </span
+        >
+        &nbsp;|&nbsp;
+        <span class="icon-coffee">&nbsp;
+          
+          
+
+          00:58
+        </span>
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv"
+          >Number of visits&nbsp;<span
+            id="busuanzi_value_site_pv"
+          ></span
+        ></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv"
+          >Number of visitors&nbsp;<span
+            id="busuanzi_value_site_uv"
+          ></span
+        ></span>
+      </div>
+    
+  </div>
+</footer>
+
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar">
+        <div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#headings">Headings</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#h2">H2</a>
+      <ul>
+        <li><a href="#h3">H3</a></li>
+      </ul>
+    </li>
+    <li><a href="#paragraph">Paragraph</a></li>
+    <li><a href="#blockquotes">Blockquotes</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#tables">Tables</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#code-blocks">Code Blocks</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#list-types">List Types</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</a></li>
+    <li><a href="#hyperlinked-image">Hyperlinked image</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+<style>
+.sidebar-toc-wrapper {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+.sidebar-toc-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-toc-wrapper ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.sidebar-toc-wrapper li {
+  margin: 0.4em 0;
+}
+
+.sidebar-toc-wrapper a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: all 0.2s ease;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.sidebar-toc-wrapper a:hover {
+  color: var(--color-meta);
+  background-color: var(--color-meta-shadow);
+}
+
+.sidebar-toc-wrapper a.active {
+  color: var(--color-link);
+  background-color: rgba(var(--color-link-rgb), 0.1);
+}
+
+.sidebar-toc-wrapper a.active:hover {
+  color: var(--color-link-hover);
+  background-color: rgba(var(--color-link-rgb), 0.8);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('.sidebar-toc-wrapper a');
+  const sections = [];
+  let lastActiveLink = null;
+
+  tocLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const section = document.getElementById(href.substring(1));
+      if (section) {
+        sections.push({ element: section, link: link });
+      }
+    }
+  });
+
+  function updateActiveSection() {
+    const scrollPosition = window.scrollY + 100;
+    let currentSection = null;
+
+    for (const section of sections) {
+      if (section.element.offsetTop <= scrollPosition) {
+        currentSection = section;
+      } else {
+        break;
+      }
+    }
+
+    if (currentSection && lastActiveLink !== currentSection.link) {
+      if (lastActiveLink) {
+        lastActiveLink.classList.remove('active');
+      }
+      currentSection.link.classList.add('active');
+      lastActiveLink = currentSection.link;
+    }
+  }
+
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(updateActiveSection);
+  });
+
+  updateActiveSection();
+});
+</script>
+      </div>
+      <div class="sidebar-common-sidebar hidden">
+        
+
+
+  
+  <div class="sidebar-author-mini">
+    <img
+      data-src="/avatar/avatar.webp"
+      data-sizes="auto"
+      alt="Muondingu"
+      class="lazyload"
+    />
+  </div>
+  <div class="sidebar-menu-mini">
+    
+      <a
+        href="//localhost:1313/"
+        class="sidebar-menu-item"
+        aria-label="Home"
+      >
+        <div class='sidebar-menu-icon icon '>
+          
+            &#xf0c9;
+          
+        </div>
+      </a>
+    
+      <a
+        href="//localhost:1313/archives"
+        class="sidebar-menu-item"
+        aria-label="Archives"
+      >
+        <div class='sidebar-menu-icon icon '>
+          
+            &#xf252;
+          
+        </div>
+      </a>
+    
+      <a
+        href="//localhost:1313/resources"
+        class="sidebar-menu-item"
+        aria-label="Resources"
+      >
+        <div class='sidebar-menu-icon icon '>
+          
+            &#xf02e;
+          
+        </div>
+      </a>
+    
+      <a
+        href="//localhost:1313/about"
+        class="sidebar-menu-item"
+        aria-label="About"
+      >
+        <div class='sidebar-menu-icon icon '>
+          
+            &#xf0f4;
+          
+        </div>
+      </a>
+    
+  </div>
+
+  <style>
+  .sidebar-author-mini {
+    display: flex;
+    justify-content: center;
+    margin: 0.8rem 0;
+    padding: 0.3rem;
+  }
+
+  .sidebar-author-mini img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 1px;
+    background: var(--color-wrap);
+  }
+
+  .sidebar-author-mini img:hover {
+    transform: scale(1.05);
+  }
+
+  .sidebar-menu-mini {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-menu-item {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-menu-item:hover {
+    color: var(--color-link);
+    transform: translateY(-2px);
+  }
+
+  .sidebar-menu-icon {
+    font-size: 1.2rem;
+  }
+  </style>
+
+
+
+
+
+
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+
+    </div>
+    
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div class="reimu-search-input" id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png" />
+        </div>
+      </div>
+    
+    
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
+    
+    
+    
+    
+    integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"
+  ></script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"
+    
+    
+    
+    
+    integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"
+  ></script>
+
+
+
+
+
+
+
+
+
+  
+      
+      <script src="/js/main.js" ></script>
+      
+
+
+
+  
+
+
+
+
+
+  
+      
+      <script src="/js/aos.js" ></script>
+      
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+
+
+
+
+
+  
+      
+      <script src="/js/pjax_main.js" data-pjax></script>
+      
+
+
+
+  <script>
+    var ALGOLIA_CONFIG = {
+      logo: '\/images\/algolia_logo.svg',
+      algolia: {
+        applicationID: "78HHSJWHHA",
+        apiKey: "db19c789a4fd2bdb15f43823fc74756f",
+        indexName: "algolia",
+        hits: {
+          "per_page": parseInt("10")
+        },
+        labels: {
+          "input_placeholder": "Search.....",
+          "hits_empty": "No content found related to 「${query}",
+          "hits_stats": "${hits} result found（took ${time} ms）"
+        }
+      }
+    };
+  </script>
+  
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js"
+    defer
+    
+    
+    
+    integrity="sha384-xvLS0jfKuoREs7pqkRI/OI8GcqohO5S&#43;jQz7ZBtQXnsXmD&#43;9jDOOY4cL6dCPzlrk" crossorigin="anonymous"
+  ></script>
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/instantsearch.js@4.56.1/dist/instantsearch.production.min.js"
+    defer
+    
+    
+    
+    integrity="sha384-hHJCflT4KBLQyHfKO9vpstIcFKn/Y&#43;KHTORelMMEn7mOp2AVPp&#43;7fr03dLgZiV3J" crossorigin="anonymous"
+  ></script>
+
+
+  
+
+
+
+
+
+  
+      
+      <script src="/js/algolia_search.js" ></script>
+      
+
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/mouse-firework@0.1.0/dist/index.umd.js"
+    
+    
+    
+    
+    integrity="sha384-KM6i7tu43nYd6e0beIljxHMC5tZc58XBDu7pPA58w50h18Jsx7gLdimfS09RXlKv" crossorigin="anonymous"
+  ></script>
+
+
+<script>
+  if (window.firework) {
+    const options = JSON.parse("{\"excludeelements\":[\"a\",\"button\"],\"particles\":[{\"colors\":[\"#ff5252\",\"#ff7c7c\",\"#ffafaf\",\"#ffd0d0\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"emit\"],\"number\":20,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.3,0.5],\"radius\":[16,32]}},{\"colors\":[\"#ff0000\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"diffuse\"],\"number\":1,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.2,0.5],\"lineWidth\":6,\"radius\":20}}]}");
+    options.excludeElements = options.excludeelements;
+    delete options.excludeelements;
+    window.firework(options);
+  }
+</script>
+
+
+
+
+
+<script>
+  function initLive2d() {
+    live2d.init('https:\/\/fastly.jsdelivr.net\/gh\/D-Sketon\/plugin-live2d\/', {themeTipsPath: ""});
+  }
+</script> 
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://fastly.jsdelivr.net/gh/D-Sketon/plugin-live2d/js/live2d-autoload.js"
+    
+    async
+    
+    onload="initLive2d()"
+    
+  ></script>
+
+
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js"
+    
+    
+    
+    
+    integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA&#43;Wd/QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"
+  ></script>
+
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout:  3000 ,
+      priority:  true ,
+      ignores: JSON.parse("[]")
+    });
+  </script>
+
+
+<div id="lazy-script">
+  <div>
+    
+      
+      
+        
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "Muondingu",
+          title: "Markdown Syntax Guide",
+          url: "\/\/localhost:1313\/post\/markdown-syntax\/",
+          description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements.",
+          cover: "\/\/localhost:1313\/abstract-fantasy-landscape-with-color-year-purple-tones.webp",
+        };
+      </script>
+    
+    
+    
+      
+
+
+
+
+
+  
+      
+      <script src="/js/insert_highlight.js" data-pjax></script>
+      
+
+      
+      
+      
+      
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;
+
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+    
+  </div>
+</div>
+
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js"
+    
+    async
+    
+    
+    integrity="sha384-0M75wtSkhjIInv4coYlaJU83&#43;OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id&#43;S" crossorigin="anonymous"
+  ></script>
+
+
+
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script>
+
+
+<script>
+  const reimuCopyright = String.raw`
+   ______     ______     __     __    __     __  __    
+  /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+  \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+   \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+    \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                    
+  `;
+  console.log(String.raw`%c ${reimuCopyright}`, "color: #ff5252;");
+  console.log(
+    "%c Theme.Reimu" + " %c https://github.com/D-Sketon/hugo-theme-reimu ",
+    "color: white; background: #ff5252; padding:5px 0;",
+    "padding:4px;border:1px solid #ff5252;",
+  );
+</script>
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js"
+    
+    
+    
+    
+    integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr&#43;h5UfruuRL/aORyw&#43;5&#43;HZoU6e" crossorigin="anonymous"
+  ></script>
+
+
+  
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js"
+    
+    
+    
+    
+    integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8&#43;0maanw1S/IyB&#43;Y4JG&#43;ZDU7GpKE8" crossorigin="anonymous"
+  ></script>
+
+
+  
+
+    
+
+<style>
+.lang-switcher {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.lang-main, .lang-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-alternatives {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+
+.lang-switcher:hover .lang-alternatives {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.lang-option {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.lang-switcher:hover .lang-option {
+  transform: translateY(-55px) rotate(0deg);
+}
+
+.lang-switcher:hover .lang-option:nth-child(1) { transform: translate(-50px, -35px); }
+.lang-switcher:hover .lang-option:nth-child(2) { transform: translate(-35px, -50px); }
+.lang-switcher:hover .lang-option:nth-child(3) { transform: translate(-15px, -60px); }
+
+.lang-main:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+ 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+</style>
+  </body>
+</html>
+
+
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-4aad71cb-9178-4154-afbc-2b2b9c5658bc" data-elfsight-app-lazy></div>
+
+
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('muondingu', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Meow!',
+    'floating-chat.donateButton.background-color': '#f45d22',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+
+<style>
+.floating-chat-kofi-popup-iframe { 
+  left: unset; 
+  right: 126px; 
+  bottom: 76px;
+  z-index: 999999;  
+}
+
+.floatingchat-container-wrap { 
+  left: unset; 
+  right: 86px; 
+  bottom: 20px;
+  transition: transform 0.3s ease;
+  z-index: 999998;  
+}
+
+.floatingchat-container-wrap:hover {
+  transform: scale(1.05);
+}
+
+ 
+@media (max-width: 768px) {
+  .floating-chat-kofi-popup-iframe {
+    left: unset;
+    right: 20px !important;
+    bottom: unset;
+    top: 20px !important;
+    max-width: 90vw;  
+  }
+
+  .floatingchat-container-wrap {
+    left: unset; 
+    right: 20px !important;
+    bottom: unset;
+    top: 20px !important;
+    max-width: 90vw;  
+  }
+}
+</style>

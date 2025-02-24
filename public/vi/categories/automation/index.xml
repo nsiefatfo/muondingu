@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automation on </title>
+    <link>//localhost:1313/vi/categories/automation/</link>
+    <description>Recent content in Automation on </description>
+    <generator>Hugo</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Fri, 21 Feb 2025 19:17:31 +0700</lastBuildDate>
+    <atom:link href="//localhost:1313/vi/categories/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ẩn danh</title>
+      <link>//localhost:1313/vi/post/anonymous/</link>
+      <pubDate>Fri, 21 Feb 2025 19:17:31 +0700</pubDate>
+      <guid>//localhost:1313/vi/post/anonymous/</guid>
+      <description>&lt;h3 id=&#34;hướng-dẫn-toàn-diện-về-việc-xuất-bản-nội-dung-ẩn-danh-và-an-toàn-trên-blog-và-mạng-xã-hội&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#h%c6%b0%e1%bb%9bng-d%e1%ba%abn-to%c3%a0n-di%e1%bb%87n-v%e1%bb%81-vi%e1%bb%87c-xu%e1%ba%a5t-b%e1%ba%a3n-n%e1%bb%99i-dung-%e1%ba%a9n-danh-v%c3%a0-an-to%c3%a0n-tr%c3%aan-blog-v%c3%a0-m%e1%ba%a1ng-x%c3%a3-h%e1%bb%99i&#34;&gt;&lt;/a&gt;&#xD;&#xA;Hướng dẫn toàn diện về việc xuất bản nội dung ẩn danh và an toàn trên blog và mạng xã hội&#xD;&#xA;&lt;/h3&gt;&lt;h4 id=&#34;điểm-chính&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%c4%91i%e1%bb%83m-ch%c3%adnh&#34;&gt;&lt;/a&gt;&#xD;&#xA;Điểm chính:&#xD;&#xA;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng &lt;strong&gt;pseudonyms&lt;/strong&gt;, &lt;strong&gt;anonymous emails&lt;/strong&gt; (ví dụ: ProtonMail), &lt;strong&gt;VPNs&lt;/strong&gt; (ví dụ: ExpressVPN), &lt;strong&gt;Tor browser&lt;/strong&gt;, và loại bỏ &lt;strong&gt;metadata&lt;/strong&gt; để đảm bảo ẩn danh về mặt kỹ thuật.&lt;/li&gt;&#xA;&lt;li&gt;Chọn các nền tảng như &lt;strong&gt;self-hosted WordPress&lt;/strong&gt; để có quyền riêng tư tốt hơn; &lt;strong&gt;social media&lt;/strong&gt; có rủi ro cao hơn do thu thập dữ liệu.&lt;/li&gt;&#xA;&lt;li&gt;Viết một cách trung lập, tránh tiết lộ thông tin cá nhân, và đánh giá rủi ro nội dung.&lt;/li&gt;&#xA;&lt;li&gt;Bảo mật tài khoản bằng mật khẩu mạnh, duyệt web ở chế độ &lt;strong&gt;private browsing&lt;/strong&gt;, và tách biệt danh tính trực tuyến và ngoại tuyến.&lt;/li&gt;&#xA;&lt;li&gt;Về mặt pháp lý, tránh &lt;strong&gt;defamation&lt;/strong&gt; và &lt;strong&gt;hate speech&lt;/strong&gt;; sử dụng quyền ẩn danh một cách có trách nhiệm.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;các-biện-pháp-kỹ-thuật&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#c%c3%a1c-bi%e1%bb%87n-ph%c3%a1p-k%e1%bb%b9-thu%e1%ba%adt&#34;&gt;&lt;/a&gt;&#xD;&#xA;Các biện pháp kỹ thuật&#xD;&#xA;&lt;/h4&gt;&lt;p&gt;Để xuất bản nội dung ẩn danh, hãy bắt đầu với các công cụ kỹ thuật sau:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

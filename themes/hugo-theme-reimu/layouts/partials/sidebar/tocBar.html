@@ -1,0 +1,101 @@
+<div class="sidebar-toc">
+  <h3 class="toc-title">{{i18n "toc" }}</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    {{ .TableOfContents }}
+  </div>
+</div>
+
+<style>
+.sidebar-toc-wrapper {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+.sidebar-toc-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-toc-wrapper ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.sidebar-toc-wrapper li {
+  margin: 0.4em 0;
+}
+
+.sidebar-toc-wrapper a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: all 0.2s ease;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.sidebar-toc-wrapper a:hover {
+  color: var(--color-meta);
+  background-color: var(--color-meta-shadow);
+}
+
+.sidebar-toc-wrapper a.active {
+  color: var(--color-link);
+  background-color: rgba(var(--color-link-rgb), 0.1);
+}
+
+.sidebar-toc-wrapper a.active:hover {
+  color: var(--color-link-hover);
+  background-color: rgba(var(--color-link-rgb), 0.8);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('.sidebar-toc-wrapper a');
+  const sections = [];
+  let lastActiveLink = null;
+
+  tocLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const section = document.getElementById(href.substring(1));
+      if (section) {
+        sections.push({ element: section, link: link });
+      }
+    }
+  });
+
+  function updateActiveSection() {
+    const scrollPosition = window.scrollY + 100;
+    let currentSection = null;
+
+    for (const section of sections) {
+      if (section.element.offsetTop <= scrollPosition) {
+        currentSection = section;
+      } else {
+        break;
+      }
+    }
+
+    if (currentSection && lastActiveLink !== currentSection.link) {
+      if (lastActiveLink) {
+        lastActiveLink.classList.remove('active');
+      }
+      currentSection.link.classList.add('active');
+      lastActiveLink = currentSection.link;
+    }
+  }
+
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(updateActiveSection);
+  });
+
+  updateActiveSection();
+});
+</script>

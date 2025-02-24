@@ -1,0 +1,19 @@
+{{ if and (len (where .Site.RegularPages "Section" "in" .Site.Params.mainSections)) (not .IsHome) }}
+  <div class="widget-wrapper">
+    <div
+      class="widget-wrap"
+      data-aos="{{ .Site.Params.animation.options.home.widget }}"
+    >
+      <h3 class="widget-title">{{ i18n "recent_posts" }}</h3>
+      <div class="widget">
+        <ul>
+          {{ range first 5 (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+            <li>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+{{ end }}

@@ -1,0 +1,30 @@
+<div class="reading-progress-bar"></div>
+
+<style>
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: var(--color-link);
+  z-index: 9999;
+  transition: width 0.2s ease;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const progressBar = document.querySelector('.reading-progress-bar');
+  
+  function updateProgressBar() {
+    const docElement = document.documentElement;
+    const totalHeight = docElement.scrollHeight - docElement.clientHeight;
+    const progress = (window.scrollY / totalHeight) * 100;
+    progressBar.style.width = `${progress}%`;
+  }
+
+  window.addEventListener('scroll', updateProgressBar);
+  window.addEventListener('resize', updateProgressBar);
+});
+</script> 

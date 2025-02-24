@@ -1,0 +1,83 @@
+{{ define "main" }}
+  {{ $ctx := . }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+  {{ if and (eq 1 $paginator.PageNumber) ($ctx.Site.Params.home_categories.enable) }}
+    <div class="post-categories-wrapper" data-aos="{{ $ctx.Site.Params.animation.options.home.post }}">
+      {{ range $k, $v := $ctx.Site.Params.home_categories.content }}
+        {{ if $v.categories }}
+          {{ $categoryPosts := where $ctx.Site.RegularPages "Params.categories" "intersect" (slice $v.categories) }}
+          {{ $categoryTerm := index (where $ctx.Site.Taxonomies.categories.ByCount "Page.Title" "eq" $v.categories) 0 }}
+          <div class="post-categories-wrap">
+            <a class="post-link" href="{{ (printf "%s%s" "categories/" $v.categories) | relURL }}" aria-label=""></a>
+            <div class="post-categories-cover">
+              {{ if $v.cover }}
+                <img
+                  data-src="{{ $v.cover | relURL }}"
+                  data-sizes="auto"
+                  alt="{{ $v.categories }}"
+                  class="lazyload"
+                />
+              {{ else }}
+                {{ $cover := partial "helpers/randomCover.html" $ctx }}
+                {{ if $cover }}
+                  <img
+                    data-src="{{ $cover }}"
+                    data-sizes="auto"
+                    alt="{{ $v.categories }}"
+                    class="lazyload"
+                  />
+                {{ else }}
+                  <img
+                    data-src="{{ $ctx.Site.Params.banner | relURL }}"
+                    data-sizes="auto"
+                    alt="{{ $v.categories }}"
+                    class="lazyload"
+                  />
+                {{ end }}
+              {{ end }}
+              <h2>{{ $v.categories }}</h2>
+              <h3>{{ i18n "home_categories.count" (len $categoryPosts) }}</h3>
+              {{ with $categoryTerm }}
+                {{ with .Page.Description }}
+                  <div class="category-description">{{ . }}</div>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <style>
+      .post-categories-cover {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .category-description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 1rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      
+      .post-categories-cover:hover .category-description {
+        transform: translateY(0);
+      }
+    </style>
+  {{ end }}
+  
+  {{ partial "tag-filter.html" . }}
+  
+  {{ range $k, $v := $paginator.Pages }}
+    {{ partial "partials/post.html"  (dict "index" $k "ctx" . "page" $v ) }}
+  {{ end }}
+  {{ partial "partials/pagination.html" . }}
+{{ end }}

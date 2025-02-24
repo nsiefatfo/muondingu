@@ -1,0 +1,167 @@
+{{ if .Params.tags }}
+  {{ $currentPage := . }}
+  {{ $relatedPosts := slice }}
+  {{ $limit := default 5 .Site.Params.related_posts_limit }}
+  
+  {{ range .Site.RegularPages }}
+    {{ if and (ne .Permalink $currentPage.Permalink) (intersect .Params.tags $currentPage.Params.tags) }}
+      {{ $relatedPosts = $relatedPosts | append . }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $relatedPosts }}
+    <div class="sidebar-related">
+      <h3 class="sidebar-related-title">Related Posts</h3>
+      <div class="sidebar-related-posts">
+        {{ range first $limit $relatedPosts }}
+          {{ $displayTitle := .Title }}
+          {{ if gt (len .Title) 20 }}
+            {{ $displayTitle = printf "%s..." (substr .Title 0 18) }}
+          {{ end }}
+          <div class="sidebar-related-item" data-aos="fade-left">
+            <a href="{{ .RelPermalink }}" class="sidebar-related-link" title="{{ .Title }}">
+              <div class="sidebar-related-cover">
+                {{ if .Params.cover }}
+                  <img
+                    data-src="{{ .Params.cover }}"
+                    data-sizes="auto"
+                    alt="{{ .Title }}"
+                    class="lazyload"
+                  />
+                {{ else }}
+                  {{ $cover := partial "helpers/randomCover.html" . }}
+                  {{ if $cover }}
+                    <img
+                      data-src="{{ $cover }}"
+                      data-sizes="auto"
+                      alt="{{ .Title }}"
+                      class="lazyload"
+                    />
+                  {{ end }}
+                {{ end }}
+              </div>
+              <div class="sidebar-related-info">
+                <div class="sidebar-related-title">{{ $displayTitle }}</div>
+                <div class="sidebar-related-date">{{ .Date.Format "2006-01-02" }}</div>
+              </div>
+            </a>
+          </div>
+        {{ end }}
+      </div>
+      <div class="related-tags">
+        {{ range .Params.tags }}
+          <a href="{{ "tags/" | absLangURL }}{{ . | urlize | lower }}" class="related-tag">
+            {{ . | upper }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
+
+    <style>
+    .sidebar-related {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      background: var(--color-wrap);
+      border-radius: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--color-meta-shadow);
+    }
+
+    .related-tag {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      border-radius: 10px;
+      background: rgba(var(--color-link-rgb), 0.1);
+      color: var(--color-link);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .related-tag:hover {
+      background: rgba(var(--color-link-rgb), 0.2);
+      transform: translateY(-1px);
+    }
+
+    .sidebar-related-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: var(--color-text);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-meta-shadow);
+    }
+
+    .sidebar-related-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .sidebar-related-item {
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-related-item:hover {
+      transform: translateX(5px);
+    }
+
+    .sidebar-related-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      width: 100%;
+    }
+
+    .sidebar-related-cover {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .sidebar-related-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-related-info {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .sidebar-related-info .sidebar-related-title {
+      font-size: 0.85rem;
+      margin: 0;
+      padding: 0;
+      border: none;
+      color: var(--color-text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .sidebar-related-date {
+      font-size: 0.75rem;
+      color: var(--color-meta);
+      margin-top: 0.2rem;
+    }
+    </style>
+  {{ end }}
+{{ end }} 
