@@ -1,0 +1,3 @@
+[submodule "theme/hugo-admonitions"]
+	path = theme/hugo-admonitions
+	url = git@github.com:nsiefatfo/hugo-admonitions.git
