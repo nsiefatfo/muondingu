@@ -1,4 +1,4 @@
-theme = ["hugo-theme-reimu", "hugo-admonitions"]
+theme = ["muondingublogtheme", "hugo-admonitions"]
 title = ''
 # codeblock 
 [markup.highlight]
