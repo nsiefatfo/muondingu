@@ -156,6 +156,16 @@ function initPostLanguageButton() {
     
     buttonElement.appendChild(textSpan);
     switcherElement.appendChild(buttonElement);
+    
+    // Add a hidden anchor element for search engines to crawl
+    const seoLink = document.createElement('a');
+    seoLink.href = alternativeURL;
+    seoLink.rel = "alternate";
+    seoLink.hreflang = alternativeLang;
+    seoLink.className = "visually-hidden";
+    seoLink.textContent = buttonText;
+    switcherElement.appendChild(seoLink);
+    
     document.body.appendChild(switcherElement);
     
     // Add button hover effect
@@ -202,6 +212,9 @@ function initPostLanguageButton() {
             window.location.href = alternativeURL;
           }
         };
+        
+        // Add an aria-description to make it clear this is a language switch button
+        button.setAttribute('aria-description', 'Switch language to ' + alternativeLang);
       }
     } else {
       switcherElement.style.display = 'none';

@@ -56,6 +56,10 @@
   window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"Copyright of this article： All articles on this blog, except those with a special declaration, are licensed under the BY-NC-SA license. Please indicate the source when reprinting!\",\"count\":50,\"enable\":true},\"fail\":\"Ehh!?? (ﾟ⊿ﾟ)ﾂ\",\"success\":\"Copied!(*^▽^*)\"},\"code_block\":{\"expand\":true},\"icon_font\":false,\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
 </script>
 
+<script>
+  window.siteConfig.swPath = '\/sw.js';
+</script>
+
 
 
 
@@ -288,6 +292,15 @@
 <div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
 </div>
 
+
+  <div class="notification-wrapper">
+    <h1>New version found</h1>
+    <p>The website seems to have new content, do you want to update?</p>
+    <div class="notification-btn">
+      <button id="notification-update-btn">Update</button>
+      <button id="notification-close-btn">Cancel</button>
+    </div>
+  </div>
 
 
 
@@ -1824,15 +1837,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then((registrations) => {
-        for (let registration of registrations) {
-          registration.unregister();
-        }
-      });
-    }
-  </script>
+  
+
+
+
+
+
+  
+      
+        
+      
+
+  
+
+
+
+
+
+  
+      
+      <script src="/js/service_worker.js" ></script>
+      
+
 
 
 <script>
@@ -1913,9 +1939,23 @@ document.addEventListener('DOMContentLoaded', function() {
        style="background-image: url('/images/flags/vi.svg')"
        lang="vi"
        hreflang="vi"
+       rel="alternate"
        aria-label="Switch to Vietnamese"
        title="Vietnamese">
       <span class="visually-hidden">Vietnamese</span>
+    </a>
+    
+  </div>
+  
+  
+  <div class="seo-language-links visually-hidden" aria-hidden="true">
+    
+    <a href="/vi/post/2025-26-02-finding-your-niche-in-the-mmo-business/" 
+       lang="vi" 
+       hreflang="vi" 
+       rel="alternate" 
+       title="Vietnamese">
+      Vietnamese
     </a>
     
   </div>
@@ -1986,6 +2026,12 @@ document.addEventListener('DOMContentLoaded', function() {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+   
+}
+
+ 
+.seo-language-links {
+   
 }
 </style>
   </body>

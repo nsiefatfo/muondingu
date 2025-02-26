@@ -16,9 +16,23 @@
        style="background-image: url('/images/flags/{{ .Language.Lang }}.svg')"
        lang="{{ .Language.Lang }}"
        hreflang="{{ .Language.Lang }}"
+       rel="alternate"
        aria-label="Switch to {{ .Language.LanguageName }}"
        title="{{ .Language.LanguageName }}">
       <span class="visually-hidden">{{ .Language.LanguageName }}</span>
+    </a>
+    {{ end }}
+  </div>
+  
+  <!-- SEO-only links - not visually displayed but accessible to crawlers -->
+  <div class="seo-language-links visually-hidden" aria-hidden="true">
+    {{ range .Translations }}
+    <a href="{{ .RelPermalink }}" 
+       lang="{{ .Language.Lang }}" 
+       hreflang="{{ .Language.Lang }}" 
+       rel="alternate" 
+       title="{{ .Language.LanguageName }}">
+      {{ .Language.LanguageName }}
     </a>
     {{ end }}
   </div>
@@ -89,5 +103,11 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+  /* Important: Don't use display: none or visibility: hidden as these hide from search engines */
+}
+
+/* Container for SEO links */
+.seo-language-links {
+  /* No additional styling needed beyond visually-hidden */
 }
 </style>
