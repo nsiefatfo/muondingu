@@ -26,6 +26,16 @@
   </url><url>
     <loc>//localhost:1313/tags/git/</loc>
     <lastmod>2025-02-25T08:37:39+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/git/"
+                />
   </url><url>
     <loc>//localhost:1313/plugintest/</loc>
     <lastmod>2025-02-25T08:37:39+00:00</lastmod>
@@ -43,9 +53,6 @@
                 href="//localhost:1313/tags/"
                 />
   </url><url>
-    <loc>//localhost:1313/categories/blog-stack/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/post/blogtest/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -62,6 +69,19 @@
                 href="//localhost:1313/categories/"
                 />
   </url><url>
+    <loc>//localhost:1313/categories/creators-stack/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/categories/creators-stack/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/categories/creators-stack/"
+                />
+  </url><url>
     <loc>//localhost:1313/post/d1---foundational-large-language-models--text-generation/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -70,6 +90,16 @@
   </url><url>
     <loc>//localhost:1313/post/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/post/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/post/git/"
+                />
   </url><url>
     <loc>//localhost:1313/categories/paradigm-shift/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
@@ -159,12 +189,42 @@
   </url><url>
     <loc>//localhost:1313/resources/</loc>
     <lastmod>2023-08-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/resources/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/resources/"
+                />
   </url><url>
     <loc>//localhost:1313/archives/</loc>
     <lastmod>2022-07-26T21:46:25+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/archives/"
+                />
   </url><url>
     <loc>//localhost:1313/about/</loc>
     <lastmod>2022-06-09T20:12:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/about/"
+                />
   </url><url>
     <loc>//localhost:1313/categories/knowledge-management/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
@@ -239,5 +299,15 @@
                 />
   </url><url>
     <loc>//localhost:1313/categories/creators-toolkit/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/categories/creators-toolkit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/categories/creators-toolkit/"
+                />
   </url>
 </urlset>

@@ -6,7 +6,7 @@ tags:
   - philosophy
 aliases: 
 categories:
-  - Paradigm-Shift
+  - Paradigm Shift
 status:
   - in progress
 ---

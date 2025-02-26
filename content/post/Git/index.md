@@ -2,7 +2,7 @@
 title: "Git"
 date: 2025-02-23
 categories:
-    - Blog Stack
+    - Creator's Stack
 tags:
     - Git   
     - System Design

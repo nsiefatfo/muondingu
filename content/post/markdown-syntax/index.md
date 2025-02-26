@@ -9,7 +9,7 @@ tags:
   - html
   - themes
 categories:
-  - Knowledge-Management
+  - Knowledge Management
 series:
   - Themes Guide
 aliases:

@@ -1,5 +1,5 @@
 theme = ["muondingublogtheme", "hugo-admonitions"]
-title = ''
+title = 'Optimize. Automate. Gamify.'
 # codeblock 
 [markup.highlight]
 guessSyntax = true

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on </title>
+    <title>Posts on Optimize. Automate. Gamify.</title>
     <link>//localhost:1313/vi/post/</link>
-    <description>Recent content in Posts on </description>
+    <description>Recent content in Posts on Optimize. Automate. Gamify.</description>
     <generator>Hugo</generator>
     <language>vi-VN</language>
-    <lastBuildDate>Fri, 21 Feb 2025 19:17:31 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/vi/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>//localhost:1313/vi/post/git/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/vi/post/git/</guid>
+      <description>&lt;h2 id=&#34;git&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#git&#34;&gt;&lt;/a&gt;&#xD;&#xA;Git&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;        &lt;link rel=&#34;stylesheet&#34; href=&#34;//localhost:1313/css/vendors/admonitions.css&#34;&gt;&#xD;&#xA;  &lt;div class=&#34;admonition info&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;admonition-header&#34;&gt;&#xD;&#xA;      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z&#34;/&gt;&lt;/svg&gt;&#xD;&#xA;      &lt;span&gt;test&lt;/span&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;      &lt;div class=&#34;admonition-content&#34;&gt;&#xD;&#xA;        &lt;p&gt;what should i do with this?&lt;/p&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&lt;p&gt;I&amp;rsquo;ll explain Git workflow in simple terms, like you&amp;rsquo;re five! 🌟&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ẩn danh</title>
       <link>//localhost:1313/vi/post/anonymous/</link>

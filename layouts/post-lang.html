@@ -1,0 +1,212 @@
+<script>
+    window.SITE_CONFIG = window.SITE_CONFIG || {};
+    window.SITE_CONFIG.postLangButton = {
+      enabled: true,
+      altLang: "vi",
+      icon: "/images/flags/vietnamese-language-code-icon.svg",
+      text: "View in Vietnamese",
+      class: "post-lang-button"
+    };
+  </script>
+
+
+<style>
+/* Container for the language switcher */
+.post-lang-switcher {
+  position: fixed;
+  bottom: 20px;
+  left: 40px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Class to make the switcher visible with a fade-in effect */
+.post-lang-switcher.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styling for the language switcher button */
+#post-lang-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect for the button */
+#post-lang-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the visually hidden text (initially hidden for screen readers) */
+#post-lang-button .visually-hidden {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the text on hover */
+#post-lang-button:hover .visually-hidden {
+  opacity: 1;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .post-lang-switcher {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  #post-lang-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  #post-lang-button:hover .visually-hidden {
+    left: 0;
+    top: -40px;
+    transform: none;
+  }
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', initPostLanguageButton);
+document.addEventListener('pjax:complete', initPostLanguageButton);
+
+function initPostLanguageButton() {
+  // Only run on post pages
+  if (!document.body.classList.contains('type-post')) {
+    return;
+  }
+  
+  // Get configuration from window.SITE_CONFIG or use defaults
+  const config = window.SITE_CONFIG?.postLangButton || {};
+  const alternativeLang = config.altLang || 'vi';
+  const buttonClass = config.class || 'post-lang-button';
+  const buttonIcon = config.icon || `/images/flags/${alternativeLang}.svg`;
+  const buttonText = config.text || `View in ${alternativeLang === 'vi' ? 'Vietnamese' : alternativeLang}`;
+  
+  // Get current language and URL path
+  const currentURL = window.location.pathname;
+  const pathParts = currentURL.replace(/^\/+/, '').split('/');
+  
+  // Determine current language
+  let currentLang = '';
+  let currentPath = '';
+  
+  // Check if the first part of the path is a language code
+  const langRegex = /^[a-z]{2}(-[a-z]{2})?$/i;
+  if (pathParts.length > 0 && langRegex.test(pathParts[0])) {
+    currentLang = pathParts[0];
+    currentPath = pathParts.slice(1).join('/');
+  } else {
+    // No language prefix, assume default language
+    currentPath = pathParts.join('/');
+  }
+  
+  // Create the alternative URL
+  const alternativeURL = `/${alternativeLang}/${currentPath}`;
+  
+  // Create button element if it doesn't exist
+  let switcherElement = document.querySelector('.post-lang-switcher');
+  if (!switcherElement) {
+    switcherElement = document.createElement('div');
+    switcherElement.className = 'post-lang-switcher';
+    switcherElement.style.cssText = 'position: fixed; bottom: 20px; left: 40px; z-index: 1000; display: none;';
+    
+    const buttonElement = document.createElement('button');
+    buttonElement.id = 'post-lang-button';
+    buttonElement.className = buttonClass;
+    buttonElement.style.cssText = `
+      background-image: url('${buttonIcon}');
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      border: 2px solid white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    `;
+    buttonElement.setAttribute('aria-label', buttonText);
+    
+    const textSpan = document.createElement('span');
+    textSpan.className = 'visually-hidden';
+    textSpan.textContent = buttonText;
+    
+    buttonElement.appendChild(textSpan);
+    switcherElement.appendChild(buttonElement);
+    document.body.appendChild(switcherElement);
+    
+    // Add button hover effect
+    const style = document.createElement('style');
+    style.textContent = `
+      #post-lang-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      }
+    `;
+    document.head.appendChild(style);
+  }
+  
+  // Function to check if the alternative URL exists
+  async function checkUrlExists(url) {
+    try {
+      const response = await fetch(url, { method: 'HEAD' });
+      return response.ok;
+    } catch (error) {
+      console.error('Error checking URL:', error);
+      return false;
+    }
+  }
+  
+  // Check if alternative URL exists and show button if it does
+  checkUrlExists(alternativeURL).then(exists => {
+    if (exists) {
+      switcherElement.style.display = 'block';
+      
+      // Add click event to the button
+      const button = document.getElementById('post-lang-button');
+      if (button) {
+        button.onclick = function() {
+          // Show loading indicator if available
+          if (window.startLoading) window.startLoading();
+          
+          // Use Pjax for navigation if available
+          if (window.Pjax) {
+            window.Pjax.loadUrl(alternativeURL);
+          } else if (window.pjax) {
+            window.pjax.loadUrl(alternativeURL);
+          } else {
+            // Fallback to regular navigation
+            window.location.href = alternativeURL;
+          }
+        };
+      }
+    } else {
+      switcherElement.style.display = 'none';
+    }
+  });
+}
+
+</script>
