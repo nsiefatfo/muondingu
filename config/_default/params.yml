@@ -480,7 +480,7 @@ service_worker:
 
 # Experimental
 live2d:
-  enable: true
+  enable: false
   position: left # left or right
 
 # Experimental

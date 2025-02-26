@@ -43,26 +43,5 @@
       <guid>//localhost:1313/vi/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</guid>
       <description></description>
     </item>
-    <item>
-      <title>Emoji</title>
-      <link>//localhost:1313/vi/tags/emoji/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/vi/tags/emoji/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ethics</title>
-      <link>//localhost:1313/vi/tags/ethics/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/vi/tags/ethics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ontology</title>
-      <link>//localhost:1313/vi/tags/ontology/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/vi/tags/ontology/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

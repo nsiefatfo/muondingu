@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/vi/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-26T23:55:35+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -14,6 +14,22 @@
                 hreflang="vi-VN"
                 href="//localhost:1313/vi/"
                 />
+  </url><url>
+    <loc>//localhost:1313/vi/post/2025-26-02-finding-your-niche-in-the-mmo-business/</loc>
+    <lastmod>2025-02-26T23:55:35+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/post/2025-26-02-finding-your-niche-in-the-mmo-business/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/post/2025-26-02-finding-your-niche-in-the-mmo-business/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/post/</loc>
+    <lastmod>2025-02-26T23:55:35+07:00</lastmod>
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
@@ -66,9 +82,6 @@
                 hreflang="vi-VN"
                 href="//localhost:1313/vi/post/git/"
                 />
-  </url><url>
-    <loc>//localhost:1313/vi/post/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/vi/tags/system-design/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
@@ -188,61 +201,6 @@
   </url><url>
     <loc>//localhost:1313/vi/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/vi/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/tags/emoji/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/tags/emoji/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/post/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/post/emoji-support/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/post/emoji-support/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/tags/ethics/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/tags/ethics/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/tags/ethics/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/tags/ontology/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/tags/ontology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/tags/ontology/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/categories/productivity/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/vi/categories/creators-toolkit/</loc>
     <xhtml:link

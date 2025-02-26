@@ -7,6 +7,7 @@ tags:
     - HTML
     - CSS
     - 
+draft: true
 ---
 >[!info] 🛠️ `=this.file.mday`  🗒️  ***`=this.file.name`*** 
 

@@ -11,9 +11,10 @@ tags:
   - "system-design"
   - "ontology"
 image: "the-creative-exchange-d2zvqp3fpro-unsplash.jpg"
+draft: false
 ---
 
-{{<externalLinkCard title="test" link="youtube.com" cover="avatar.png">}}
+{{<externalLinkCard title="test" link="https://www.youtube.com/watch?v=2SYwkOL_6ag&list=RD2SYwkOL_6ag&start_radio=1" cover="avatar.png">}}
 
 
 

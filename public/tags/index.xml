@@ -6,55 +6,34 @@
     <description>Recent content in Tags on Optimize. Automate. Gamify.</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 25 Feb 2025 08:37:39 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2025 23:55:32 +0700</lastBuildDate>
     <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog</title>
-      <link>//localhost:1313/tags/blog/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/blog/</guid>
+      <title>Business</title>
+      <link>//localhost:1313/tags/business/</link>
+      <pubDate>Wed, 26 Feb 2025 23:55:32 +0700</pubDate>
+      <guid>//localhost:1313/tags/business/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MMO</title>
+      <link>//localhost:1313/tags/mmo/</link>
+      <pubDate>Wed, 26 Feb 2025 23:55:32 +0700</pubDate>
+      <guid>//localhost:1313/tags/mmo/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
       <link>//localhost:1313/tags/git/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/tags/git/</guid>
       <description></description>
     </item>
     <item>
-      <title>GenAI</title>
-      <link>//localhost:1313/tags/genai/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/genai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Philosophy</title>
-      <link>//localhost:1313/tags/philosophy/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/philosophy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>System-Design</title>
+      <title>System Design</title>
       <link>//localhost:1313/tags/system-design/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/tags/system-design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Css</title>
-      <link>//localhost:1313/tags/css/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Html</title>
-      <link>//localhost:1313/tags/html/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/html/</guid>
       <description></description>
     </item>
     <item>
@@ -72,17 +51,10 @@
       <description></description>
     </item>
     <item>
-      <title>Markdown</title>
-      <link>//localhost:1313/tags/markdown/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Themes</title>
-      <link>//localhost:1313/tags/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/themes/</guid>
+      <title>Philosophy</title>
+      <link>//localhost:1313/tags/philosophy/</link>
+      <pubDate>Fri, 21 Feb 2025 19:17:31 +0700</pubDate>
+      <guid>//localhost:1313/tags/philosophy/</guid>
       <description></description>
     </item>
     <item>
@@ -90,6 +62,13 @@
       <link>//localhost:1313/tags/ai/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>//localhost:1313/tags/markdown/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
@@ -114,17 +93,10 @@
       <description></description>
     </item>
     <item>
-      <title>LaTeX</title>
-      <link>//localhost:1313/tags/latex/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/latex/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Math</title>
-      <link>//localhost:1313/tags/math/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/math/</guid>
+      <title>Workflow</title>
+      <link>//localhost:1313/tags/workflow/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/workflow/</guid>
       <description></description>
     </item>
     <item>

@@ -1,6 +1,6 @@
 +++
 date = '2025-02-21T19:17:31+07:00'
-draft = false
+draft = true
 title = 'readme'
 categories = ["Automation"]
 tags = ["philosophy","ethics","system-design","ontology"]

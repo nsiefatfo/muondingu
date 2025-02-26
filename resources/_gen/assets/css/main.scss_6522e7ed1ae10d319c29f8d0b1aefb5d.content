@@ -3606,10 +3606,6 @@ a, .main-nav-icon, .popup-btn-close {
   background: var(--color-hover-shadow) !important;
 }
 
-#live2d-toggle {
-  z-index: 1;
-}
-
 .post-categories-wrapper {
   display: flex;
   gap: 40px;
