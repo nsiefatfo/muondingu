@@ -1,0 +1,93 @@
+{{ if .Translations }}
+<div class="lang-switcher" role="navigation" aria-label="Language switcher">
+  <!-- Current Language -->
+  <button class="lang-main" 
+          style="background-image: url('/images/flags/{{ .Site.Language.Lang }}.svg')"
+          aria-label="Current language: {{ .Site.Language.LanguageName }}"
+          aria-expanded="false">
+    <span class="visually-hidden">{{ .Site.Language.LanguageName }}</span>
+  </button>
+  
+  <!-- Alternative Languages -->
+  <div class="lang-alternatives">
+    {{ range .Translations }}
+    <a href="{{ .RelPermalink }}" 
+       class="lang-option" 
+       style="background-image: url('/images/flags/{{ .Language.Lang }}.svg')"
+       lang="{{ .Language.Lang }}"
+       hreflang="{{ .Language.Lang }}"
+       aria-label="Switch to {{ .Language.LanguageName }}"
+       title="{{ .Language.LanguageName }}">
+      <span class="visually-hidden">{{ .Language.LanguageName }}</span>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+<style>
+.lang-switcher {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.lang-main, .lang-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-alternatives {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+
+.lang-switcher:hover .lang-alternatives {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.lang-option {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.lang-switcher:hover .lang-option {
+  transform: translateY(-55px) rotate(0deg);
+}
+
+.lang-switcher:hover .lang-option:nth-child(1) { transform: translate(-50px, -35px); }
+.lang-switcher:hover .lang-option:nth-child(2) { transform: translate(-35px, -50px); }
+.lang-switcher:hover .lang-option:nth-child(3) { transform: translate(-15px, -60px); }
+
+.lang-main:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Add this for screen reader only text */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+</style>

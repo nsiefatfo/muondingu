@@ -3,6 +3,18 @@
   
   
   {
+    "objectID": "1740355200",
+    "permalink": "//localhost:1313/post/index.md/",
+    "title": "blogdevelopment log",
+    
+    "content": "\rBriefly summarize the main idea or purpose of the note. Use this space to write a concise overview (1-2 sentences).\rConnections\r🗺️\rlist\nfrom \u0026ldquo;\u0026rdquo;\nwhere any(contains(file.tags, this.file.tags))\nand contains(file.tags, \u0026ldquo;#MoC\u0026rdquo;)\nand file.name != this.file.name\nsort file.mtime desc\nlimit 5\n📚 References \u0026amp; Resources\rSource 1: PDF Source 2: URL ➖ Related Topics\rlist from \u0026ldquo;\u0026rdquo;\nwhere file.name != Files and contains(file.outlinks, this.file.link)\nsort file.name asc\n🛠️ =this.file.mday 🗒️ =this.file.name\rBlog system logic\rNetlify deploy website from Github repositories. When there\u0026rsquo;s change on Github repositories, Netlify notices the last commit log and rebuild( update the site\u0026rsquo;s content) again. To make change to Github repo, we have to push the commitment. git add . `list changes` git commit -m \u0026#39;change description\u0026#39; `confirm changes` git push origin main `push changes to the *main* branch` Git management\rInfo\rThemes as gitmodules need to be pushed to their remote repo When modifying the main Planner\rPost-Deployment To-Do List\n✅ Backup \u0026amp; Version Control\nConfirm website content + theme submodule are backed up (e.g., GitHub). ✅ Post-Update Testing\nRun Lighthouse (performance, SEO, accessibility).\nTest cross-browser + mobile responsiveness.\nCheck for broken links (e.g., htmltest).\n🔒 Security\nAudit dependencies (Hugo modules, npm).\nEnsure HTTPS/SSL is enforced (Netlify settings).\n🚀 Performance\nOptimize images (auto-compress via Netlify plugin).\nPreload critical assets (fonts, CSS).\n📈 Monitoring\nSet up Netlify Analytics or Google Search Console.\nEnable uptime monitoring (e.g., UptimeRobot).\n🔄 CI/CD Automation\nAdd build hooks for auto-deploy on theme/submodule updates.\nConfigure branch deploys (preview PRs in staging).\n📑 Documentation\nUpdate CHANGELOG.md with theme version + customizations.\nNote any theme overrides (to avoid conflicts in future updates).\n⏮️ Rollback Plan\nTag stable commits in your repo.\nTest Netlify’s “Rollback Deploy” feature.\nTime Investment: ~2-3 hours for initial setup; 30 mins/month for maintenance.\nShortcodes\rIssues\r[ ] tag-filter not working properly, expect pagination problem [ ] home-categories card not working properly in vietnamese, sidebar is ok. Also problem with aliases [ ] /vi no banner [ ] algolia search in vi ",
+    
+    "date": "2025-02-24 00:00:00",
+    "updated": "2025-02-25 08:37:39"
+  }
+  
+  , 
+  {
     "objectID": "1740268800",
     "permalink": "//localhost:1313/post/blogtest/",
     "title": "Blogtest",
@@ -67,7 +79,7 @@
     "permalink": "//localhost:1313/post/readme/",
     "title": "readme",
     
-    "content": " hexo-theme-reimu 💘 Hakurei Reimu 💘 Demo\n简体中文 | English\nWarning\rVersions below v1.0.0 have been deprecated. Please upgrade to version v1.0.0 or above as soon as possible.\nA Hakurei Reimu style Hexo theme.\nA combination of landscape、Tangyuxian and Shoka themes.\nframework repository version stars Hexo hexo-theme-reimu Astro astro-theme-reimu Hugo hugo-theme-reimu ISSUE and PR Welcome!\nFeatures\rBasic Functions\r✨ Full blog functionality 🔄 Compatible with Hexo6+ 📱 Responsive layout 🌙 Dark mode support 🅰️ i18n support Code \u0026amp;amp; Math\r🖥️ Code highlighting and copying ➗ KaTeX / MathJax3 math formula support 📊 Mermaid flowchart support Search \u0026amp;amp; Comments\r🔍 Algolia search integration 🔍 Local search integration 💬 Multiple comment systems support: Valine Waline Twikoo Gitalk Giscus Statistics \u0026amp;amp; Analytics\r📊 Article reading statistics (Valine / Waline) 👥 Visitor statistics (Busuanzi) Media \u0026amp;amp; Interactive Features\r🎵 Music player support: Aplayer Meting 🖼️ Lazy loading for images ⚡ Loading …",
+    "content": "\rhexo-theme-reimu\r💘 Hakurei Reimu 💘\rDemo\n简体中文 | English\nWarning\rVersions below v1.0.0 have been deprecated. Please upgrade to version v1.0.0 or above as soon as possible.\nA Hakurei Reimu style Hexo theme.\nA combination of landscape、Tangyuxian and Shoka themes.\nframework repository version stars Hexo hexo-theme-reimu Astro astro-theme-reimu Hugo hugo-theme-reimu ISSUE and PR Welcome!\nFeatures\rBasic Functions\r✨ Full blog functionality 🔄 Compatible with Hexo6+ 📱 Responsive layout 🌙 Dark mode support 🅰️ i18n support Code \u0026amp;amp; Math\r🖥️ Code highlighting and copying ➗ KaTeX / MathJax3 math formula support 📊 Mermaid flowchart support Search \u0026amp;amp; Comments\r🔍 Algolia search integration 🔍 Local search integration 💬 Multiple comment systems support: Valine Waline Twikoo Gitalk Giscus Statistics \u0026amp;amp; Analytics\r📊 Article reading statistics (Valine / Waline) 👥 Visitor statistics (Busuanzi) Media \u0026amp;amp; Interactive Features\r🎵 Music player support: Aplayer Meting 🖼️ Lazy loading for images ⚡ Loading …",
     
     "date": "2025-02-21 19:17:31",
     "updated": "2025-02-21 19:17:31"

@@ -2,7 +2,7 @@
 date = '2025-02-21T19:17:31+07:00'
 draft = false
 title = 'Ẩn danh'
-categories = ["automation"]
+categories = ["Automation"]
 +++
 
 ### Hướng dẫn toàn diện về việc xuất bản nội dung ẩn danh và an toàn trên blog và mạng xã hội

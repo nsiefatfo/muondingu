@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-25T08:37:39+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi-VN"
@@ -13,6 +13,34 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="//localhost:1313/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/blog/</loc>
+    <lastmod>2025-02-25T08:37:39+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/plugintest/zone/blogdevelopment-log/</loc>
+    <lastmod>2025-02-25T08:37:39+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/post/index.md/</loc>
+    <lastmod>2025-02-25T08:37:39+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/git/</loc>
+    <lastmod>2025-02-25T08:37:39+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/plugintest/</loc>
+    <lastmod>2025-02-25T08:37:39+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2025-02-25T08:37:39+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/"
                 />
   </url><url>
     <loc>//localhost:1313/categories/blog-stack/</loc>
@@ -40,9 +68,6 @@
     <loc>//localhost:1313/tags/genai/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/git/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/post/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -63,19 +88,6 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="//localhost:1313/tags/system-design/"
-                />
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/tags/"
                 />
   </url><url>
     <loc>//localhost:1313/categories/automation/</loc>
