@@ -21,8 +21,7 @@ pagerSize = 5
 
 DefaultContentLanguage= "en"
 defaultContentLanguageInSubdir = false
-baseURL = "https://muondingu.com/"
-title = "hello"
+baseURL = 'https://muondingu.com/'
 
 [languages]
 [languages.en]
