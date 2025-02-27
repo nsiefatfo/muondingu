@@ -16,6 +16,7 @@ tags:
   - "Tools"
   - "LLM"
   - "Local"
+slug: "Local-Ai-Models"
 ---
 # Choosing the Right AI Model for Personal Use on Local Devices
 <!--more-->

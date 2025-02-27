@@ -30,18 +30,18 @@
       <description>&lt;p&gt;Philosophy Meets Technology&#xA;I sometimes find myself daydreaming about how philosophical concepts could transform AI technology and perhaps even the ground of reality itself. While these thoughts can get abstract, they fuel my practical explorations of knowledge systems.&#xA;Philosophy isn&amp;rsquo;t just theoretical—it provides frameworks for organizing information and making decisions that have practical applications in our digital tools. The way we structure our notes, automate our workflows, and design our systems all reflect underlying philosophical assumptions about what matters and how information should flow.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Knowledge Management</title>
-      <link>//localhost:1313/categories/knowledge-management/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/knowledge-management/</guid>
-      <description></description>
-    </item>
-    <item>
       <title></title>
       <link>//localhost:1313/categories/creators-toolkit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/categories/creators-toolkit/</guid>
       <description>&lt;h1 id=&#34;start-of-selection&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#start-of-selection&#34;&gt;&lt;/a&gt;&#xD;&#xA;Start of Selection&#xD;&#xA;&lt;/h1&gt;&lt;hr&gt;&#xA;&lt;p&gt;title: &amp;ldquo;Creator&amp;rsquo;s Toolkit&amp;rdquo;&#xA;description: &amp;ldquo;This is an example category&amp;rdquo;&#xA;slug: &amp;ldquo;creators-toolkit&amp;rdquo;  # Changed slug to lowercase and replaced spaces with hyphens for better URL formatting&#xA;image: &amp;ldquo;hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg&amp;rdquo;&#xA;style:&#xA;background: &amp;ldquo;#2a9d8f&amp;rdquo;&#xA;color: &amp;ldquo;#fff&amp;rdquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;end-of-selection&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#end-of-selection&#34;&gt;&lt;/a&gt;&#xD;&#xA;End of Selection&#xD;&#xA;&lt;/h1&gt;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>Knowledge Management</title>
+      <link>//localhost:1313/categories/knowledge-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/knowledge-management/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

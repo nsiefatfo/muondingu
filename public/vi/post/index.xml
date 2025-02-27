@@ -10,24 +10,10 @@
     <atom:link href="//localhost:1313/vi/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Choosing the Right AI Model for Personal Use on Local Devices</title>
-      <link>//localhost:1313/vi/post/choosing-the-right-ai-model-for-personal-use-on-local-devices/</link>
+      <link>//localhost:1313/vi/post/local-ai-models/</link>
       <pubDate>Thu, 27 Feb 2025 19:44:46 +0700</pubDate>
-      <guid>//localhost:1313/vi/post/choosing-the-right-ai-model-for-personal-use-on-local-devices/</guid>
+      <guid>//localhost:1313/vi/post/local-ai-models/</guid>
       <description>&lt;h1 id=&#34;chọn-mô-hình-ai-phù-hợp-cho-sử-dụng-cá-nhân-trên-thiết-bị-cục-bộ&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#ch%e1%bb%8dn-m%c3%b4-h%c3%acnh-ai-ph%c3%b9-h%e1%bb%a3p-cho-s%e1%bb%ad-d%e1%bb%a5ng-c%c3%a1-nh%c3%a2n-tr%c3%aan-thi%e1%ba%bft-b%e1%bb%8b-c%e1%bb%a5c-b%e1%bb%99&#34;&gt;&lt;/a&gt;&#xD;&#xA;Chọn Mô Hình AI Phù Hợp cho Sử Dụng Cá Nhân trên Thiết Bị Cục Bộ&#xD;&#xA;&lt;/h1&gt;</description>
-    </item>
-    <item>
-      <title>Finding Your Niche in the MMO Business</title>
-      <link>//localhost:1313/vi/post/2025-26-02-finding-your-niche-in-the-mmo-business/</link>
-      <pubDate>Wed, 26 Feb 2025 23:55:35 +0700</pubDate>
-      <guid>//localhost:1313/vi/post/2025-26-02-finding-your-niche-in-the-mmo-business/</guid>
-      <description>&lt;p&gt;2025 26 02 Finding Your Niche in the MMO Business&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Git</title>
-      <link>//localhost:1313/vi/post/git/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/vi/post/git/</guid>
-      <description>&lt;h2 id=&#34;git&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#git&#34;&gt;&lt;/a&gt;&#xD;&#xA;Git&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;        &lt;link rel=&#34;stylesheet&#34; href=&#34;//localhost:1313/css/vendors/admonitions.css&#34;&gt;&#xD;&#xA;  &lt;div class=&#34;admonition info&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;admonition-header&#34;&gt;&#xD;&#xA;      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z&#34;/&gt;&lt;/svg&gt;&#xD;&#xA;      &lt;span&gt;test&lt;/span&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;      &lt;div class=&#34;admonition-content&#34;&gt;&#xD;&#xA;        &lt;p&gt;what should i do with this?&lt;/p&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&lt;p&gt;I&amp;rsquo;ll explain Git workflow in simple terms, like you&amp;rsquo;re five! 🌟&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ẩn danh</title>
@@ -37,11 +23,11 @@
       <description>&lt;h3 id=&#34;hướng-dẫn-toàn-diện-về-việc-xuất-bản-nội-dung-ẩn-danh-và-an-toàn-trên-blog-và-mạng-xã-hội&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#h%c6%b0%e1%bb%9bng-d%e1%ba%abn-to%c3%a0n-di%e1%bb%87n-v%e1%bb%81-vi%e1%bb%87c-xu%e1%ba%a5t-b%e1%ba%a3n-n%e1%bb%99i-dung-%e1%ba%a9n-danh-v%c3%a0-an-to%c3%a0n-tr%c3%aan-blog-v%c3%a0-m%e1%ba%a1ng-x%c3%a3-h%e1%bb%99i&#34;&gt;&lt;/a&gt;&#xD;&#xA;Hướng dẫn toàn diện về việc xuất bản nội dung ẩn danh và an toàn trên blog và mạng xã hội&#xD;&#xA;&lt;/h3&gt;&lt;h4 id=&#34;điểm-chính&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%c4%91i%e1%bb%83m-ch%c3%adnh&#34;&gt;&lt;/a&gt;&#xD;&#xA;Điểm chính:&#xD;&#xA;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng &lt;strong&gt;pseudonyms&lt;/strong&gt;, &lt;strong&gt;anonymous emails&lt;/strong&gt; (ví dụ: ProtonMail), &lt;strong&gt;VPNs&lt;/strong&gt; (ví dụ: ExpressVPN), &lt;strong&gt;Tor browser&lt;/strong&gt;, và loại bỏ &lt;strong&gt;metadata&lt;/strong&gt; để đảm bảo ẩn danh về mặt kỹ thuật.&lt;/li&gt;&#xA;&lt;li&gt;Chọn các nền tảng như &lt;strong&gt;self-hosted WordPress&lt;/strong&gt; để có quyền riêng tư tốt hơn; &lt;strong&gt;social media&lt;/strong&gt; có rủi ro cao hơn do thu thập dữ liệu.&lt;/li&gt;&#xA;&lt;li&gt;Viết một cách trung lập, tránh tiết lộ thông tin cá nhân, và đánh giá rủi ro nội dung.&lt;/li&gt;&#xA;&lt;li&gt;Bảo mật tài khoản bằng mật khẩu mạnh, duyệt web ở chế độ &lt;strong&gt;private browsing&lt;/strong&gt;, và tách biệt danh tính trực tuyến và ngoại tuyến.&lt;/li&gt;&#xA;&lt;li&gt;Về mặt pháp lý, tránh &lt;strong&gt;defamation&lt;/strong&gt; và &lt;strong&gt;hate speech&lt;/strong&gt;; sử dụng quyền ẩn danh một cách có trách nhiệm.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;các-biện-pháp-kỹ-thuật&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#c%c3%a1c-bi%e1%bb%87n-ph%c3%a1p-k%e1%bb%b9-thu%e1%ba%adt&#34;&gt;&lt;/a&gt;&#xD;&#xA;Các biện pháp kỹ thuật&#xD;&#xA;&lt;/h4&gt;&lt;p&gt;Để xuất bản nội dung ẩn danh, hãy bắt đầu với các công cụ kỹ thuật sau:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>مثال نص</title>
+      <title>Placeholder Tags</title>
       <link>//localhost:1313/vi/post/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/vi/post/placeholder-text/</guid>
-      <description>&lt;h2 id=&#34;فقرة-1&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%d9%81%d9%82%d8%b1%d8%a9-1&#34;&gt;&lt;/a&gt;&#xD;&#xA;فقرة 1&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من &lt;a href=&#34;https://colorslab.com/textgator/&#34;&gt;مولد النص العربى&lt;/a&gt;، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.&#xA;إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.&#xA;ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.&#xA;هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.&lt;/p&gt;</description>
+      <description></description>
     </item>
   </channel>
 </rss>

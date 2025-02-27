@@ -47,19 +47,19 @@
                 href="//localhost:1313/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/post/choosing-the-right-ai-model-for-personal-use-on-local-devices/</loc>
+    <loc>//localhost:1313/post/local-ai-models/</loc>
     <lastmod>2025-02-27T19:44:40+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi-VN"
-                href="//localhost:1313/vi/post/choosing-the-right-ai-model-for-personal-use-on-local-devices/"
+                href="//localhost:1313/vi/post/local-ai-models/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="//localhost:1313/post/choosing-the-right-ai-model-for-personal-use-on-local-devices/"
+                href="//localhost:1313/post/local-ai-models/"
                 />
   </url><url>
     <loc>//localhost:1313/tags/genai/</loc>
@@ -146,31 +146,11 @@
     <lastmod>2025-02-26T23:55:32+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/categories/creators-stack/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/categories/creators-stack/"
-                />
   </url><url>
     <loc>//localhost:1313/post/2025-26-02-finding-your-niche-in-the-mmo-business/</loc>
     <lastmod>2025-02-26T23:55:32+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/post/2025-26-02-finding-your-niche-in-the-mmo-business/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/post/2025-26-02-finding-your-niche-in-the-mmo-business/"
-                />
   </url><url>
     <loc>//localhost:1313/tags/mmo/</loc>
     <lastmod>2025-02-26T23:55:32+07:00</lastmod>
@@ -181,46 +161,11 @@
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/tags/git/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/tags/git/"
-                />
   </url><url>
     <loc>//localhost:1313/post/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/post/git/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/post/git/"
-                />
-  </url><url>
-    <loc>//localhost:1313/tags/system-design/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/tags/system-design/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/tags/system-design/"
-                />
   </url><url>
     <loc>//localhost:1313/post/anonymous/</loc>
     <lastmod>2025-02-21T19:17:31+07:00</lastmod>
@@ -241,16 +186,61 @@
     <lastmod>2025-02-21T19:17:31+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/ethics/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/ethics/"
+                />
   </url><url>
     <loc>//localhost:1313/tags/ontology/</loc>
     <lastmod>2025-02-21T19:17:31+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/ontology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/ontology/"
+                />
   </url><url>
     <loc>//localhost:1313/tags/philosophy/</loc>
     <lastmod>2025-02-21T19:17:31+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/philosophy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/philosophy/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/system-design/</loc>
+    <lastmod>2025-02-21T19:17:31+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/system-design/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/system-design/"
+                />
   </url><url>
     <loc>//localhost:1313/resources/</loc>
     <lastmod>2023-08-20T00:00:00+00:00</lastmod>
@@ -301,26 +291,121 @@
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/ai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/ai/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/css/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/css/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/css/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/emoji/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/emoji/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/emoji/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/html/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/html/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/html/"
+                />
   </url><url>
     <loc>//localhost:1313/tags/markdown/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/markdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/markdown/"
+                />
   </url><url>
     <loc>//localhost:1313/tags/n8n/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/n8n/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/n8n/"
+                />
   </url><url>
     <loc>//localhost:1313/tags/obsidian/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/obsidian/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/obsidian/"
+                />
   </url><url>
     <loc>//localhost:1313/categories/paradigm-shift/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/categories/paradigm-shift/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/categories/paradigm-shift/"
+                />
   </url><url>
     <loc>//localhost:1313/post/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
@@ -337,25 +422,35 @@
                 href="//localhost:1313/post/placeholder-text/"
                 />
   </url><url>
+    <loc>//localhost:1313/tags/themes/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/themes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/themes/"
+                />
+  </url><url>
     <loc>//localhost:1313/tags/workflow/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url><url>
-    <loc>//localhost:1313/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>//localhost:1313/post/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>//localhost:1313/categories/knowledge-management/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/workflow/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/workflow/"
+                />
   </url><url>
     <loc>//localhost:1313/categories/creators-toolkit/</loc>
     <changefreq>daily</changefreq>
@@ -370,5 +465,9 @@
                 hreflang="en-US"
                 href="//localhost:1313/categories/creators-toolkit/"
                 />
+  </url><url>
+    <loc>//localhost:1313/categories/knowledge-management/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

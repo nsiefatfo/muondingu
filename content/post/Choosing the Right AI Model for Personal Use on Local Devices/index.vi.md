@@ -16,6 +16,7 @@ tags:
   - "Tools"
   - "LLM"
   - "Local"
+slug: "Local-AI-Models"
 ---
 # Chọn Mô Hình AI Phù Hợp cho Sử Dụng Cá Nhân trên Thiết Bị Cục Bộ
 <!--more-->

@@ -29,26 +29,5 @@
       <guid>//localhost:1313/vi/categories/creators-toolkit/</guid>
       <description>&lt;h1 id=&#34;start-of-selection&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#start-of-selection&#34;&gt;&lt;/a&gt;&#xD;&#xA;Start of Selection&#xD;&#xA;&lt;/h1&gt;&lt;hr&gt;&#xA;&lt;p&gt;title: &amp;ldquo;Creator&amp;rsquo;s Toolkit&amp;rdquo;&#xA;description: &amp;ldquo;This is an example category&amp;rdquo;&#xA;slug: &amp;ldquo;creators-toolkit&amp;rdquo;  # Changed slug to lowercase and replaced spaces with hyphens for better URL formatting&#xA;image: &amp;ldquo;hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg&amp;rdquo;&#xA;style:&#xA;background: &amp;ldquo;#2a9d8f&amp;rdquo;&#xA;color: &amp;ldquo;#fff&amp;rdquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;end-of-selection&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#end-of-selection&#34;&gt;&lt;/a&gt;&#xD;&#xA;End of Selection&#xD;&#xA;&lt;/h1&gt;&lt;hr&gt;</description>
     </item>
-    <item>
-      <title>Creator&#39;s Stack</title>
-      <link>//localhost:1313/vi/categories/creators-stack/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/vi/categories/creators-stack/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>تجربة</title>
-      <link>//localhost:1313/vi/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/vi/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>تجربة مع فراغات</title>
-      <link>//localhost:1313/vi/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/vi/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
