@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Optimize. Automate. Gamify.</description>
     <generator>Hugo</generator>
     <language>vi-VN</language>
-    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2025 19:44:46 +0700</lastBuildDate>
     <atom:link href="//localhost:1313/vi/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GenAI</title>
+      <link>//localhost:1313/vi/tags/genai/</link>
+      <pubDate>Thu, 27 Feb 2025 19:44:46 +0700</pubDate>
+      <guid>//localhost:1313/vi/tags/genai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>//localhost:1313/vi/tags/llm/</link>
+      <pubDate>Thu, 27 Feb 2025 19:44:46 +0700</pubDate>
+      <guid>//localhost:1313/vi/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Local</title>
+      <link>//localhost:1313/vi/tags/local/</link>
+      <pubDate>Thu, 27 Feb 2025 19:44:46 +0700</pubDate>
+      <guid>//localhost:1313/vi/tags/local/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>//localhost:1313/vi/tags/tools/</link>
+      <pubDate>Thu, 27 Feb 2025 19:44:46 +0700</pubDate>
+      <guid>//localhost:1313/vi/tags/tools/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Git</title>
       <link>//localhost:1313/vi/tags/git/</link>

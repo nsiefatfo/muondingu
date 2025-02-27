@@ -6,20 +6,20 @@
     <description>Recent content in Categories on Optimize. Automate. Gamify.</description>
     <generator>Hugo</generator>
     <language>vi-VN</language>
-    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2025 19:44:46 +0700</lastBuildDate>
     <atom:link href="//localhost:1313/vi/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation</title>
+      <link>//localhost:1313/vi/categories/automation/</link>
+      <pubDate>Thu, 27 Feb 2025 19:44:46 +0700</pubDate>
+      <guid>//localhost:1313/vi/categories/automation/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Creator&#39;s Stack</title>
       <link>//localhost:1313/vi/categories/creators-stack/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/vi/categories/creators-stack/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Automation</title>
-      <link>//localhost:1313/vi/categories/automation/</link>
-      <pubDate>Fri, 21 Feb 2025 19:17:31 +0700</pubDate>
-      <guid>//localhost:1313/vi/categories/automation/</guid>
       <description></description>
     </item>
     <item>
@@ -41,7 +41,7 @@
       <link>//localhost:1313/vi/categories/creators-toolkit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/vi/categories/creators-toolkit/</guid>
-      <description>&lt;h1 id=&#34;start-of-selection&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#start-of-selection&#34;&gt;&lt;/a&gt;&#xD;&#xA;Start of Selection&#xD;&#xA;&lt;/h1&gt;&lt;hr&gt;&#xA;&lt;p&gt;title: &amp;ldquo;Creator&amp;rsquo;s Stack&amp;rdquo;&#xA;description: &amp;ldquo;This is an example category&amp;rdquo;&#xA;slug: &amp;ldquo;Blog-Stack&amp;rdquo;  # Changed slug to lowercase and replaced spaces with hyphens for better URL formatting&#xA;image: &amp;ldquo;hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg&amp;rdquo;&#xA;style:&#xA;background: &amp;ldquo;#2a9d8f&amp;rdquo;&#xA;color: &amp;ldquo;#fff&amp;rdquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;end-of-selection&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#end-of-selection&#34;&gt;&lt;/a&gt;&#xD;&#xA;End of Selection&#xD;&#xA;&lt;/h1&gt;&lt;hr&gt;</description>
+      <description>&lt;h1 id=&#34;start-of-selection&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#start-of-selection&#34;&gt;&lt;/a&gt;&#xD;&#xA;Start of Selection&#xD;&#xA;&lt;/h1&gt;&lt;hr&gt;&#xA;&lt;p&gt;title: &amp;ldquo;Creator&amp;rsquo;s Toolkit&amp;rdquo;&#xA;description: &amp;ldquo;This is an example category&amp;rdquo;&#xA;slug: &amp;ldquo;creators-toolkit&amp;rdquo;  # Changed slug to lowercase and replaced spaces with hyphens for better URL formatting&#xA;image: &amp;ldquo;hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg&amp;rdquo;&#xA;style:&#xA;background: &amp;ldquo;#2a9d8f&amp;rdquo;&#xA;color: &amp;ldquo;#fff&amp;rdquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;end-of-selection&#34;&gt;&#xD;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#end-of-selection&#34;&gt;&lt;/a&gt;&#xD;&#xA;End of Selection&#xD;&#xA;&lt;/h1&gt;&lt;hr&gt;</description>
     </item>
   </channel>
 </rss>

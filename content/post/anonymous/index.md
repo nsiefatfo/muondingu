@@ -6,10 +6,6 @@ categories = ["Automation"]
 tags = ["philosophy", "ethics", "system design", "ontology"]
 +++
 
-![test](/images/gojocat.png)
-![test2](test2.jpg)
-![test3](/1358788.png)
-
 # Key Points for Anonymous and Safe Content Publishing
 
 - Use pseudonyms, anonymous emails (e.g., ProtonMail), VPNs (e.g., ExpressVPN), Tor browser, and remove metadata for technical anonymity.

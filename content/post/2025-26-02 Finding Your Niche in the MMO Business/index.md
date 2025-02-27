@@ -12,8 +12,8 @@ mermaid: false
 categories:
   - Creator's Stack
 tags:
-  - MMO
-  - Business
+  - "MMO"
+  - "Business"
 ---
 **Finding Your Niche in the MMO Business**
 <!--more-->

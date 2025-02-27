@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2025-02-26T23:55:32+07:00</lastmod>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link
@@ -17,13 +17,23 @@
                 href="//localhost:1313/"
                 />
   </url><url>
-    <loc>//localhost:1313/tags/business/</loc>
-    <lastmod>2025-02-26T23:55:32+07:00</lastmod>
+    <loc>//localhost:1313/categories/automation/</loc>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/categories/automation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/categories/automation/"
+                />
   </url><url>
     <loc>//localhost:1313/categories/</loc>
-    <lastmod>2025-02-26T23:55:32+07:00</lastmod>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link
@@ -36,6 +46,101 @@
                 hreflang="en-US"
                 href="//localhost:1313/categories/"
                 />
+  </url><url>
+    <loc>//localhost:1313/post/choosing-the-right-ai-model-for-personal-use-on-local-devices/</loc>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/post/choosing-the-right-ai-model-for-personal-use-on-local-devices/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/post/choosing-the-right-ai-model-for-personal-use-on-local-devices/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/genai/</loc>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/genai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/genai/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/llm/</loc>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/llm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/llm/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/local/</loc>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/local/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/local/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/tools/</loc>
+    <lastmod>2025-02-27T19:44:40+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi-VN"
+                href="//localhost:1313/vi/tags/tools/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tags/tools/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tags/business/</loc>
+    <lastmod>2025-02-26T23:55:32+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/categories/creators-stack/</loc>
     <lastmod>2025-02-26T23:55:32+07:00</lastmod>
@@ -71,21 +176,6 @@
     <lastmod>2025-02-26T23:55:32+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2025-02-26T23:55:32+07:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/tags/"
-                />
   </url><url>
     <loc>//localhost:1313/tags/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
@@ -145,21 +235,6 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="//localhost:1313/post/anonymous/"
-                />
-  </url><url>
-    <loc>//localhost:1313/categories/automation/</loc>
-    <lastmod>2025-02-21T19:17:31+07:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/categories/automation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/categories/automation/"
                 />
   </url><url>
     <loc>//localhost:1313/tags/ethics/</loc>
@@ -261,11 +336,6 @@
                 hreflang="en-US"
                 href="//localhost:1313/post/placeholder-text/"
                 />
-  </url><url>
-    <loc>//localhost:1313/tags/tools/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/tags/workflow/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
