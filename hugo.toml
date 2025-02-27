@@ -52,3 +52,9 @@ weight = 2
   [[module.mounts]]
     source = "layouts"
     target = "layouts"
+
+[sitemap]
+  changeFreq = 'daily'
+  disable = false
+  filename = 'sitemap.xml'
+  priority = 0.8

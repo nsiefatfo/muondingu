@@ -4,6 +4,8 @@
   <url>
     <loc>//localhost:1313/vi/</loc>
     <lastmod>2025-02-26T23:55:35+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -17,6 +19,8 @@
   </url><url>
     <loc>//localhost:1313/vi/post/2025-26-02-finding-your-niche-in-the-mmo-business/</loc>
     <lastmod>2025-02-26T23:55:35+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -30,9 +34,13 @@
   </url><url>
     <loc>//localhost:1313/vi/post/</loc>
     <lastmod>2025-02-26T23:55:35+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -46,6 +54,8 @@
   </url><url>
     <loc>//localhost:1313/vi/categories/creators-stack/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -59,6 +69,8 @@
   </url><url>
     <loc>//localhost:1313/vi/tags/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -72,6 +84,8 @@
   </url><url>
     <loc>//localhost:1313/vi/post/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -85,6 +99,8 @@
   </url><url>
     <loc>//localhost:1313/vi/tags/system-design/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -98,6 +114,8 @@
   </url><url>
     <loc>//localhost:1313/vi/tags/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -111,6 +129,8 @@
   </url><url>
     <loc>//localhost:1313/vi/categories/automation/</loc>
     <lastmod>2025-02-21T19:17:31+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -124,6 +144,8 @@
   </url><url>
     <loc>//localhost:1313/vi/post/anonymous/</loc>
     <lastmod>2025-02-21T19:17:31+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -137,6 +159,8 @@
   </url><url>
     <loc>//localhost:1313/vi/resources/</loc>
     <lastmod>2023-08-20T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -150,6 +174,8 @@
   </url><url>
     <loc>//localhost:1313/vi/archives/</loc>
     <lastmod>2022-07-26T21:46:25+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -163,6 +189,8 @@
   </url><url>
     <loc>//localhost:1313/vi/about/</loc>
     <lastmod>2022-06-09T20:12:52+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -176,15 +204,23 @@
   </url><url>
     <loc>//localhost:1313/vi/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/vi/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/vi/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/vi/post/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -198,11 +234,17 @@
   </url><url>
     <loc>//localhost:1313/vi/tags/%D9%86%D8%B5/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/vi/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/vi/categories/creators-toolkit/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
