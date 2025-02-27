@@ -54,10 +54,6 @@
   window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"Copyright of this article： All articles on this blog, except those with a special declaration, are licensed under the BY-NC-SA license. Please indicate the source when reprinting!\",\"count\":50,\"enable\":true},\"fail\":\"Ehh!?? (ﾟ⊿ﾟ)ﾂ\",\"success\":\"Copied!(*^▽^*)\"},\"code_block\":{\"expand\":true},\"icon_font\":false,\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
 </script>
 
-<script>
-  window.siteConfig.swPath = '\/sw.js';
-</script>
-
 
 
 
@@ -782,28 +778,15 @@
 
 
 
-  
-
-
-
-
-
-  
-      
-        
-      
-
-  
-
-
-
-
-
-  
-      
-      <script src="/js/service_worker.js" ></script>
-      
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script>
 
 
 <script>

@@ -476,7 +476,7 @@ quicklink:
 
 # Experimental
 service_worker:
-  enable: true
+  enable: false
 
 # Experimental
 live2d:

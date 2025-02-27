@@ -57,10 +57,6 @@
   window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"Copyright of this article： All articles on this blog, except those with a special declaration, are licensed under the BY-NC-SA license. Please indicate the source when reprinting!\",\"count\":50,\"enable\":true},\"fail\":\"Ehh!?? (ﾟ⊿ﾟ)ﾂ\",\"success\":\"Copied!(*^▽^*)\"},\"code_block\":{\"expand\":true},\"icon_font\":false,\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
 </script>
 
-<script>
-  window.siteConfig.swPath = '\/sw.js';
-</script>
-
 
 
 
@@ -292,15 +288,6 @@
 <div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
 </div>
 
-
-  <div class="notification-wrapper">
-    <h1>New version found</h1>
-    <p>The website seems to have new content, do you want to update?</p>
-    <div class="notification-btn">
-      <button id="notification-update-btn">Update</button>
-      <button id="notification-close-btn">Cancel</button>
-    </div>
-  </div>
 
 
 
@@ -1090,7 +1077,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         
           <img
-            data-src="http://localhost:1313/images/rbanner/giyu.png"
+            data-src="http://localhost:1313/images/rbanner/yuii.png"
             data-sizes="auto"
             alt="Choosing the Right AI Model for Personal Use on Local Devices"
             class="lazyload"
@@ -1160,7 +1147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         
           <img
-            data-src="http://localhost:1313/images/rbanner/yuii.png"
+            data-src="http://localhost:1313/images/rbanner/giyu.png"
             data-sizes="auto"
             alt="Finding Your Niche in the MMO Business"
             class="lazyload"
@@ -1230,7 +1217,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         
           <img
-            data-src="http://localhost:1313/images/rbanner/giyu.png"
+            data-src="http://localhost:1313/images/rbanner/cherino.png"
             data-sizes="auto"
             alt="Git"
             class="lazyload"
@@ -1390,7 +1377,7 @@ I&rsquo;ll explain Git workflow in simple terms, like you&rsquo;re five! 🌟
         
         
           <img
-            data-src="http://localhost:1313/images/rbanner/17oxz7eqfifa1.png"
+            data-src="http://localhost:1313/images/rbanner/cherino.png"
             data-sizes="auto"
             alt="Placeholder Tags"
             class="lazyload"
@@ -2082,28 +2069,15 @@ I&rsquo;ll explain Git workflow in simple terms, like you&rsquo;re five! 🌟
 
 
 
-  
-
-
-
-
-
-  
-      
-        
-      
-
-  
-
-
-
-
-
-  
-      
-      <script src="/js/service_worker.js" ></script>
-      
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script>
 
 
 <script>

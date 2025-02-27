@@ -4,19 +4,16 @@ date: 2025-02-23
 categories:
     - Creator's Stack
 tags:
-    - Git   
-    - System Design
+    - "Git"   
+    - "Tools"
 ---
+
+> [!info] BASIC BLOG'S CONTENT MANAGEMENT WITH GIT
 
 ## Git
 
-> [!info] test
-> what should i do with this?
-
-I'll explain Git workflow in simple terms, like you're five! 🌟
-
 ### 1. Your Local Repository (Like Your Toy Box) 📦
-Think of your local repository (C:\Users\nneko\muondingu) as your toy box. It has three main areas:
+Think of your local repository (C:\Users\`your-username`\`your-repository`) as your toy box. It has three main areas:
 - **Working Directory**: Where you play with your toys (make changes to files)
 - **Staging Area**: Where you put toys you want to keep (staged changes)
 - **Local Repository**: Your toy box where you store toys properly (committed changes)

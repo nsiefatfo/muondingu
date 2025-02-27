@@ -56,10 +56,6 @@
   window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"Copyright of this article： All articles on this blog, except those with a special declaration, are licensed under the BY-NC-SA license. Please indicate the source when reprinting!\",\"count\":50,\"enable\":true},\"fail\":\"Ehh!?? (ﾟ⊿ﾟ)ﾂ\",\"success\":\"Copied!(*^▽^*)\"},\"code_block\":{\"expand\":true},\"icon_font\":false,\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
 </script>
 
-<script>
-  window.siteConfig.swPath = '\/sw.js';
-</script>
-
 
 
 
@@ -292,15 +288,6 @@
 <div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
 </div>
 
-
-  <div class="notification-wrapper">
-    <h1>Phiên bản mới được tìm thấy</h1>
-    <p>Trang web dường như có nội dung mới, bạn có muốn cập nhật không?</p>
-    <div class="notification-btn">
-      <button id="notification-update-btn">Cập nhật</button>
-      <button id="notification-close-btn">Hủy</button>
-    </div>
-  </div>
 
 
 
@@ -832,17 +819,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <a class="header-anchor" href="#git"></a>
 Git
 </h2>
-        <link rel="stylesheet" href="/css/vendors/admonitions.css">
   <div class="admonition info">
     <div class="admonition-header">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
-      <span>test</span>
+      <span>BASIC BLOG&rsquo;S CONTENT MANAGEMENT WITH GIT</span>
     </div>
-      <div class="admonition-content">
-        <p>what should i do with this?</p>
-      </div>
   </div>
-<p>I&rsquo;ll explain Git workflow in simple terms, like you&rsquo;re five! 🌟</p>
 <h3 id="1-your-local-repository-like-your-toy-box-">
 <a class="header-anchor" href="#1-your-local-repository-like-your-toy-box-"></a>
 1. Your Local Repository (Like Your Toy Box) 📦
@@ -889,8 +871,7 @@ Basic Workflow Commands 🎮
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status
 </span></span></code></pre></div><p>Let&rsquo;s check what&rsquo;s in your themes folder since we saw changes there earlier:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls themes
-</span></span></code></pre></div><p>Now, let me explain how to manage your repository step by step:</p>
-<h2 id="daily-workflow-">
+</span></span></code></pre></div><h2 id="daily-workflow-">
 <a class="header-anchor" href="#daily-workflow-"></a>
 Daily Workflow 📅
 </h2><ol>
@@ -1174,7 +1155,7 @@ Save File Safety 🛡️
           
           
             <img
-              data-src="http://localhost:1313/images/rbanner/giyu2.png"
+              data-src="http://localhost:1313/images/rbanner/buf.png"
               data-sizes="auto"
               alt="Ẩn danh"
               class="lazyload"
@@ -1197,7 +1178,7 @@ Save File Safety 🛡️
           
           
             <img
-              data-src="http://localhost:1313/images/rbanner/banner.png"
+              data-src="http://localhost:1313/images/rbanner/klee.png"
               data-sizes="auto"
               alt="Finding Your Niche in the MMO Business"
               class="lazyload"
@@ -1272,7 +1253,7 @@ Save File Safety 🛡️
       <div>
         <span class="icon-brush"
           >&nbsp;
-            2.5k
+            2.1k
           </span
         >
         &nbsp;|&nbsp;
@@ -1280,7 +1261,7 @@ Save File Safety 🛡️
           
           
 
-          00:14
+          00:11
         </span>
       </div>
     
@@ -1937,7 +1918,7 @@ document.addEventListener('DOMContentLoaded', function() {
           author: "Muondingu",
           title: "Git",
           url: "\/\/localhost:1313\/vi\/post\/git\/",
-          description: "\rGit\rtest\rwhat should i do with this?\nI\u0026rsquo;ll explain Git workflow in simple terms, like you\u0026rsquo;re five! 🌟\n",
+          description: "\rGit\rBASIC BLOG\u0026rsquo;S CONTENT MANAGEMENT WITH GIT\r1. Your Local Repository (Like Your Toy Box) 📦\rThink of your local repository (C:\\Users\\nneko\\muondingu) as your toy box. It has three main areas:\n",
           cover: "\/\/localhost:1313\/abstract-fantasy-landscape-with-color-year-purple-tones.webp",
         };
       </script>
@@ -2029,28 +2010,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  
-
-
-
-
-
-  
-      
-        
-      
-
-  
-
-
-
-
-
-  
-      
-      <script src="/js/service_worker.js" ></script>
-      
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script>
 
 
 <script>

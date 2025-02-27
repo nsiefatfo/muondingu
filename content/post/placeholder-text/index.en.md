@@ -5,18 +5,24 @@ description: "Lorem Ipsum Dolor Si Amet"
 categories:
   - "Paradigm-Shift"
 tags:
-  - markdown
-  - obsidian
-  - n8n
-  - tools
-  - philosophy
-  - AI
-  - ethics
-  - workflow
-  - 
+  - "markdown"
+  - "obsidian"
+  - "n8n"
+  - "tools"
+  - "philosophy"
+  - "AI"
+  - "ethics"
+  - "workflow"
+  - "emoji"
+  - "system-design"
+  - "ontology"
+  - "tools"
+  - "css"
+  - "html"
+  - "themes"
+  - "GenAI"
 image: "matt-le-SJSpo9hQf7s-unsplash.jpg"
-translationKey:
-  - "about"
+
 ---
 
 

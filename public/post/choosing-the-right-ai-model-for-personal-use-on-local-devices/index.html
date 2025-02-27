@@ -56,10 +56,6 @@
   window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"Copyright of this article： All articles on this blog, except those with a special declaration, are licensed under the BY-NC-SA license. Please indicate the source when reprinting!\",\"count\":50,\"enable\":true},\"fail\":\"Ehh!?? (ﾟ⊿ﾟ)ﾂ\",\"success\":\"Copied!(*^▽^*)\"},\"code_block\":{\"expand\":true},\"icon_font\":false,\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
 </script>
 
-<script>
-  window.siteConfig.swPath = '\/sw.js';
-</script>
-
 
 
 
@@ -292,15 +288,6 @@
 <div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
 </div>
 
-
-  <div class="notification-wrapper">
-    <h1>New version found</h1>
-    <p>The website seems to have new content, do you want to update?</p>
-    <div class="notification-btn">
-      <button id="notification-update-btn">Update</button>
-      <button id="notification-close-btn">Cancel</button>
-    </div>
-  </div>
 
 
 
@@ -669,7 +656,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   
     
-  
+      
     
   
     
@@ -677,10 +664,191 @@ document.addEventListener('DOMContentLoaded', function() {
     
   
     
-  
+      
     
   
 
+  
+    <div class="sidebar-related">
+      <h3 class="sidebar-related-title">Related Posts</h3>
+      <div class="sidebar-related-posts">
+        
+          
+          
+          <div class="sidebar-related-item" data-aos="fade-left">
+            <a href="/post/git/" class="sidebar-related-link" title="Git">
+              <div class="sidebar-related-cover">
+                
+                  
+                  
+                    <img
+                      data-src="http://localhost:1313/images/rbanner/giyu2.png"
+                      data-sizes="auto"
+                      alt="Git"
+                      class="lazyload"
+                    />
+                  
+                
+              </div>
+              <div class="sidebar-related-info">
+                <div class="sidebar-related-title">Git</div>
+                <div class="sidebar-related-date">2025-02-23</div>
+              </div>
+            </a>
+          </div>
+        
+          
+          
+          <div class="sidebar-related-item" data-aos="fade-left">
+            <a href="/post/placeholder-text/" class="sidebar-related-link" title="Placeholder Tags">
+              <div class="sidebar-related-cover">
+                
+                  
+                  
+                    <img
+                      data-src="http://localhost:1313/images/rbanner/banner.png"
+                      data-sizes="auto"
+                      alt="Placeholder Tags"
+                      class="lazyload"
+                    />
+                  
+                
+              </div>
+              <div class="sidebar-related-info">
+                <div class="sidebar-related-title">Placeholder Tags</div>
+                <div class="sidebar-related-date">2019-03-09</div>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+      <div class="related-tags">
+        
+          <a href="//localhost:1313/tags/genai" class="related-tag">
+            GENAI
+          </a>
+        
+          <a href="//localhost:1313/tags/tools" class="related-tag">
+            TOOLS
+          </a>
+        
+          <a href="//localhost:1313/tags/llm" class="related-tag">
+            LLM
+          </a>
+        
+          <a href="//localhost:1313/tags/local" class="related-tag">
+            LOCAL
+          </a>
+        
+      </div>
+    </div>
+
+    <style>
+    .sidebar-related {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      background: var(--color-wrap);
+      border-radius: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--color-meta-shadow);
+    }
+
+    .related-tag {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      border-radius: 10px;
+      background: rgba(var(--color-link-rgb), 0.1);
+      color: var(--color-link);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .related-tag:hover {
+      background: rgba(var(--color-link-rgb), 0.2);
+      transform: translateY(-1px);
+    }
+
+    .sidebar-related-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: var(--color-text);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-meta-shadow);
+    }
+
+    .sidebar-related-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .sidebar-related-item {
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-related-item:hover {
+      transform: translateX(5px);
+    }
+
+    .sidebar-related-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      width: 100%;
+    }
+
+    .sidebar-related-cover {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .sidebar-related-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-related-info {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .sidebar-related-info .sidebar-related-title {
+      font-size: 0.85rem;
+      margin: 0;
+      padding: 0;
+      border: none;
+      color: var(--color-text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .sidebar-related-date {
+      font-size: 0.75rem;
+      color: var(--color-meta);
+      margin-top: 0.2rem;
+    }
+    </style>
   
  
           
@@ -817,7 +985,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <a class="header-anchor" href="#choosing-the-right-ai-model-for-personal-use-on-local-devices"></a>
 Choosing the Right AI Model for Personal Use on Local Devices
 </h1>
-        <link rel="stylesheet" href="/css/vendors/admonitions.css">
   <div class="admonition info">
     <div class="admonition-header">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
@@ -992,9 +1159,9 @@ Conclusion
           
           
             <img
-              data-src="http://localhost:1313/images/rbanner/hollowk.png"
+              data-src="http://localhost:1313/images/rbanner/buf.png"
               data-sizes="auto"
-              alt="Finding Your Niche in the MMO Business"
+              alt="Finding Your Niche in the MMO World"
               class="lazyload"
             />
           
@@ -1003,7 +1170,7 @@ Conclusion
         <div class="article-nav-caption">Newer</div>
         <h3 class="article-nav-title">
           
-            Finding Your Niche in the MMO Business
+            Finding Your Niche in the MMO World
           
         </h3>
       </div>
@@ -1050,9 +1217,6 @@ Conclusion
   
   
 
-  
-  
-
 
 
 <footer id="footer">
@@ -1072,7 +1236,7 @@ Conclusion
       <div>
         <span class="icon-brush"
           >&nbsp;
-            4.4k
+            4.3k
           </span
         >
         &nbsp;|&nbsp;
@@ -1080,7 +1244,7 @@ Conclusion
           
           
 
-          00:24
+          00:23
         </span>
       </div>
     
@@ -1812,28 +1976,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  
-
-
-
-
-
-  
-      
-        
-      
-
-  
-
-
-
-
-
-  
-      
-      <script src="/js/service_worker.js" ></script>
-      
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script>
 
 
 <script>
