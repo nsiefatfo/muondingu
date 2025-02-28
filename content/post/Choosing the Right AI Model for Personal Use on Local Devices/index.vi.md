@@ -40,7 +40,9 @@ Quantization đóng vai trò quan trọng trong việc cân bằng giữa hiệu
 - Quantization Q4 thường mang lại sự cân bằng tối ưu giữa kích thước mô hình và độ chính xác  
 - Khi chọn mức quantization, cần xem xét thông số phần cứng và yêu cầu hiệu suất của bạn  
 
-Để xác định mức quantization phù hợp với phần cứng của mình, bạn có thể tham khảo công cụ [Can I Run This LLM](https://canirunthisllm.com/). Công cụ này hỗ trợ tính toán mức quantization tối đa có thể sử dụng trên GPU của Nvidia, AMD và Apple.  
+Để xác định mức quantization phù hợp với phần cứng của mình, bạn có thể tham khảo công cụ [Can I Run This LLM](https://canirunthisllm.com/){target="_blank" rel="noopener noreferrer"}. Công cụ này hỗ trợ tính toán mức quantization tối đa có thể sử dụng trên GPU của Nvidia, AMD và Apple.   [Visit Example](https://example.com){target="_blank" rel="noopener noreferrer"}
+
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Visit Example</a>
 
 ## Cân Nhắc về Kích Thước Mô Hình  
 

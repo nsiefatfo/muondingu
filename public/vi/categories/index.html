@@ -237,13 +237,6 @@
 
 
 
-
-  <link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" />
-
-
-
-
-
   </head>
   <body>
     
@@ -392,24 +385,6 @@
             >
           <aside id="sidebar">
   
-  
-    <meting-js
-      theme="var(--color-link)"
-      id="9102128200"
-      server="netease"
-      type="playlist"
-      
-      fixed="false"
-      autoplay="false"
-      
-      order="random"
-      preload="true"
-      volume="0.3"
-      mutex="true"
-      list-folded="true"
-      lrc-type="0"
-      >
-    </meting-js>
   
   
   <div class="sidebar-wrapper ">
@@ -961,7 +936,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div>
         <span class="icon-brush"
           >&nbsp;
-            1.2k
+            1.3k
           </span
         >
         &nbsp;|&nbsp;
@@ -1622,47 +1597,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-  
 
-  
-  
-  
-  
-  
-  
-  <script
-    src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js"
-    
-    
-    
-    
-    integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr&#43;h5UfruuRL/aORyw&#43;5&#43;HZoU6e" crossorigin="anonymous"
-  ></script>
-
-
-  
-
-
-
-  
-
-  
-  
-  
-  
-  
-  
-  <script
-    src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js"
-    
-    
-    
-    
-    integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8&#43;0maanw1S/IyB&#43;Y4JG&#43;ZDU7GpKE8" crossorigin="anonymous"
-  ></script>
-
-
-  
 
     
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
@@ -1777,6 +1712,636 @@ document.addEventListener('DOMContentLoaded', function() {
    
 }
 </style>
+    
+
+<div id="youtube-player-container" class="yt-player">
+    <div class="player-body">
+      <div class="player-thumbnail">
+        
+        <img id="current-thumbnail" src="/api/placeholder/400/320" alt="Video thumbnail">
+      </div>
+      
+      <div class="player-info">
+        <div class="player-music">
+          <span id="current-track-title" class="player-title">No track selected</span>
+          <span class="player-author"></span>
+        </div>
+        
+        <div class="player-controller">
+          <div class="player-controls player-bar-wrap">
+            <button id="prev-button" class="player-icon control-button">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path d="M689.92 128l0 768-384-384z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button id="play-pause-button" class="player-icon control-button">
+              <svg class="icon play" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path d="M512 128l0 768-384-384z" fill="currentColor"></path>
+              </svg>
+              <svg class="icon pause" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="display:none">
+                <path d="M256 128h192v768H256zM576 128h192v768H576z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button id="next-button" class="player-icon control-button">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path d="M334.08 128l384 384-384 384z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <div class="volume-control player-volume-wrap">
+              <button class="player-icon volume-btn">
+                <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <path d="M512.036 128.036l0 767.96-288-288.032 288 0.032z" fill="currentColor"></path>
+                  <path d="M640 229.084l0 565.904q23.986-18.022 43.994-40.982t34.048-49.024 23.040-56.986 8.038-64q0-32-8.038-64t-23.040-57.024-34.048-48.96-43.994-41.028z" fill="currentColor"></path>
+                </svg>
+              </button>
+              <div class="player-volume-bar">
+                <input type="range" id="volume-slider" min="0" max="100" value="70" class="player-volume">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="playlist-toggle-container">
+      <button id="toggle-playlist" class="playlist-toggle-btn">
+        <span>Show Playlist</span>
+        <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="player-list" style="display: none">
+      <ol id="playlist" class="track-list">
+        <li class="loading-message player-list-light">
+          <span class="player-list-cur"></span>
+          <span class="player-list-title">Select a song</span>
+        </li>
+      </ol>
+    </div>
+    
+    <style>
+      :root {
+        --color-wrap: #f5f5f5;
+        --color-link: #2196f3;
+        --color-h2-border: #e0e0e0;
+        --color-hover-shadow: #e9e9e9;
+        --post-radius: 8px;
+        --font-basic: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      
+      .yt-player {
+        margin: 0 0 calc(var(--spacing-unit) * 2.5) !important;
+        border-radius: var(--post-radius) !important;
+        background: var(--color-wrap) !important;
+        transition: all 0.3s;
+        font-family: var(--font-basic) !important;
+        max-width: clamp(20rem, 50vw, 25rem);  
+        margin: 0 auto;
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      
+      .yt-player button, .yt-player .player-icon {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        transition: all 0.2s;
+        color: #666;
+      }
+      
+      .yt-player button:hover, .yt-player .player-icon:hover {
+        color: var(--color-link) !important;
+      }
+      
+      .yt-player button:hover path, .yt-player .player-icon:hover path {
+        fill: var(--color-link) !important;
+      }
+      
+      .player-body {
+        display: flex;
+        padding: 15px;
+      }
+      
+      .player-thumbnail {
+        position: relative;
+        width: 6rem;  
+        height: 4.25rem;  
+        flex-shrink: 0;
+        margin-right: var(--spacing-unit);
+        border-radius: var(--post-radius);
+        overflow: hidden;
+        }
+      
+      #current-thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .player-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 5px;
+      }
+      
+      .player-music {
+        margin-bottom: 15px;
+      }
+      
+      .player-title {
+        font-size: 16px;
+        color: var(--color-link) !important;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      
+      .player-author {
+        font-size: 14px;
+        color: #999;
+      }
+      
+      .player-controls, .player-controller {
+        display: flex;
+        align-items: center;
+      }
+      
+      .player-bar-wrap {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+      }
+      
+      .volume-control, .player-volume-wrap {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+      }
+      
+      .player-volume-bar {
+        width: 80px;
+        margin-left: 5px;
+      }
+      
+      #volume-slider, .player-volume {
+        width: 100%;
+        height: 6px;
+        appearance: none;
+        background: #4b81f5;
+        border-radius: 3px;
+        outline: none;
+      }
+      
+      #volume-slider::-webkit-slider-thumb, .player-volume::-webkit-slider-thumb {
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background-color: var(--color-link);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      
+       
+      .playlist-toggle-container {
+        padding: 8px 15px;
+        border-top: 1px solid var(--color-h2-border) !important;
+      }
+      
+      .playlist-toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 8px 12px;
+        background-color: var(--color-hover-shadow);
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        color: var(--color-link);
+        transition: all 0.2s;
+      }
+      
+      .playlist-toggle-btn:hover {
+        background-color: var(--color-hover-shadow);
+        opacity: 0.8;
+      }
+      
+      .dropdown-icon {
+        transition: transform 0.2s;
+      }
+      
+      .dropdown-icon.active {
+        transform: rotate(180deg);
+      }
+      
+      .player-list {
+        max-height: 250px;
+        overflow-y: auto;
+        border-top: 1px solid var(--color-h2-border) !important;
+        background: var(--color-wrap);
+        transition: all .3s;
+      }
+      
+      .player-list ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .player-list ol li {
+        padding: 10px 15px;
+        cursor: pointer;
+        position: relative;
+        transition: all .3s;
+        border-top: 1px solid var(--color-h2-border) !important;
+        display: flex;
+        align-items: center;
+      }
+      
+      .player-list ol li:first-child {
+        border-top: none !important;
+      }
+      
+      .player-list-cur {
+        width: 3px;
+        height: 22px;
+        background-color: var(--color-link);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+      }
+      
+      .player-list-light .player-list-cur {
+        display: block;
+      }
+      
+      .player-list ol li.player-list-light {
+        background: var(--color-hover-shadow) !important;
+      }
+      
+      .player-list ol li:hover {
+        background: var(--color-hover-shadow) !important;
+      }
+      
+      .player-list-title {
+        color: var(--color-link) !important;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      
+      .loading-message {
+        text-align: center;
+        padding: 20px;
+        font-style: italic;
+        color: #666;
+      }
+      
+       
+      .player-fixed {
+        position: fixed;
+        bottom: unset;
+        left: 50%; 
+        top: 0;
+        transform: translateX(-50%);  
+        width: 400px;  
+        margin: 0 !important;
+        z-index: 99;
+        max-width: 100%;  
+        max-height: 50%;
+        border-radius: 0 !important;
+      }
+      
+      .player-fixed .player-body {
+        background: var(--color-wrap) !important;
+        transition: all .3s;
+      }
+      
+      .player-fixed .player-info {
+        transition: all .3s;
+        border-top: 1px solid var(--color-h2-border) !important;
+      }
+      
+      .player-fixed .player-list {
+        border: 1px solid var(--color-h2-border) !important;
+        transition: all .3s;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        max-height: 300px;
+      }
+      
+       
+      @media screen and (max-width: 768px) {
+        .player-body {
+        flex-direction: row;
+        padding: var(--spacing-unit);
+    }
+    
+     
+      } 
+      
+       
+      #fixed-player-toggle {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 100;
+      }
+    </style>
+  
+    <script>
+  
+  if (!window.youtubePlayer) {
+    
+    const hiddenPlayerDiv = document.createElement('div');
+    hiddenPlayerDiv.id = 'hidden-youtube-player';
+    hiddenPlayerDiv.style.display = 'none';
+    document.body.appendChild(hiddenPlayerDiv); 
+
+    
+    window.onYouTubeIframeAPIReady = function() {
+      window.youtubePlayer = new YT.Player('hidden-youtube-player', {
+        height: '1',
+        width: '1',
+        playerVars: {
+          'playsinline': 1,
+          'controls': 0,
+          'showinfo': 0,
+          'rel': 0,
+          'iv_load_policy': 3,
+          'modestbranding': 1,
+          'theme': playerConfig.theme
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    };
+
+    
+    if (!window.YT) {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    } else {
+      
+      window.onYouTubeIframeAPIReady();
+    }
+  }
+
+  
+  const playerConfig = {
+    playlistId: 'PL_qgAWz6_HsSAOTHVLgUWPocAoLageX0r',
+    autoplay:  true ,
+    theme: 'dark',
+    shuffle:  false ,
+    fixed:  0 
+  };
+
+
+  
+  let isPlaying = false;
+  let isFixed = playerConfig.fixed;
+  let playlistData = [];
+
+  
+  if (isFixed && document.getElementById('youtube-player-container')) {
+    document.getElementById('youtube-player-container').classList.add('player-fixed');
+  }
+
+  
+  function onPlayerReady(event) {
+    window.youtubePlayer.setVolume(70);
+    loadYouTubePlaylist();
+      
+  
+
+  }
+
+  
+  function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+      playNextTrack();
+    }
+    if (event.data === YT.PlayerState.CUED) {
+      updatePlaylistUI();
+    }
+    if (event.data === YT.PlayerState.PLAYING) {
+      isPlaying = true;
+      updatePlayPauseButton(true);
+      updateCurrentTrackInfo();
+      updateActiveTrack();
+    } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+      isPlaying = false;
+      updatePlayPauseButton(false);
+    }
+  }
+
+  
+  function updatePlayPauseButton(playing) {
+    const playIcon = document.querySelector('.icon.play');
+    const pauseIcon = document.querySelector('.icon.pause');
+    if (playIcon && pauseIcon) {
+      playIcon.style.display = playing ? 'none' : 'block';
+      pauseIcon.style.display = playing ? 'block' : 'none';
+    }
+  }
+
+  
+  function updateCurrentTrackInfo() {
+    if (window.youtubePlayer && document.getElementById('current-thumbnail')) {
+      const videoId = window.youtubePlayer.getVideoData().video_id;
+      document.getElementById('current-thumbnail').src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+      const videoData = window.youtubePlayer.getVideoData();
+      if (videoData && videoData.title) {
+        document.getElementById('current-track-title').textContent = videoData.title;
+      }
+    }
+  }
+
+  
+  function loadYouTubePlaylist() {
+  if (!window.youtubePlayer || !document.getElementById('playlist')) return;
+  
+  document.getElementById('playlist').innerHTML = '<li class="loading-message player-list-light"><span class="player-list-cur"></span><span class="player-list-title">Loading playlist...</span></li>';
+  
+  try {
+    
+    window.youtubePlayer.cuePlaylist({
+      list: playerConfig.playlistId,
+      listType: 'playlist',
+      index: 0,
+      startSeconds: 0,
+      suggestedQuality: 'default'
+    });
+    
+    
+    setTimeout(() => {
+      if (playerConfig.shuffle) {
+        window.youtubePlayer.setShuffle(true);
+        console.log("Shuffle enabled");
+      }
+      
+      
+      if (playerConfig.autoplay) {
+        window.youtubePlayer.playVideo();
+      }
+      
+      
+      updatePlaylistUI();
+    }, 1000);
+  } catch (error) {
+    console.error("Error loading playlist:", error);
+    document.getElementById('playlist').innerHTML = '<li class="loading-message player-list-light"><span class="player-list-cur"></span><span class="player-list-title">Error loading playlist. Please try refreshing the page.</span></li>';
+  }
+}
+
+
+
+  
+
+
+  
+  function updatePlaylistUI() {
+    if (window.youtubePlayer && document.getElementById('playlist')) {
+      const videoIds = window.youtubePlayer.getPlaylist();
+      const playlistElement = document.getElementById('playlist');
+      playlistElement.innerHTML = '';
+
+      function getVideoDetails(videoId, index) {
+        fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`)
+          .then(response => response.json())
+          .then(data => {
+            playlistData[index] = { id: videoId, title: data.title, thumbnail: `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` };
+            appendPlaylistItem(index, data.title, videoId);
+          })
+          .catch(() => {
+            appendPlaylistItem(index, `Track ${index + 1}`, videoId);
+          });
+      }
+
+      function appendPlaylistItem(index, title, videoId) {
+        const li = document.createElement('li');
+        li.dataset.index = index;
+        li.addEventListener('click', () => window.youtubePlayer.playVideoAt(index));
+        li.innerHTML = `<span class="player-list-cur"></span><span class="player-list-title">${title}</span>`;
+        playlistElement.appendChild(li);
+        if (index === window.youtubePlayer.getPlaylistIndex()) {
+          li.classList.add('player-list-light');
+          document.getElementById('current-track-title').textContent = title;
+          document.getElementById('current-thumbnail').src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+        }
+      }
+
+      videoIds.forEach((videoId, index) => getVideoDetails(videoId, index));
+    }
+  }
+
+  
+  function updateActiveTrack() {
+    if (window.youtubePlayer && document.querySelector('#playlist')) {
+      const currentIndex = window.youtubePlayer.getPlaylistIndex();
+      document.querySelectorAll('#playlist li').forEach(item => {
+        item.classList.toggle('player-list-light', parseInt(item.dataset.index) === currentIndex);
+      });
+    }
+  }
+
+  
+  function togglePlayPause() {
+    if (window.youtubePlayer) {
+      if (isPlaying) {
+        window.youtubePlayer.pauseVideo();
+      } else {
+        window.youtubePlayer.playVideo();
+      }
+    }
+  }
+
+  
+  function playNextTrack() {
+    if (window.youtubePlayer) window.youtubePlayer.nextVideo();
+  }
+  function playPreviousTrack() {
+    if (window.youtubePlayer) window.youtubePlayer.previousVideo();
+  }
+
+  
+  if (document.getElementById('play-pause-button')) {
+    document.getElementById('play-pause-button').addEventListener('click', togglePlayPause);
+  }
+  if (document.getElementById('prev-button')) {
+    document.getElementById('prev-button').addEventListener('click', playPreviousTrack);
+  }
+  if (document.getElementById('next-button')) {
+    document.getElementById('next-button').addEventListener('click', playNextTrack);
+  }
+  if (document.getElementById('volume-slider')) {
+    document.getElementById('volume-slider').addEventListener('input', function() {
+      if (window.youtubePlayer) window.youtubePlayer.setVolume(this.value);
+    });
+  }
+  if (document.getElementById('toggle-playlist')) {
+    const toggleBtn = document.getElementById('toggle-playlist');
+    const playlistContainer = document.querySelector('.player-list');
+    const dropdownIcon = document.querySelector('.dropdown-icon');
+    toggleBtn.addEventListener('click', () => {
+      const isVisible = playlistContainer.style.display !== 'none';
+      playlistContainer.style.display = isVisible ? 'none' : 'block';
+      toggleBtn.querySelector('span').textContent = isVisible ? 'Show Playlist' : 'Hide Playlist';
+      dropdownIcon.classList.toggle('active');
+    });
+  }
+
+  
+  if (document.getElementById('youtube-player-container')) {
+    const playerContainer = document.getElementById('youtube-player-container');
+    let fixedToggleBtn = document.getElementById('fixed-player-toggle');
+    if (!fixedToggleBtn) {
+      fixedToggleBtn = document.createElement('button');
+      fixedToggleBtn.id = 'fixed-player-toggle';
+      fixedToggleBtn.textContent = isFixed ? 'Hide' : 'Music';
+      playerContainer.appendChild(fixedToggleBtn);
+    }
+    fixedToggleBtn.addEventListener('click', () => {
+      isFixed = !isFixed;
+      playerContainer.classList.toggle('player-fixed', isFixed);
+      fixedToggleBtn.textContent = isFixed ? 'Hide' : 'Music';
+    });
+  }
+
+  
+  if (window.youtubePlayer) {
+    updatePlaylistUI();
+    updatePlayPauseButton(isPlaying);
+  }
+
+
+</script>
+
+
+
   </body>
 </html>
 

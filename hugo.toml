@@ -38,8 +38,12 @@ weight = 2
   enablei18n-switch = false
   mainSections = ["post"]
   related_posts_limit = 3
-
-
+  youtubePlaylistId = "PL_qgAWz6_HsSAOTHVLgUWPocAoLageX0r" 
+  playerAutoplay = true 
+  playerTheme = "dark" 
+  playerShuffle = false
+  # youtubeApiKey = "YOUR_API_KEY" # Uncomment and add if you want to use the YouTube Data API
+ 
 
 # Enable raw HTML in markdown
 [markup]
