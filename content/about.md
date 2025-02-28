@@ -11,10 +11,6 @@ lastmod: 2022-06-09T20:12:52+08:00
 
 I'm a self-proclaimed lazy optimizer on a mission to build perfect systems that do the work for me. My journey into knowledge management and automation wasn't born from productivity evangelism, it came from a deep desire to minimize effort while maximizing results.
 
-## The Lazy Perfectionist Approach
-
-I believe the best system is one that requires minimal maintenance while delivering maximum value. My obsession with tools like Obsidian and n8n stems from their potential to create "logic gates" for human interactions- systems that make decisions and respond more effectively than my tired brain could on its own!!
-
 ## Why I Created This Site
 
 This site exists because I wished for something like it when I started my own journey. I wanted straightforward explanations of how tools like Obsidian could solve real business problems. I needed concrete examples of automation workflows that didn't require a computer science degree to implement.
@@ -34,4 +30,4 @@ Philosophy isn't just theoretical, it provides frameworks for organizing informa
 If you share my aversion to unnecessary work and my appreciation for elegant systems, you're in the right place. Share your own lazy-but-effective solutions, challenge my approaches, or just commiserate about the dream of the perfect one-click workflow.
 Here's to doing less, achieving more, and enjoying the time we save.
 
-Peace!
+Cheers!

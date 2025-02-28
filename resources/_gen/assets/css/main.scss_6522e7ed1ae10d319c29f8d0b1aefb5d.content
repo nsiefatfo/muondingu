@@ -57,8 +57,8 @@
   --highlight-aqua: #479d9d;
   --highlight-blue: #1973b8;
   --highlight-purple: #7135ac;
-  --cursor-default: url(/images/cursor/icons8-cat-footprint-32.png), auto;
-  --cursor-pointer: url(<no value>), pointer;
+  --cursor-default: url(/images/cursor/icons8-cat-footprint-16.png), auto;
+  --cursor-pointer: url(/images/cursor/icons8-cat-20.png), pointer;
   --cursor-text: url(<no value>), text;
 }
 

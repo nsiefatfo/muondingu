@@ -17,6 +17,7 @@ tags:
   - "LLM"
   - "Local"
 slug: "Local-AI-Models"
+cover: "https://muondingu.com/muốn-đi-ngủ.webp"
 ---
 # Chọn Mô Hình AI Phù Hợp cho Sử Dụng Cá Nhân trên Thiết Bị Cục Bộ
 <!--more-->

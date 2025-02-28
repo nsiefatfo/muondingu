@@ -381,7 +381,7 @@
 
 
 
-
+<link rel="icon" href="/images/favicon.ico">
         <div id="content"
           class="sidebar-left"
             >
@@ -389,6 +389,7 @@
   
   
   
+
   <div class="sidebar-wrapper ">
     <div
       class="sidebar-wrap"
@@ -529,6 +530,7 @@
     </div>
   </div>
 
+  
   <div class="sidebar-widget">
     
       
@@ -848,6 +850,8 @@
 </aside>
 
 <style>
+
+
 .sidebar-common-sidebar {
   display: flex;
   flex-direction: column;
@@ -1960,92 +1964,105 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 <div id="youtube-player-container" class="yt-player">
-    <div class="player-body">
-      <div class="player-thumbnail">
-        
-        <img id="current-thumbnail" src="/api/placeholder/400/320" alt="Video thumbnail">
+  <div class="player-body">
+    <div class="player-thumbnail">
+      
+      <img id="current-thumbnail" src="/api/placeholder/400/320" alt="Video thumbnail">
+    </div>
+    
+    <div class="player-info">
+      <div class="player-music">
+        <span id="current-track-title" class="player-title">No track selected</span>
+        <span class="player-author"></span>
+      </div>
+
+      <div class="player-controller">
+        <div class="player-controls player-bar-wrap">
+          <button id="prev-button" class="player-icon control-button">
+            <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <path d="M689.92 128l0 768-384-384z" fill="currentColor"></path>
+            </svg>
+          </button>
+          <button id="play-pause-button" class="player-icon control-button">
+            <svg class="icon play" viewBox="0 0 512 512" width="20" title="play-circle">   
+              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z" />
+            </svg>
+            <svg class="icon pause" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="display:none">
+              <path d="M256 128h192v768H256zM576 128h192v768H576z" fill="currentColor"></path>
+            </svg>
+          </button>
+          <button id="next-button" class="player-icon control-button">
+            <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <path d="M334.08 128l384 384-384 384z" fill="currentColor"></path>
+            </svg>
+          </button>
+          
+        </div>
       </div>
       
-      <div class="player-info">
-        <div class="player-music">
-          <span id="current-track-title" class="player-title">No track selected</span>
-          <span class="player-author"></span>
-        </div>
-        
-        <div class="player-controller">
-          <div class="player-controls player-bar-wrap">
-            <button id="prev-button" class="player-icon control-button">
-              <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <path d="M689.92 128l0 768-384-384z" fill="currentColor"></path>
-              </svg>
-            </button>
-            <button id="play-pause-button" class="player-icon control-button">
-              <svg class="icon play" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <path d="M512 128l0 768-384-384z" fill="currentColor"></path>
-              </svg>
-              <svg class="icon pause" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="display:none">
-                <path d="M256 128h192v768H256zM576 128h192v768H576z" fill="currentColor"></path>
-              </svg>
-            </button>
-            <button id="next-button" class="player-icon control-button">
-              <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <path d="M334.08 128l384 384-384 384z" fill="currentColor"></path>
-              </svg>
-            </button>
-            <div class="volume-control player-volume-wrap">
-              <button class="player-icon volume-btn">
-                <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                  <path d="M512.036 128.036l0 767.96-288-288.032 288 0.032z" fill="currentColor"></path>
-                  <path d="M640 229.084l0 565.904q23.986-18.022 43.994-40.982t34.048-49.024 23.040-56.986 8.038-64q0-32-8.038-64t-23.040-57.024-34.048-48.96-43.994-41.028z" fill="currentColor"></path>
-                </svg>
-              </button>
-              <div class="player-volume-bar">
-                <input type="range" id="volume-slider" min="0" max="100" value="70" class="player-volume">
-              </div>
-            </div>
-          </div>
-        </div>
+      
+    </div>
+  </div>
+
+
+  
+  <div class="playlist-toggle-container">
+    <button id="toggle-playlist" class="playlist-toggle-btn">
+      <span>Show Playlist</span>
+      <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+      </svg>
+    </button>
+    
+    <div class="volume-control player-volume-wrap">
+      
+      <div class="player-volume-bar">
+        <input type="range" id="volume-slider" min="0" max="100" value="70" class="player-volume">
       </div>
     </div>
-    
-    <div class="playlist-toggle-container">
-      <button id="toggle-playlist" class="playlist-toggle-btn">
-        <span>Show Playlist</span>
-        <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
-        </svg>
-      </button>
-    </div>
-    
-    <div class="player-list" style="display: none">
-      <ol id="playlist" class="track-list">
-        <li class="loading-message player-list-light">
-          <span class="player-list-cur"></span>
-          <span class="player-list-title">Select a song</span>
-        </li>
-      </ol>
-    </div>
+  </div>
+  
+  <div class="player-list" style="display: none">
+    <ol id="playlist" class="track-list">
+      <li class="loading-message player-list-light">
+        <span class="player-list-cur"></span>
+        <span class="player-list-title">Select a song</span>
+      </li>
+    </ol>
+  </div>
+</div>
+
+
+
     
     <style>
       :root {
-        --color-wrap: #f5f5f5;
+        --color-wrap: #f5f5f56c;
         --color-link: #2196f3;
         --color-h2-border: #e0e0e0;
         --color-hover-shadow: #e9e9e9;
         --post-radius: 8px;
         --font-basic: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       }
-      
+    
       .yt-player {
         margin: 0 0 calc(var(--spacing-unit) * 2.5) !important;
         border-radius: var(--post-radius) !important;
         background: var(--color-wrap) !important;
         transition: all 0.3s;
         font-family: var(--font-basic) !important;
+        width: 14%;
         max-width: clamp(20rem, 50vw, 25rem);  
         margin: 0 auto;
         box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
         overflow: hidden;
+         
+        position: fixed;
+        bottom: unset;
+        left: unset;
+        right: 10px;
+        top: 10px;
+        z-index: 1000;
       }
       
       .yt-player button, .yt-player .player-icon {
@@ -2126,19 +2143,20 @@ document.addEventListener('DOMContentLoaded', function() {
       .volume-control, .player-volume-wrap {
         display: flex;
         align-items: center;
-        margin-left: auto;
+        margin-left: 1em;
       }
       
       .player-volume-bar {
         width: 80px;
+        height: 20px;
         margin-left: 5px;
       }
       
       #volume-slider, .player-volume {
         width: 100%;
-        height: 6px;
+        height: 10px;
         appearance: none;
-        background: #4b81f5;
+        background: #138bd12c;
         border-radius: 3px;
         outline: none;
       }
@@ -2156,13 +2174,14 @@ document.addEventListener('DOMContentLoaded', function() {
       .playlist-toggle-container {
         padding: 8px 15px;
         border-top: 1px solid var(--color-h2-border) !important;
+        display: flex
       }
       
       .playlist-toggle-btn {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        width: 50%;
         padding: 8px 12px;
         background-color: var(--color-hover-shadow);
         border-radius: 4px;
@@ -2286,15 +2305,49 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 0;
         max-height: 300px;
       }
-      
+
        
-      @media screen and (max-width: 768px) {
-        .player-body {
-        flex-direction: row;
+
+      .player-fixed .list{
+        position: absolute;
+      }
+      .player-fixed .player-list-light{
+        border: 1px solid var(--color-h2-border) !important;
+        transition: all .3s;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        max-height: 300px;
+      }
+      .player-fixed .player-list-title{
+        color: var(--color-link) !important;
+      }
+      .player-fixed .player-list ol{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .player-fixed .player-list ol li{
         padding: var(--spacing-unit);
-    }
+      }
+      .player-fixed .list-cur{
+        background-color: var(--color-h2-border) !important;
+      }
+      
+     
+       
+    @media screen and (max-width: 768px) {
+  .yt-player {
+    display: none;
+  }
+  .playlist-toggle-btn:hover {
+        background-color: var(--color-hover-shadow);
+        opacity: 0.8;
+      }
     
      
+         
       } 
       
        
@@ -2311,9 +2364,12 @@ document.addEventListener('DOMContentLoaded', function() {
         cursor: pointer;
         z-index: 100;
       }
+
+
     </style>
   
     <script>
+
   
   if (!window.youtubePlayer) {
     
@@ -2380,8 +2436,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.youtubePlayer.setVolume(70);
     loadYouTubePlaylist();
       
-  
-
+  window.addEventListener('click', function() {
+    
+    if (playerConfig.autoplay && !isPlaying) {
+      window.youtubePlayer.playVideo();
+    }
+  }, { once: true }); 
   }
 
   
@@ -2486,6 +2546,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
       }
 
+
       function appendPlaylistItem(index, title, videoId) {
         const li = document.createElement('li');
         li.dataset.index = index;
@@ -2587,59 +2648,78 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+    
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('muondingu', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': '!!',
+    'floating-chat.donateButton.background-color': '#f45d22',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+  
+</script>
+
+<style>
+ 
+.floating-chat-kofi-popup-iframe { 
+  left: unset !important; 
+  right: 126px !important;
+  bottom: 76px !important;
+  z-index: 99;
+}
+
+.floatingchat-container-wrap { 
+  left: 86px !important;
+  right: unset !important;
+  bottom: 20px !important;
+  transition: transform 0.3s ease;
+   
+  display: block;
+}
+
+  
+@media screen and (max-width: 768px) {
+  .floating-chat-kofi-popup-iframe,
+  .floatingchat-container-wrap,
+  .floating-chat-kofi-popup-iframe > iframe,
+  #floating-chat-kofi-popup-iframe {
+    position: fixed !important;
+    left: auto !important;
+    right: 10px !important;
+    bottom: auto !important;
+    top: 10px !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+    max-width: 55px !important;
+  }
+
+  .floatingchat-donate-button.text {
+    display: none !important;  
+  }
+
+  .floatingchat-donate-button {
+    padding: 12px !important;
+    border-radius: 50% !important;
+  }
+
+  .floatingchat-donate-icon {
+    margin: 0 !important;
+  }
+}
+
+ 
+@media (hover: hover) and (pointer: fine) {
+  .floatingchat-container-wrap:hover {
+    transform: scale(1.05);
+  }
+} 
+</style>
   </body>
 </html>
 
 
 
 
-
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('muondingu', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Meow!',
-    'floating-chat.donateButton.background-color': '#f45d22',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
-
-<style>
-.floating-chat-kofi-popup-iframe { 
-  left: unset; 
-  right: 126px; 
-  bottom: 76px;
-  z-index: 999999;  
-}
-
-.floatingchat-container-wrap { 
-  left: unset; 
-  right: 86px; 
-  bottom: 20px;
-  transition: transform 0.3s ease;
-  z-index: 999998;  
-}
-
-.floatingchat-container-wrap:hover {
-  transform: scale(1.05);
-}
-
- 
-@media (max-width: 768px) {
-  .floating-chat-kofi-popup-iframe {
-    left: unset;
-    right: 20px !important;
-    bottom: unset;
-    top: 20px !important;
-    max-width: 90vw;  
-  }
-
-  .floatingchat-container-wrap {
-    left: unset; 
-    right: 20px !important;
-    bottom: unset;
-    top: 20px !important;
-    max-width: 90vw;  
-  }
-}
-</style>

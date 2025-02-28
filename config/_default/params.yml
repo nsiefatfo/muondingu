@@ -79,7 +79,7 @@ footer:
 sidebar: left
 
 social:
-  email: 'muondingu.work@gmail.com'
+  email: muondingu.work@gmail.com
   # github: https://github.com/yourname
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname
@@ -123,8 +123,8 @@ anchor_icon: # default use '#' icon, you can use a hexadecimal representation of
 reimu_cursor:
   enable: true
   cursor:
-    default: /images/cursor/icons8-cat-footprint-32.png #/images/cursor/icons8-minecraft-pickaxe-30.png # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
-    pointer: #/images/cursor/icons8-cat-footprint-32.png
+    default: /images/cursor/icons8-cat-footprint-16.png #/images/cursor/icons8-minecraft-pickaxe-30.png # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
+    pointer: /images/cursor/icons8-cat-20.png
     text: #/images/cursor/icons8-minecraft-sword-30.png
 
 icon_font: false #4552607_0khxww3tj3q9
