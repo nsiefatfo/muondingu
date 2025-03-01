@@ -6,3 +6,5 @@ Allow: /
 
 Sitemap: https://muondingu.com/en/sitemap.xml
 Sitemap: https://muondingu.com/vi/sitemap.xml
+
+# Algolia-Crawler-Verif: 68E42F10E5922752

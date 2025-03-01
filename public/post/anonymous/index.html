@@ -615,6 +615,50 @@ document.addEventListener('DOMContentLoaded', function() {
   .sidebar-menu-icon {
     font-size: 1.2rem;
   }
+
+
+   
+  .sidebar-btn-wrapper {
+    position: absolute;
+    top: unset;
+    bottom: 20%;  
+    right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: grid;
+    gap: 10px;
+  }
+
+   
+  .sidebar-toc-btn,
+  .sidebar-common-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-wrap);
+    border-radius: 5px 0 0 5px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .sidebar-toc-btn.current,
+  .sidebar-common-btn.current {
+    background-color: var(--color-link);
+  }
+
+   
+  .sidebar-toc-btn:before {
+    content: "📑";  
+  }
+
+  .sidebar-common-btn:before {
+    content: "≡";  
+  }
+
+
   </style>
 
 
@@ -660,7 +704,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   
                   
                     <img
-                      data-src="https://muondingu.com/images/rbanner/cherino.png"
+                      data-src="https://muondingu.com/images/rbanner/banner.png"
                       data-sizes="auto"
                       alt="Placeholder Tags"
                       class="lazyload"
@@ -802,6 +846,139 @@ document.addEventListener('DOMContentLoaded', function() {
       color: var(--color-meta);
       margin-top: 0.2rem;
     }
+
+
+      .sidebar-wrap .sidebar-related {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: var(--color-wrap);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+     
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sidebar-wrap .related-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--color-meta-shadow);
+  }
+
+  .sidebar-wrap .related-tag {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    background: rgba(var(--color-link-rgb), 0.1);
+    color: var(--color-link);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .sidebar-wrap .related-tag:hover {
+    background: rgba(var(--color-link-rgb), 0.2);
+    transform: translateY(-1px);
+  }
+
+  .sidebar-wrap .sidebar-related-title {
+    font-size: 0.95rem;  
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--color-text);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-meta-shadow);
+  }
+
+  .sidebar-wrap .sidebar-related-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .sidebar-wrap .sidebar-related-item {
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-wrap .sidebar-related-item:hover {
+    transform: translateX(5px);
+  }
+
+  .sidebar-wrap .sidebar-related-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .sidebar-wrap .sidebar-related-cover {
+    flex-shrink: 0;
+    width: 45px;  
+    height: 45px;  
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .sidebar-wrap .sidebar-related-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sidebar-wrap .sidebar-related-info {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  .sidebar-wrap .sidebar-related-info .sidebar-related-title {
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: var(--color-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .sidebar-wrap .sidebar-related-date {
+    font-size: 0.75rem;
+    color: var(--color-meta);
+    margin-top: 0.2rem;
+  }
+
+   
+  @media (max-width: 768px) {
+    .sidebar-wrap .sidebar-related {
+      padding: 0.6rem;
+      border-radius: 8px;
+      margin-top: 0.8rem;
+    }
+    
+    .sidebar-wrap .sidebar-related-cover {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .sidebar-wrap .sidebar-related-info .sidebar-related-title {
+      font-size: 0.8rem;
+    }
+    
+    .sidebar-wrap .related-tags {
+      gap: 0.3rem;
+    }
+  }
+
+
     </style>
   
  
@@ -1277,7 +1454,7 @@ Key Citations
           
           
             <img
-              data-src="https://muondingu.com/images/rbanner/yuii.png"
+              data-src="https://muondingu.com/images/rbanner/giyu.png"
               data-sizes="auto"
               alt="Placeholder Tags"
               class="lazyload"
@@ -1300,7 +1477,7 @@ Key Citations
           
           
             <img
-              data-src="https://muondingu.com/images/rbanner/17oxz7eqfifa1.png"
+              data-src="https://muondingu.com/images/rbanner/buf.png"
               data-sizes="auto"
               alt="Git"
               class="lazyload"
@@ -1645,6 +1822,50 @@ document.addEventListener('DOMContentLoaded', function() {
   .sidebar-menu-icon {
     font-size: 1.2rem;
   }
+
+
+   
+  .sidebar-btn-wrapper {
+    position: absolute;
+    top: unset;
+    bottom: 20%;  
+    right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: grid;
+    gap: 10px;
+  }
+
+   
+  .sidebar-toc-btn,
+  .sidebar-common-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-wrap);
+    border-radius: 5px 0 0 5px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .sidebar-toc-btn.current,
+  .sidebar-common-btn.current {
+    background-color: var(--color-link);
+  }
+
+   
+  .sidebar-toc-btn:before {
+    content: "📑";  
+  }
+
+  .sidebar-common-btn:before {
+    content: "≡";  
+  }
+
+
   </style>
 
 
@@ -1659,6 +1880,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="sidebar-btn-wrapper">
       <div class="sidebar-toc-btn current"></div>
       <div class="sidebar-common-btn"></div>
+      <div class="sidebar-related-btn"></div>
     </div>
   
 </nav>
