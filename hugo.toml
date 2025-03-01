@@ -43,6 +43,7 @@ weight = 2
   playerTheme = "dark" 
   playerShuffle = false
   # youtubeApiKey = "YOUR_API_KEY" # Uncomment and add if you want to use the YouTube Data API
+  playerMobileIcon = "/images/cursor/music_8466745.png"
  
 
 # Enable raw HTML in markdown
