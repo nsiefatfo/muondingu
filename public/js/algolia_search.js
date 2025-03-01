@@ -38,7 +38,7 @@
         container: "#reimu-hits",
         templates: {
           item: (data) => {
-            return '<a href="' + data.permalink + '" class="reimu-hit-item-link">' + data._highlightResult.title.value + "</a>";
+            return '<a href="' + data.url + '" class="reimu-hit-item-link">' + data._highlightResult.title.value + "</a>";
           },
           empty: (data) => {
             return '<div id="reimu-hits-empty">' + algoliaSettings.labels.hits_empty.replace(
