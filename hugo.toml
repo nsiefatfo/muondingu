@@ -41,7 +41,7 @@ weight = 2
   youtubePlaylistId = "PL_qgAWz6_HsSAOTHVLgUWPocAoLageX0r" 
   playerAutoplay = true 
   playerTheme = "dark" 
-  playerShuffle = false
+  playerShuffle = true
   # youtubeApiKey = "YOUR_API_KEY" # Uncomment and add if you want to use the YouTube Data API
   playerMobileIcon = "/images/cursor/music_8466745.png"
  
