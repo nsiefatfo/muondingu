@@ -400,7 +400,10 @@
       <ul>
         <li><a href="#1-your-local-repository-like-your-toy-box-">1. Your Local Repository (Like Your Toy Box) 📦</a></li>
         <li><a href="#2-remote-repository-like-a-shared-toy-box-at-school-">2. Remote Repository (Like a Shared Toy Box at School) 🏫</a></li>
-        <li><a href="#basic-workflow-commands-">Basic Workflow Commands 🎮</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-workflow-commands-">Basic Workflow Commands 🎮</a>
+      <ul>
         <li><a href="#daily-workflow-">Daily Workflow 📅</a></li>
         <li><a href="#special-cases-">Special Cases 🎯</a></li>
         <li><a href="#for-your-current-situation-">For Your Current Situation 🎯</a></li>
@@ -419,57 +422,113 @@
 </div>
 
 <style>
+.sidebar-toc {
+  background-color: var;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 16px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.toc-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--color-heading, #333);
+}
+
 .sidebar-toc-wrapper {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-meta, #888) transparent;
+  padding-right: 5px;
 }
 
 .sidebar-toc-wrapper::-webkit-scrollbar {
-  display: none;
+  width: 5px;
 }
 
+.sidebar-toc-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-toc-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--color-meta, #888);
+  border-radius: 10px;
+}
+
+ 
 .sidebar-toc-wrapper ul {
   list-style: none;
-  padding-left: 1em;
+  padding-left: 0;
+  margin: 0;
 }
 
 .sidebar-toc-wrapper li {
-  margin: 0.4em 0;
+  margin: 4px 0;
+  padding: 0;
+}
+
+ 
+.sidebar-toc-wrapper li::before,
+.sidebar-toc-wrapper a::before {
+  display: none !important;
+  content: none !important; 
+}
+
+ 
+.sidebar-toc-wrapper li li {
+  padding-left: 16px;
+  border-left: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
 }
 
 .sidebar-toc-wrapper a {
-  color: var(--color-text);
+  color: var(--color-text, #444);
   text-decoration: none;
   font-size: 0.95em;
   transition: all 0.2s ease;
-  padding: 2px 6px;
-  border-radius: 3px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: block;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .sidebar-toc-wrapper a:hover {
-  color: var(--color-meta);
-  background-color: var(--color-meta-shadow);
+  color: var(--color-link, #0366d6);
+  background-color: var(--color-meta-shadow, rgba(0, 0, 0, 0.05));
 }
 
 .sidebar-toc-wrapper a.active {
-  color: var(--color-link);
-  background-color: rgba(var(--color-link-rgb), 0.1);
+  color: var(--color-link, #0366d6);
+  background-color: rgba(var(--color-link-rgb, 3, 102, 214), 0.1);
+  font-weight: 500;
 }
 
 .sidebar-toc-wrapper a.active:hover {
-  color: var(--color-link-hover);
-  background-color: rgba(var(--color-link-rgb), 0.8);
+  color: var(--color-link-hover, #0056b3);
+  background-color: rgba(var(--color-link-rgb, 3, 102, 214), 0.15);
+}
+
+@media (max-width: 768px) {
+  .sidebar-toc {
+    position: relative;
+  }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  
   const tocLinks = document.querySelectorAll('.sidebar-toc-wrapper a');
   const sections = [];
   let lastActiveLink = null;
-
+  let observer = null;
+  
   tocLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href && href.startsWith('#')) {
@@ -479,37 +538,87 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
-
-  function updateActiveSection() {
-    const scrollPosition = window.scrollY + 100;
-    let currentSection = null;
-
-    for (const section of sections) {
-      if (section.element.offsetTop <= scrollPosition) {
-        currentSection = section;
-      } else {
-        break;
+  
+  
+  if (window.IntersectionObserver && sections.length > 0) {
+    const options = {
+      rootMargin: '-80px 0px -80% 0px',
+      threshold: 0
+    };
+    
+    observer = new IntersectionObserver(entries => {
+      let visibleSection = null;
+      
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const matchingSection = sections.find(section => section.element === entry.target);
+          if (matchingSection) {
+            visibleSection = matchingSection;
+          }
+        }
+      });
+      
+      if (visibleSection) {
+        updateActiveLink(visibleSection.link);
+      }
+    }, options);
+    
+    sections.forEach(section => {
+      observer.observe(section.element);
+    });
+  } else {
+    
+    function updateActiveSection() {
+      const scrollPosition = window.scrollY + 100;
+      let currentSection = null;
+      
+      for (const section of sections) {
+        if (section.element.offsetTop <= scrollPosition) {
+          currentSection = section;
+        } else if (currentSection) {
+          break;
+        }
+      }
+      
+      if (currentSection) {
+        updateActiveLink(currentSection.link);
       }
     }
-
-    if (currentSection && lastActiveLink !== currentSection.link) {
+    
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+      }
+      scrollTimeout = window.requestAnimationFrame(updateActiveSection);
+    });
+    
+    updateActiveSection();
+  }
+  
+  function updateActiveLink(activeLink) {
+    if (lastActiveLink !== activeLink) {
       if (lastActiveLink) {
         lastActiveLink.classList.remove('active');
       }
-      currentSection.link.classList.add('active');
-      lastActiveLink = currentSection.link;
+      activeLink.classList.add('active');
+      lastActiveLink = activeLink;
+      
+      
+      const wrapper = document.querySelector('.sidebar-toc-wrapper');
+      if (wrapper) {
+        const linkRect = activeLink.getBoundingClientRect();
+        const wrapperRect = wrapper.getBoundingClientRect();
+        
+        if (linkRect.bottom > wrapperRect.bottom || linkRect.top < wrapperRect.top) {
+          activeLink.scrollIntoView({
+            block: 'center',
+            behavior: 'smooth'
+          });
+        }
+      }
     }
   }
-
-  let scrollTimeout;
-  window.addEventListener('scroll', () => {
-    if (scrollTimeout) {
-      window.cancelAnimationFrame(scrollTimeout);
-    }
-    scrollTimeout = window.requestAnimationFrame(updateActiveSection);
-  });
-
-  updateActiveSection();
 });
 </script>
         </div>
@@ -757,6 +866,10 @@ document.addEventListener('DOMContentLoaded', function() {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .sidebar-related-item {
@@ -800,7 +913,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   .sidebar-related-date {
     font-size: 0.75rem;
-    color: var(--color-text-secondary);
+    color: var(--color-link);
   }
 
   .related-tags {
@@ -825,7 +938,6 @@ document.addEventListener('DOMContentLoaded', function() {
     color: white;
   }
 </style>
-
 
 
 
@@ -994,10 +1106,10 @@ Git
 <li>Get new toys from there (pull)</li>
 <li>Share toys with friends (collaborate)</li>
 </ul>
-<h3 id="basic-workflow-commands-">
+<h2 id="basic-workflow-commands-">
 <a class="header-anchor" href="#basic-workflow-commands-"></a>
 Basic Workflow Commands 🎮
-</h3><ol>
+</h2><ol>
 <li><strong>Check what toys are out (changed files)</strong>:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status
@@ -1307,7 +1419,7 @@ Save File Safety 🛡️
           
           
             <img
-              data-src="https://muondingu.com/images/rbanner/cherino.png"
+              data-src="https://muondingu.com/images/rbanner/yuii.png"
               data-sizes="auto"
               alt="Anonymous and Safe Content Publishing"
               class="lazyload"
@@ -1330,7 +1442,7 @@ Save File Safety 🛡️
           
           
             <img
-              data-src="https://muondingu.com/images/rbanner/yuii.png"
+              data-src="https://muondingu.com/images/rbanner/klee.png"
               data-sizes="auto"
               alt="Finding Your Niche in the MMO World"
               class="lazyload"
@@ -1460,7 +1572,10 @@ Save File Safety 🛡️
       <ul>
         <li><a href="#1-your-local-repository-like-your-toy-box-">1. Your Local Repository (Like Your Toy Box) 📦</a></li>
         <li><a href="#2-remote-repository-like-a-shared-toy-box-at-school-">2. Remote Repository (Like a Shared Toy Box at School) 🏫</a></li>
-        <li><a href="#basic-workflow-commands-">Basic Workflow Commands 🎮</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-workflow-commands-">Basic Workflow Commands 🎮</a>
+      <ul>
         <li><a href="#daily-workflow-">Daily Workflow 📅</a></li>
         <li><a href="#special-cases-">Special Cases 🎯</a></li>
         <li><a href="#for-your-current-situation-">For Your Current Situation 🎯</a></li>
@@ -1479,57 +1594,113 @@ Save File Safety 🛡️
 </div>
 
 <style>
+.sidebar-toc {
+  background-color: var;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 16px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.toc-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--color-heading, #333);
+}
+
 .sidebar-toc-wrapper {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-meta, #888) transparent;
+  padding-right: 5px;
 }
 
 .sidebar-toc-wrapper::-webkit-scrollbar {
-  display: none;
+  width: 5px;
 }
 
+.sidebar-toc-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-toc-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--color-meta, #888);
+  border-radius: 10px;
+}
+
+ 
 .sidebar-toc-wrapper ul {
   list-style: none;
-  padding-left: 1em;
+  padding-left: 0;
+  margin: 0;
 }
 
 .sidebar-toc-wrapper li {
-  margin: 0.4em 0;
+  margin: 4px 0;
+  padding: 0;
+}
+
+ 
+.sidebar-toc-wrapper li::before,
+.sidebar-toc-wrapper a::before {
+  display: none !important;
+  content: none !important; 
+}
+
+ 
+.sidebar-toc-wrapper li li {
+  padding-left: 16px;
+  border-left: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
 }
 
 .sidebar-toc-wrapper a {
-  color: var(--color-text);
+  color: var(--color-text, #444);
   text-decoration: none;
   font-size: 0.95em;
   transition: all 0.2s ease;
-  padding: 2px 6px;
-  border-radius: 3px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: block;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .sidebar-toc-wrapper a:hover {
-  color: var(--color-meta);
-  background-color: var(--color-meta-shadow);
+  color: var(--color-link, #0366d6);
+  background-color: var(--color-meta-shadow, rgba(0, 0, 0, 0.05));
 }
 
 .sidebar-toc-wrapper a.active {
-  color: var(--color-link);
-  background-color: rgba(var(--color-link-rgb), 0.1);
+  color: var(--color-link, #0366d6);
+  background-color: rgba(var(--color-link-rgb, 3, 102, 214), 0.1);
+  font-weight: 500;
 }
 
 .sidebar-toc-wrapper a.active:hover {
-  color: var(--color-link-hover);
-  background-color: rgba(var(--color-link-rgb), 0.8);
+  color: var(--color-link-hover, #0056b3);
+  background-color: rgba(var(--color-link-rgb, 3, 102, 214), 0.15);
+}
+
+@media (max-width: 768px) {
+  .sidebar-toc {
+    position: relative;
+  }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  
   const tocLinks = document.querySelectorAll('.sidebar-toc-wrapper a');
   const sections = [];
   let lastActiveLink = null;
-
+  let observer = null;
+  
   tocLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href && href.startsWith('#')) {
@@ -1539,37 +1710,87 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
-
-  function updateActiveSection() {
-    const scrollPosition = window.scrollY + 100;
-    let currentSection = null;
-
-    for (const section of sections) {
-      if (section.element.offsetTop <= scrollPosition) {
-        currentSection = section;
-      } else {
-        break;
+  
+  
+  if (window.IntersectionObserver && sections.length > 0) {
+    const options = {
+      rootMargin: '-80px 0px -80% 0px',
+      threshold: 0
+    };
+    
+    observer = new IntersectionObserver(entries => {
+      let visibleSection = null;
+      
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const matchingSection = sections.find(section => section.element === entry.target);
+          if (matchingSection) {
+            visibleSection = matchingSection;
+          }
+        }
+      });
+      
+      if (visibleSection) {
+        updateActiveLink(visibleSection.link);
+      }
+    }, options);
+    
+    sections.forEach(section => {
+      observer.observe(section.element);
+    });
+  } else {
+    
+    function updateActiveSection() {
+      const scrollPosition = window.scrollY + 100;
+      let currentSection = null;
+      
+      for (const section of sections) {
+        if (section.element.offsetTop <= scrollPosition) {
+          currentSection = section;
+        } else if (currentSection) {
+          break;
+        }
+      }
+      
+      if (currentSection) {
+        updateActiveLink(currentSection.link);
       }
     }
-
-    if (currentSection && lastActiveLink !== currentSection.link) {
+    
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+      }
+      scrollTimeout = window.requestAnimationFrame(updateActiveSection);
+    });
+    
+    updateActiveSection();
+  }
+  
+  function updateActiveLink(activeLink) {
+    if (lastActiveLink !== activeLink) {
       if (lastActiveLink) {
         lastActiveLink.classList.remove('active');
       }
-      currentSection.link.classList.add('active');
-      lastActiveLink = currentSection.link;
+      activeLink.classList.add('active');
+      lastActiveLink = activeLink;
+      
+      
+      const wrapper = document.querySelector('.sidebar-toc-wrapper');
+      if (wrapper) {
+        const linkRect = activeLink.getBoundingClientRect();
+        const wrapperRect = wrapper.getBoundingClientRect();
+        
+        if (linkRect.bottom > wrapperRect.bottom || linkRect.top < wrapperRect.top) {
+          activeLink.scrollIntoView({
+            block: 'center',
+            behavior: 'smooth'
+          });
+        }
+      }
     }
   }
-
-  let scrollTimeout;
-  window.addEventListener('scroll', () => {
-    if (scrollTimeout) {
-      window.cancelAnimationFrame(scrollTimeout);
-    }
-    scrollTimeout = window.requestAnimationFrame(updateActiveSection);
-  });
-
-  updateActiveSection();
 });
 </script>
       </div>
@@ -1676,7 +1897,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     
                       <img
-                        data-src="https://muondingu.com/images/rbanner/giyu.png"
+                        data-src="https://muondingu.com/images/rbanner/klee.png"
                         data-sizes="auto"
                         alt="Choosing the Right AI Model for Personal Use on Local Devices"
                         class="lazyload"
@@ -1817,6 +2038,10 @@ document.addEventListener('DOMContentLoaded', function() {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .sidebar-related-item {
@@ -1860,7 +2085,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   .sidebar-related-date {
     font-size: 0.75rem;
-    color: var(--color-text-secondary);
+    color: var(--color-link);
   }
 
   .related-tags {
@@ -1885,7 +2110,6 @@ document.addEventListener('DOMContentLoaded', function() {
     color: white;
   }
 </style>
-
 
 
 
@@ -3270,7 +3494,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
   kofiWidgetOverlay.draw('muondingu', {
     'type': 'floating-chat',
-    'floating-chat.donateButton.text': '!!',
+    'floating-chat.donateButton.text': 'Meow!!',
     'floating-chat.donateButton.background-color': '#f45d22',
     'floating-chat.donateButton.text-color': '#fff'
   });
@@ -3280,8 +3504,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <style>
  
 .floating-chat-kofi-popup-iframe { 
-  left: unset !important; 
-  right: 126px !important;
+  left: 86px !important; 
+  right: unset !important;
   bottom: 76px !important;
   z-index: 99;
 }

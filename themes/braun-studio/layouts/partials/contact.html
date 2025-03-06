@@ -1,0 +1,105 @@
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ .Params.contactTitle | default "Get In Touch" }}</h2>
+            <p class="section-subtitle">{{ .Params.contactSubtitle }}</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3 class="info-title">Our Location</h3>
+                        <p class="info-text">{{ .Site.Params.address }}</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3 class="info-title">Email Us</h3>
+                        <p class="info-text"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3 class="info-title">Call Us</h3>
+                        <p class="info-text"><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <h3 class="social-title">Follow Us</h3>
+                    <div class="social-icons">
+                        {{ with .Site.Params.social.facebook }}
+                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        {{ end }}
+                        
+                        {{ with .Site.Params.social.twitter }}
+                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        {{ end }}
+                        
+                        {{ with .Site.Params.social.instagram }}
+                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        {{ end }}
+                        
+                        {{ with .Site.Params.social.linkedin }}
+                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form" action="{{ .Site.Params.contactFormAction }}" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+        {{ if .Site.Params.mapEmbed }}
+        <div class="map-container">
+            <div class="google-map">
+                {{ .Site.Params.mapEmbed | safeHTML }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section> 

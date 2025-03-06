@@ -1,0 +1,44 @@
+<section class="portfolio-section" id="portfolio">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ .Params.portfolioTitle | default "Our Work" }}</h2>
+            <p class="section-subtitle">{{ .Params.portfolioSubtitle }}</p>
+        </div>
+        
+        {{ if .Params.portfolioCategories }}
+        <div class="portfolio-filter">
+            <ul class="filter-menu">
+                <li class="filter-item active" data-filter="all">All</li>
+                {{ range .Params.portfolioCategories }}
+                <li class="filter-item" data-filter="{{ . | urlize }}">{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+        
+        <div class="portfolio-grid">
+            {{ range .Params.portfolioItems }}
+            <div class="portfolio-item" data-category="{{ .category | urlize }}">
+                <div class="portfolio-image">
+                    <img src="{{ .image | relURL }}" alt="{{ .title }}">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">{{ .title }}</h3>
+                            <p class="portfolio-category">{{ .category }}</p>
+                            <a href="{{ .link }}" class="portfolio-link">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        
+        {{ if .Params.portfolioButton }}
+        <div class="portfolio-cta">
+            <a href="{{ .Params.portfolioButtonLink }}" class="btn btn-primary">{{ .Params.portfolioButton }}</a>
+        </div>
+        {{ end }}
+    </div>
+</section> 

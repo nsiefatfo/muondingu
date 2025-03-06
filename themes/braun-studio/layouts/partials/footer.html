@@ -1,0 +1,107 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-col footer-info">
+                <div class="footer-logo">
+                    {{ if .Site.Params.footerLogo }}
+                    <img src="{{ .Site.Params.footerLogo | relURL }}" alt="{{ .Site.Title }}">
+                    {{ else }}
+                    <span class="footer-logo-text">{{ .Site.Title }}</span>
+                    {{ end }}
+                </div>
+                <p class="footer-description">{{ .Site.Params.footerDescription }}</p>
+            </div>
+            
+            <div class="footer-col footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-menu">
+                    {{ range .Site.Menus.footer }}
+                    <li class="footer-menu-item">
+                        <a href="{{ .URL }}" class="footer-menu-link">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-contact">
+                <h3 class="footer-heading">Contact Us</h3>
+                <ul class="contact-list">
+                    {{ with .Site.Params.address }}
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>{{ . }}</span>
+                    </li>
+                    {{ end }}
+                    
+                    {{ with .Site.Params.email }}
+                    <li class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:{{ . }}">{{ . }}</a>
+                    </li>
+                    {{ end }}
+                    
+                    {{ with .Site.Params.phone }}
+                    <li class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:{{ . }}">{{ . }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Subscribe to our newsletter to receive updates and news.</p>
+                <form class="newsletter-form" action="{{ .Site.Params.newsletterAction }}" method="post">
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.
+            </div>
+            
+            <div class="social-links">
+                {{ with .Site.Params.social.facebook }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                {{ end }}
+                
+                {{ with .Site.Params.social.twitter }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                {{ end }}
+                
+                {{ with .Site.Params.social.instagram }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                {{ end }}
+                
+                {{ with .Site.Params.social.linkedin }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                {{ end }}
+                
+                {{ with .Site.Params.social.behance }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-behance"></i>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</a> 

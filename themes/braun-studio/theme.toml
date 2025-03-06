@@ -1,0 +1,12 @@
+name = "Braun Studio"
+license = "MIT"
+licenselink = "https://github.com/yourusername/braun-studio/blob/master/LICENSE"
+description = "A modern, minimalist theme for creative agencies and studios inspired by Braun Studio"
+homepage = "https://github.com/yourusername/braun-studio"
+tags = ["responsive", "creative", "portfolio", "agency", "studio", "minimalist", "modern"]
+features = ["responsive", "portfolio", "blog", "services", "testimonials", "contact form"]
+min_version = "0.41.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://yourwebsite.com" 

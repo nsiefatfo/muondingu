@@ -1,0 +1,45 @@
+<section class="testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ .Params.testimonialsTitle | default "What Our Clients Say" }}</h2>
+            <p class="section-subtitle">{{ .Params.testimonialsSubtitle }}</p>
+        </div>
+        
+        <div class="testimonials-slider">
+            {{ range .Params.testimonials }}
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">{{ .text }}</p>
+                    <div class="testimonial-author">
+                        {{ if .image }}
+                        <div class="author-image">
+                            <img src="{{ .image | relURL }}" alt="{{ .name }}">
+                        </div>
+                        {{ end }}
+                        <div class="author-info">
+                            <h4 class="author-name">{{ .name }}</h4>
+                            <p class="author-position">{{ .position }}, {{ .company }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        
+        {{ if .Params.clientLogos }}
+        <div class="clients-section">
+            <h3 class="clients-title">{{ .Params.clientsTitle | default "Trusted By" }}</h3>
+            <div class="clients-logos">
+                {{ range .Params.clientLogos }}
+                <div class="client-logo">
+                    <img src="{{ .logo | relURL }}" alt="{{ .name }}">
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section> 

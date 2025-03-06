@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+    {{ partial "head.html" . }}
+    <body class="{{ if .IsHome }}home{{ else }}{{ .Type }}{{ end }}">
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+        
+        <!-- Header -->
+        {{ partial "header.html" . }}
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            {{ block "main" . }}{{ end }}
+        </main>
+        
+        <!-- Footer -->
+        {{ partial "footer.html" . }}
+        
+        <!-- JavaScript -->
+        {{ $js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+        <script src="{{ $js.RelPermalink }}"></script>
+        
+        <!-- Additional Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        
+        <script>
+            // Initialize sliders
+            $(document).ready(function(){
+                $('.testimonials-slider').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    autoplay: true,
+                    autoplaySpeed: 5000
+                });
+                
+                $('.clients-logos').slick({
+                    dots: false,
+                    arrows: false,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        },
+                        {
+                            breakpoint: 576,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        }
+                    ]
+                });
+                
+                // Mobile menu toggle
+                $('.mobile-menu-toggle').on('click', function() {
+                    $(this).toggleClass('active');
+                    $('.mobile-menu').toggleClass('active');
+                });
+                
+                // Portfolio filter
+                $('.filter-item').on('click', function() {
+                    var filterValue = $(this).attr('data-filter');
+                    
+                    $('.filter-item').removeClass('active');
+                    $(this).addClass('active');
+                    
+                    if (filterValue === 'all') {
+                        $('.portfolio-item').show();
+                    } else {
+                        $('.portfolio-item').hide();
+                        $('.portfolio-item[data-category="' + filterValue + '"]').show();
+                    }
+                });
+                
+                // Back to top button
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > 300) {
+                        $('.back-to-top').addClass('show');
+                    } else {
+                        $('.back-to-top').removeClass('show');
+                    }
+                });
+                
+                $('.back-to-top').on('click', function(e) {
+                    e.preventDefault();
+                    $('html, body').animate({scrollTop: 0}, 800);
+                });
+                
+                // Smooth scroll for anchor links
+                $('a[href*="#"]:not([href="#"])').on('click', function() {
+                    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top - 70
+                            }, 800);
+                            return false;
+                        }
+                    }
+                });
+                
+                // Preloader
+                $(window).on('load', function() {
+                    $('.preloader').fadeOut(500);
+                });
+            });
+        </script>
+    </body>
+</html> 

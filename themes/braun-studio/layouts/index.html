@@ -1,0 +1,84 @@
+{{ define "main" }}
+    <!-- Hero Section -->
+    {{ partial "hero.html" . }}
+    
+    <!-- Featured Services Section -->
+    {{ partial "featured-services.html" . }}
+    
+    <!-- Portfolio Section -->
+    {{ partial "portfolio.html" . }}
+    
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">{{ .Params.aboutTitle | default "About Us" }}</h2>
+                <p class="section-subtitle">{{ .Params.aboutSubtitle }}</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="{{ .Params.aboutImage | relURL }}" alt="About Us">
+                </div>
+                
+                <div class="about-text">
+                    {{ .Params.aboutContent | markdownify }}
+                    
+                    {{ if .Params.aboutButton }}
+                    <div class="about-cta">
+                        <a href="{{ .Params.aboutButtonLink }}" class="btn btn-primary">{{ .Params.aboutButton }}</a>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    {{ partial "testimonials.html" . }}
+    
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">{{ .Params.blogTitle | default "Latest News" }}</h2>
+                <p class="section-subtitle">{{ .Params.blogSubtitle }}</p>
+            </div>
+            
+            <div class="blog-grid">
+                {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 3 }}
+                {{ range $paginator.Pages }}
+                <div class="blog-card">
+                    <div class="blog-image">
+                        {{ if .Params.image }}
+                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                        {{ end }}
+                    </div>
+                    
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                            {{ with .Params.categories }}
+                            <span class="blog-category">{{ index . 0 }}</span>
+                            {{ end }}
+                        </div>
+                        
+                        <h3 class="blog-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                        <p class="blog-excerpt">{{ .Summary }}</p>
+                        <a href="{{ .Permalink }}" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            
+            {{ if .Params.blogButton }}
+            <div class="blog-cta">
+                <a href="{{ .Params.blogButtonLink }}" class="btn btn-primary">{{ .Params.blogButton }}</a>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    {{ partial "contact.html" . }}
+{{ end }} 

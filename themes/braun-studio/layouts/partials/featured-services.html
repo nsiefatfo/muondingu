@@ -1,0 +1,29 @@
+<section class="featured-services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ .Params.servicesTitle | default "Our Services" }}</h2>
+            <p class="section-subtitle">{{ .Params.servicesSubtitle }}</p>
+        </div>
+        
+        <div class="services-grid">
+            {{ range .Params.services }}
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="{{ .icon }}"></i>
+                </div>
+                <h3 class="service-title">{{ .title }}</h3>
+                <p class="service-description">{{ .description }}</p>
+                {{ if .link }}
+                <a href="{{ .link }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        
+        {{ if .Params.servicesButton }}
+        <div class="services-cta">
+            <a href="{{ .Params.servicesButtonLink }}" class="btn btn-primary">{{ .Params.servicesButton }}</a>
+        </div>
+        {{ end }}
+    </div>
+</section> 

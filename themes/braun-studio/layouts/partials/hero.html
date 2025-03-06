@@ -1,0 +1,43 @@
+<section class="hero-section">
+    {{ if .Params.heroVideo }}
+    <div class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="{{ .Params.heroVideo | relURL }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    {{ else if .Params.heroImage }}
+    <div class="hero-image-container" style="background-image: url('{{ .Params.heroImage | relURL }}');">
+    </div>
+    {{ end }}
+    
+    <div class="hero-overlay"></div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">{{ .Params.heroTitle | default .Title }}</h1>
+            <p class="hero-subtitle">{{ .Params.heroSubtitle }}</p>
+            
+            {{ if .Params.heroCta }}
+            <div class="hero-cta">
+                <a href="{{ .Params.heroCtaLink }}" class="btn btn-primary btn-lg">{{ .Params.heroCta }}</a>
+            </div>
+            {{ end }}
+            
+            {{ if .Params.heroSecondCta }}
+            <div class="hero-secondary-cta">
+                <a href="{{ .Params.heroSecondCtaLink }}" class="btn btn-outline btn-lg">{{ .Params.heroSecondCta }}</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    
+    {{ if .Params.heroScrollDown }}
+    <div class="scroll-down">
+        <a href="#{{ .Params.heroScrollDownTarget }}" class="scroll-down-link">
+            <span class="scroll-down-text">{{ .Params.heroScrollDown }}</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+    {{ end }}
+</section> 

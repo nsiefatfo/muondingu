@@ -24,7 +24,7 @@ Think of your local repository (C:\Users\`your-username`\`your-repository`) as y
 - Get new toys from there (pull)
 - Share toys with friends (collaborate)
 
-### Basic Workflow Commands 🎮
+## Basic Workflow Commands 🎮
 
 1. **Check what toys are out (changed files)**:
 ```bash

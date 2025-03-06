@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{ if .Description }}
+        <p class="page-description">{{ .Description }}</p>
+        {{ end }}
+    </div>
+</section>
+
+<section class="list-section">
+    <div class="container">
+        <div class="list-grid">
+            {{ $paginator := .Paginate .Pages }}
+            {{ range $paginator.Pages }}
+            <div class="list-item">
+                <div class="list-image">
+                    {{ if .Params.image }}
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                    </a>
+                    {{ end }}
+                </div>
+                
+                <div class="list-content">
+                    <div class="list-meta">
+                        <span class="list-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                        {{ with .Params.categories }}
+                        <span class="list-category">{{ index . 0 }}</span>
+                        {{ end }}
+                    </div>
+                    
+                    <h2 class="list-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <p class="list-excerpt">{{ .Summary }}</p>
+                    <a href="{{ .Permalink }}" class="list-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        
+        {{ template "_internal/pagination.html" . }}
+    </div>
+</section>
+{{ end }} 

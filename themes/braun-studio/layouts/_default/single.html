@@ -1,0 +1,125 @@
+{{ define "main" }}
+<section class="single-post">
+    <div class="container">
+        <article class="post-content">
+            {{ if .Params.image }}
+            <div class="post-image">
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+            </div>
+            {{ end }}
+            
+            <div class="post-header">
+                <h1 class="post-title">{{ .Title }}</h1>
+                
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar-alt"></i> {{ .Date.Format "Jan 2, 2006" }}
+                    </span>
+                    
+                    {{ with .Params.author }}
+                    <span class="post-author">
+                        <i class="far fa-user"></i> {{ . }}
+                    </span>
+                    {{ end }}
+                    
+                    {{ with .Params.categories }}
+                    <span class="post-categories">
+                        <i class="far fa-folder-open"></i>
+                        {{ range $index, $category := . }}
+                            {{ if $index }}, {{ end }}
+                            <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </div>
+            </div>
+            
+            <div class="post-body">
+                {{ .Content }}
+            </div>
+            
+            {{ with .Params.tags }}
+            <div class="post-tags">
+                <span class="tags-title">Tags:</span>
+                {{ range . }}
+                <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+            
+            <div class="post-share">
+                <span class="share-title">Share:</span>
+                <div class="share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener noreferrer" class="share-button facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener noreferrer" class="share-button twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="_blank" rel="noopener noreferrer" class="share-button linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" class="share-button email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            {{ if .Site.DisqusShortname }}
+            <div class="post-comments">
+                {{ template "_internal/disqus.html" . }}
+            </div>
+            {{ end }}
+        </article>
+        
+        <div class="post-navigation">
+            <div class="post-nav-item prev">
+                {{ with .PrevInSection }}
+                <a href="{{ .Permalink }}" class="post-nav-link">
+                    <span class="post-nav-label"><i class="fas fa-arrow-left"></i> Previous Post</span>
+                    <span class="post-nav-title">{{ .Title }}</span>
+                </a>
+                {{ end }}
+            </div>
+            
+            <div class="post-nav-item next">
+                {{ with .NextInSection }}
+                <a href="{{ .Permalink }}" class="post-nav-link">
+                    <span class="post-nav-label">Next Post <i class="fas fa-arrow-right"></i></span>
+                    <span class="post-nav-title">{{ .Title }}</span>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+        
+        <div class="related-posts">
+            <h3 class="related-title">Related Posts</h3>
+            <div class="related-grid">
+                {{ $related := .Site.RegularPages.Related . | first 3 }}
+                {{ with $related }}
+                    {{ range . }}
+                    <div class="related-post">
+                        {{ if .Params.image }}
+                        <div class="related-image">
+                            <a href="{{ .Permalink }}">
+                                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                            </a>
+                        </div>
+                        {{ end }}
+                        
+                        <div class="related-content">
+                            <h4 class="related-post-title">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h4>
+                            <span class="related-post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                        </div>
+                    </div>
+                    {{ end }}
+                {{ else }}
+                    <p>No related posts found.</p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }} 
