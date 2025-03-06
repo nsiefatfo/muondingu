@@ -157,21 +157,6 @@
                 href="//localhost:1313/vi/post/anonymous/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/resources/</loc>
-    <lastmod>2023-08-20T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/resources/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/resources/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/archives/</loc>
     <lastmod>2022-07-26T21:46:25+08:00</lastmod>
     <changefreq>daily</changefreq>

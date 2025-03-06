@@ -433,7 +433,7 @@
     
       <div class="icon-email sidebar-social-icon">
         <a
-          href="muondingu.work@gmail.com"
+          href="contact@muondingu.com"
           itemprop="url"
           target="_blank"
           aria-label="email"
@@ -616,6 +616,8 @@
    
   .sidebar-related {
     margin-top: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     padding: 0.5rem;
   }
 
@@ -701,6 +703,8 @@
 
 
 
+
+
       
 
       
@@ -712,6 +716,7 @@
     
       
         
+
   <div class="widget-wrapper">
     <div
       class="widget-wrap"
@@ -743,6 +748,7 @@
          
       
         
+
   <div class="widget-wrapper">
     <div
       class="widget-wrap"
@@ -770,8 +776,11 @@
   </div>
 
 
+
+
       
         
+
 <div class="widget-wrapper">
   <div
     class="widget-wrap"
@@ -973,6 +982,7 @@
     </div>
   </div>
 </div>
+
 
       
     
@@ -1381,7 +1391,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
       <div class="icon-email sidebar-social-icon">
         <a
-          href="muondingu.work@gmail.com"
+          href="contact@muondingu.com"
           itemprop="url"
           target="_blank"
           aria-label="email"
@@ -1564,6 +1574,8 @@ document.addEventListener('DOMContentLoaded', function() {
    
   .sidebar-related {
     margin-top: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     padding: 0.5rem;
   }
 
@@ -1646,6 +1658,8 @@ document.addEventListener('DOMContentLoaded', function() {
     color: white;
   }
 </style>
+
+
 
 
 
@@ -2138,119 +2152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    
-<div class="lang-switcher" role="navigation" aria-label="Language switcher">
-  
-  <button class="lang-main" 
-          style="background-image: url('/images/flags/vi.svg')"
-          aria-label="Current language: Vietnamese"
-          aria-expanded="false">
-    <span class="visually-hidden">Vietnamese</span>
-  </button>
-  
-  
-  <div class="lang-alternatives">
-    
-    <a href="/tags/html/" 
-       class="lang-option" 
-       style="background-image: url('/images/flags/en.svg')"
-       lang="en"
-       hreflang="en"
-       rel="alternate"
-       aria-label="Switch to English"
-       title="English">
-      <span class="visually-hidden">English</span>
-    </a>
-    
-  </div>
-  
-  
-  <div class="seo-language-links visually-hidden" aria-hidden="true">
-    
-    <a href="/tags/html/" 
-       lang="en" 
-       hreflang="en" 
-       rel="alternate" 
-       title="English">
-      English
-    </a>
-    
-  </div>
-</div>
 
-
-<style>
-.lang-switcher {
-  position: fixed;
-  bottom: 20px;
-  right: 40px;
-  z-index: 1000;
-}
-
-.lang-main, .lang-option {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  border: 2px solid white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.lang-alternatives {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.5);
-  transition: all 0.3s ease;
-}
-
-.lang-switcher:hover .lang-alternatives {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-}
-
-.lang-option {
-  position: absolute;
-  transition: all 0.3s ease;
-}
-
-.lang-switcher:hover .lang-option {
-  transform: translateY(-55px) rotate(0deg);
-}
-
-.lang-switcher:hover .lang-option:nth-child(1) { transform: translate(-50px, -35px); }
-.lang-switcher:hover .lang-option:nth-child(2) { transform: translate(-35px, -50px); }
-.lang-switcher:hover .lang-option:nth-child(3) { transform: translate(-15px, -60px); }
-
-.lang-main:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
- 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-   
-}
-
- 
-.seo-language-links {
-   
-}
-</style>
     <div id="youtube-player-container" class="yt-player">
   <div class="player-body">
     <div class="player-thumbnail">
@@ -3198,6 +3100,247 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 } 
 </style>
+    
+<div id="dynamic-language-switcher" class="lang-switcher hidden-until-loaded"></div>
+
+<style>
+.lang-switcher {
+  position: fixed;
+  top: unset;
+  left: unset;
+  bottom: 20px;
+  right: 40px;
+  z-index: 1000;
+}
+.lang-main, .lang-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lang-alternatives {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+.lang-switcher:hover .lang-alternatives {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.lang-option {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.lang-switcher:hover .lang-option {
+  transform: translateY(-55px) rotate(0deg);
+}
+.lang-switcher:hover .lang-option:nth-child(1) { transform: translate(-50px, -35px); }
+.lang-switcher:hover .lang-option:nth-child(2) { transform: translate(-35px, -50px); }
+.lang-switcher:hover .lang-option:nth-child(3) { transform: translate(-15px, -60px); }
+.lang-main:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.hidden-until-loaded {
+  display: none;
+}
+</style>
+
+<script>
+  
+  let switcherState = {
+    currentLang: null,
+    availableLanguages: []
+  };
+
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    initLanguageSwitcher();
+  });
+  
+  
+  document.addEventListener('pjax:complete', function() {
+    setTimeout(initLanguageSwitcher, 300);
+  });
+
+  function initLanguageSwitcher() {
+    const currentPath = window.location.pathname;
+    const currentLang = getCurrentLanguage(currentPath);
+    
+    
+    if (currentPath.includes('/post/')) {
+      handlePostPageLanguageSwitcher(currentPath, currentLang);
+    } 
+    
+    else {
+      handleOtherPagesLanguageSwitcher(currentPath, currentLang);
+    }
+  }
+
+  function handlePostPageLanguageSwitcher(currentPath, currentLang) {
+    const allLanguages = ['en', 'vi'];
+    const alternativeLangs = allLanguages.filter(lang => lang !== currentLang);
+    
+    Promise.all(
+      alternativeLangs.map(lang => {
+        const altPath = lang === 'en' 
+          ? currentPath.replace('/vi/', '/') 
+          : `/vi${currentPath}`;
+        
+        return fetch(altPath, { method: 'HEAD' })
+          .then(response => response.ok ? lang : null)
+          .catch(() => null);
+      })
+    ).then(availableLangs => {
+      const validLangs = availableLangs.filter(lang => lang !== null);
+      
+      if (validLangs.length > 0) {
+        updatePostPageLanguageSwitcher(currentLang, validLangs);
+      } else {
+        document.getElementById('dynamic-language-switcher').style.display = 'none';
+      }
+    });
+  }
+
+  function handleOtherPagesLanguageSwitcher(currentPath, currentLang) {
+    const allLanguages = ['en', 'vi'];
+    const alternativeLangs = allLanguages.filter(lang => lang !== currentLang);
+    
+    Promise.all(
+      alternativeLangs.map(lang => {
+        const altPath = lang === 'en' 
+          ? currentPath.replace('/vi/', '/') 
+          : `/vi${currentPath}`;
+        
+        return fetch(altPath, { method: 'HEAD' })
+          .then(response => response.ok ? lang : null)
+          .catch(() => null);
+      })
+    ).then(availableLangs => {
+      const validLangs = availableLangs.filter(lang => lang !== null);
+      
+      if (validLangs.length > 0) {
+        updateOtherPagesLanguageSwitcher(currentLang, validLangs);
+      } else {
+        document.getElementById('dynamic-language-switcher').style.display = 'none';
+      }
+    });
+  }
+
+  function getCurrentLanguage(path) {
+    return path.startsWith('/vi/') ? 'vi' : 'en';
+  }
+
+  function updatePostPageLanguageSwitcher(currentLang, availableLangs) {
+    const switcherContainer = document.getElementById('dynamic-language-switcher');
+    
+    switcherContainer.innerHTML = `
+      <div class="lang-main" style="background-image: url('/images/flags/${currentLang}.svg')"></div>
+      <div class="lang-alternatives">
+        ${availableLangs.map((lang, index) => `
+          <div 
+            class="lang-option" 
+            data-lang="${lang}" 
+            style="background-image: url('/images/flags/${lang}.svg');"
+          ></div>
+        `).join('')}
+      </div>
+    `;
+    
+    switcherContainer.style.display = 'block';
+    switcherContainer.classList.remove('hidden-until-loaded');
+    
+    switcherContainer.querySelectorAll('.lang-option').forEach(option => {
+      option.addEventListener('click', function() {
+        const targetLang = this.getAttribute('data-lang');
+        const currentPath = window.location.pathname;
+        
+        const targetPath = targetLang === 'en' 
+          ? currentPath.replace('/vi/', '/') 
+          : `/vi${currentPath}`;
+        
+        window.dispatchEvent(new Event('pjax:send'));
+        
+        fetch(targetPath)
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            const mainContent = document.querySelector('section#main');
+            const newContent = doc.querySelector('section#main');
+            
+            if (mainContent && newContent) {
+              mainContent.innerHTML = newContent.innerHTML;
+              
+              window.history.pushState({url: targetPath}, doc.title, targetPath);
+              document.title = doc.title;
+              
+              window.dispatchEvent(new Event('pjax:success'));
+              
+              setTimeout(() => {
+                initLanguageSwitcher();
+                window.dispatchEvent(new Event('pjax:complete'));
+              }, 300);
+            } else {
+              window.location.href = targetPath;
+            }
+          })
+          .catch(error => {
+            console.error('Language switch error:', error);
+            window.location.href = targetPath;
+          });
+      });
+    });
+  }
+
+  function updateOtherPagesLanguageSwitcher(currentLang, availableLangs) {
+    const switcherContainer = document.getElementById('dynamic-language-switcher');
+    
+    switcherContainer.innerHTML = `
+      <div class="lang-main" style="background-image: url('/images/flags/${currentLang}.svg')"></div>
+      <div class="lang-alternatives">
+        ${availableLangs.map((lang, index) => `
+          <div 
+            class="lang-option" 
+            data-lang="${lang}" 
+            style="background-image: url('/images/flags/${lang}.svg');"
+          ></div>
+        `).join('')}
+      </div>
+    `;
+    
+    switcherContainer.style.display = 'block';
+    switcherContainer.classList.remove('hidden-until-loaded');
+    
+    switcherContainer.querySelectorAll('.lang-option').forEach(option => {
+      option.addEventListener('click', function() {
+        const targetLang = this.getAttribute('data-lang');
+        const currentPath = window.location.pathname;
+        
+        const targetPath = targetLang === 'en' 
+          ? currentPath.replace('/vi/', '/') 
+          : `/vi${currentPath}`;
+        
+        window.location.href = targetPath;
+      });
+    });
+  }
+</script>
+
   </body>
 </html>
 

@@ -242,21 +242,6 @@
                 href="//localhost:1313/tags/system-design/"
                 />
   </url><url>
-    <loc>//localhost:1313/resources/</loc>
-    <lastmod>2023-08-20T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi-VN"
-                href="//localhost:1313/vi/resources/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/resources/"
-                />
-  </url><url>
     <loc>//localhost:1313/archives/</loc>
     <lastmod>2022-07-26T21:46:25+08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -465,6 +450,10 @@
                 hreflang="en-US"
                 href="//localhost:1313/categories/creators-toolkit/"
                 />
+  </url><url>
+    <loc>//localhost:1313/resources/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>//localhost:1313/categories/knowledge-management/</loc>
     <changefreq>daily</changefreq>

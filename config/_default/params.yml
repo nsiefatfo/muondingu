@@ -17,7 +17,6 @@ menu:
   - name: resources
     url: "resources"
     icon: f02e
-
   
 
 mainSections: ["post"]
@@ -79,7 +78,7 @@ footer:
 sidebar: left
 
 social:
-  email: muondingu.work@gmail.com
+  email: contact@muondingu.com
   # github: https://github.com/yourname
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname

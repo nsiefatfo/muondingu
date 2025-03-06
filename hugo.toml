@@ -35,6 +35,11 @@ languageName = "Vietnamese"
 weight = 2
 
 [params]
+  disable_commonbar = false
+  disable_sidebar = false
+  disable_category = false
+  disable_recent_post = false
+  disable_tagcloud = false
   enablei18n-switch = false
   mainSections = ["post"]
   related_posts_limit = 3
