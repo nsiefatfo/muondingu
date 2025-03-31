@@ -1,4 +1,4 @@
-theme = ["muondingublogtheme", "hugo-admonitions"]
+theme = ["muondingublogtheme"]
 title = 'Optimize. Automate. Gamify.'
 # codeblock 
 [markup.highlight]
